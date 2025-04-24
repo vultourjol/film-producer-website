@@ -30,7 +30,7 @@
             
             <nav class="hidden md:flex space-x-8">
                 <a href="#portfolio" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Портфолио</a>
-                <a href="#showcase" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Шоукейс</a>
+                <a href="#showcase" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Новое</a>
                 <a href="#about" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Обо мне</a>
                 <a href="#contact" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Контакты</a>
             </nav>
@@ -38,7 +38,7 @@
             <div class="mobile-menu fixed inset-0 bg-black bg-opacity-95 flex-col justify-center items-center z-40 hidden">
                 <nav class="flex flex-col space-y-8 items-center">
                     <a href="#portfolio" class="text-white hover:text-primary transition-colors text-2xl uppercase tracking-wider">Портфолио</a>
-                    <a href="#showcase" class="text-white hover:text-primary transition-colors text-2xl uppercase tracking-wider">Шоукейс</a>
+                    <a href="#showcase" class="text-white hover:text-primary transition-colors text-2xl uppercase tracking-wider">Новое</a>
                     <a href="#about" class="text-white hover:text-primary transition-colors text-2xl uppercase tracking-wider">Обо мне</a>
                     <a href="#contact" class="text-white hover:text-primary transition-colors text-2xl uppercase tracking-wider">Контакты</a>
                 </nav>
@@ -79,12 +79,18 @@
     <!-- Portfolio Grid Section -->
     <section id="portfolio" class="py-24 bg-black">
         <div class="container mx-auto px-6">
-            <h2 class="heading-font text-4xl md:text-5xl font-bold mb-16 text-center">Избранные <span class="text-primary">работы</span></h2>
+            <h2 class="heading-font text-4xl md:text-5xl font-bold mb-16 text-center">Мои <span class="text-primary">Проекты</span></h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
                 <div class="project-card rounded overflow-hidden relative h-80">
-                    <img src="source/alexstory.jpeg" alt="Urban Nights" class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                    <picture>
+                        <source srcset="source/alexstory.webp" media="(max-width: 600px)" type="image/webp">
+                        <source srcset="source/alexstory.webp" media="(max-width: 1200px)" type="image/webp">
+                        <source srcset="source/alexstory.webp" type="image/webp">
+                        <img src="source/alexstory.webp" loading="lazy" alt="Алекс" 
+                             class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                    </picture>                     
                     <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
                         <h3 class="text-xl font-bold mb-2">Shitty Story</h3>
                         <p class="text-sm opacity-80">Короткий фильм • 2024</p>
@@ -93,7 +99,13 @@
                 
                 <!-- Project 2 -->
                 <div class="project-card rounded overflow-hidden relative h-80">
-                    <img src="source/russianking.png" alt="Conversations" class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                    <picture>
+                        <source srcset="source/russianking-600.webp" media="(max-width: 600px)" type="image/webp">
+                        <source srcset="source/russianking-1200.webp" media="(max-width: 1200px)" type="image/webp">
+                        <source srcset="source/russianking.webp" type="image/webp">
+                        <img src="source/russianking.jpg" loading="lazy" alt="Российский король рок-н-ролла" 
+                             class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                    </picture>                    
                     <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
                         <h3 class="text-xl font-bold mb-2">Российский король рок-н-ролла</h3>
                         <p class="text-sm opacity-80">Документальное • 2025</p>
@@ -102,7 +114,13 @@
                 
                 <!-- Project 3 -->
                 <div class="project-card rounded overflow-hidden relative h-80">
-                    <img src="source/manbunker.png" alt="Wilderness" class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                    <picture>
+                        <source srcset="source/manbunker.webp" media="(max-width: 600px)" type="image/webp">
+                        <source srcset="source/manbunker.webp" media="(max-width: 1200px)" type="image/webp">
+                        <source srcset="source/manbunker.webp" type="image/webp">
+                        <img src="source/manbunker.webp" loading="lazy" alt="Человек с бункером" 
+                             class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                      </picture>                    
                     <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
                         <h3 class="text-xl font-bold mb-2">Человек с бункером</h3>
                         <p class="text-sm opacity-80">Документальное • 2023</p>
@@ -111,7 +129,13 @@
                 
                 <!-- Project 4 -->
                 <div class="project-card rounded overflow-hidden relative h-80">
-                    <img src="source/firstone.png" alt="Road Trip" class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                    <picture>
+                        <source srcset="source/firstone.webp" media="(max-width: 600px)" type="image/webp">
+                        <source srcset="source/firstone.webp" media="(max-width: 1200px)" type="image/webp">
+                        <source srcset="source/firstone.webp" type="image/webp">
+                        <img src="source/firstone.webp" loading="lazy" alt="Быть первым" 
+                             class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                      </picture>                   
                     <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
                         <h3 class="text-xl font-bold mb-2">Быть первым</h3>
                         <p class="text-sm opacity-80">Документальное • 2022</p>
@@ -120,7 +144,13 @@
                 
                 <!-- Project 5 -->
                 <div class="project-card rounded overflow-hidden relative h-80">
-                    <img src="source/fatumfatum.jpeg" alt="Rhythm" class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                    <picture>
+                        <source srcset="source/fatumfatum.webp" media="(max-width: 600px)" type="image/webp">
+                        <source srcset="source/fatumfatum.webp" media="(max-width: 1200px)" type="image/webp">
+                        <source srcset="source/fatumfatum.webp" type="image/webp">
+                        <img src="source/fatumfatum.webp" loading="lazy" alt="Фатум" 
+                             class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                    </picture>                    
                     <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
                         <h3 class="text-xl font-bold mb-2">Фатум</h3>
                         <p class="text-sm opacity-80">Короткий фильм • 2022</p>
@@ -129,7 +159,13 @@
                 
                 <!-- Project 6 -->
                 <div class="project-card rounded overflow-hidden relative h-80">
-                    <img src="source/warclassic.png" alt="Echoes" class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                    <picture>
+                        <source srcset="source/warclassic.webp" media="(max-width: 600px)" type="image/webp">
+                        <source srcset="source/warclassic.webp" media="(max-width: 1200px)" type="image/webp">
+                        <source srcset="source/warclassic.webp" type="image/webp">
+                        <img src="source/warclassic.webp" loading="lazy" alt="Боевая классика" 
+                             class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                    </picture>                     
                     <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
                         <h3 class="text-xl font-bold mb-2">Боевая классика</h3>
                         <p class="text-sm opacity-80">Документальное • 2021</p>
@@ -142,13 +178,19 @@
     <!-- Project Showcase Section -->
     <section id="showcase" class="py-24 bg-black">
         <div class="container mx-auto px-6">
-            <h2 class="heading-font text-4xl md:text-5xl font-bold mb-16 text-center">Шоукейс <span class="text-primary">проектов</span></h2>
+            <h2 class="heading-font text-4xl md:text-5xl font-bold mb-16 text-center">Крайние <span class="text-primary">Проекты</span></h2>
             
             <div class="film-reel-divider mb-16"></div>
             
             <div class="featured-project mb-32">
                 <div class="relative h-[70vh] rounded-lg overflow-hidden mb-12">
-                    <img src="source/russianking.png" alt="Urban Nights" class="w-full h-full object-cover object-top">
+                    <picture>
+                        <source srcset="source/russianking-600.webp" media="(max-width: 600px)" type="image/webp">
+                        <source srcset="source/russianking-1200.webp" media="(max-width: 1200px)" type="image/webp">
+                        <source srcset="source/russianking.webp" type="image/webp">
+                        <img src="source/russianking.jpg" loading="lazy" alt="Российский король рок-н-ролла" 
+                             class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                    </picture>
                     <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-12">
                         <h3 class="heading-font text-3xl md:text-4xl font-bold mb-4">Российский король рок-н-ролла</h3>
@@ -207,7 +249,13 @@
             
             <div class="featured-project">
                 <div class="relative h-[70vh] rounded-lg overflow-hidden mb-12">
-                    <img src="source/manbunker.png" alt="Wilderness" class="w-full h-full object-cover object-top">
+                    <picture>
+                        <source srcset="source/manbunker.webp" media="(max-width: 600px)" type="image/webp">
+                        <source srcset="source/manbunker.webp" media="(max-width: 1200px)" type="image/webp">
+                        <source srcset="source/manbunker.webp" type="image/webp">
+                        <img src="source/manbunker.webp" loading="lazy" alt="Человек с бункером" 
+                             class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                      </picture>
                     <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-12">
                         <h3 class="heading-font text-3xl md:text-4xl font-bold mb-4">Человек с бункером</h3>
@@ -267,13 +315,19 @@
     <!-- About Section -->
     <section id="about" class="py-24 bg-black">
         <div class="container mx-auto px-6">
-            <h2 class="heading-font text-4xl md:text-5xl font-bold mb-16 text-center">Обо <span class="text-primary">мне</span></h2>
+            <h2 class="heading-font text-4xl md:text-5xl font-bold mb-16 text-center">Обо <span class="text-primary">Мне</span></h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="relative">
                     <div class="film-strip absolute top-0 left-0 h-full w-12"></div>
                     <div class="pl-16">
-                        <img src="source/mypic.jpeg" alt="Alexander Mitchell" class="w-full h-auto rounded-lg shadow-2xl">
+                        <picture>
+                            <source srcset="source/mypic.webp" media="(max-width: 600px)" type="image/webp">
+                            <source srcset="source/mypic.webp" media="(max-width: 1200px)" type="image/webp">
+                            <source srcset="source/mypic.webp" type="image/webp">
+                            <img src="source/mypic.webp" loading="lazy" alt="Портрет" 
+                                 class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                        </picture>                    
                     </div>
                     
                     <div class="absolute -bottom-8 -right-8 bg-primary rounded-lg p-6 shadow-xl">
@@ -400,7 +454,7 @@
     <!-- Contact Section -->
     <section id="contact" class="py-24 bg-black">
         <div class="container mx-auto px-6">
-            <h2 class="heading-font text-4xl md:text-5xl font-bold mb-16 text-center">Остаемся на <span class="text-primary">связи</span></h2>
+            <h2 class="heading-font text-4xl md:text-5xl font-bold mb-16 text-center">Остаемся на <span class="text-primary">Связи</span></h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div>
