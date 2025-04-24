@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRODBYLELYA</title>
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script>tailwind.config={theme:{extend:{colors:{primary:'#e63946',secondary:'#457b9d'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#EAA124',secondary:'#457b9d'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
         :root {
             --dark-bg: #121212;
             --dark-surface: #1e1e1e;
-            --accent-color: #e63946;
+            --accent-color: #EAA124;
             --text-primary: #ffffff;
             --text-secondary: rgba(255, 255, 255, 0.7);
         }
@@ -55,14 +55,16 @@
             white-space: nowrap;
             margin: 0 auto;
             letter-spacing: 0.15em;
-            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+            width: 0;
+            max-width: max-content; /* Ограничивает ширину содержимым */
+            animation: typing 3.5s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
         }
-        
+
         @keyframes typing {
             from { width: 0 }
             to { width: 100% }
         }
-        
+
         @keyframes blink-caret {
             from, to { border-color: transparent }
             50% { border-color: var(--accent-color) }
@@ -132,7 +134,7 @@
         }
         
         .film-reel-divider {
-            background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,10 L2000,10' stroke='%23e63946' stroke-width='2' stroke-dasharray='20,10' /%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,10 L2000,10' stroke='%23EAA124' stroke-width='2' stroke-dasharray='20,10' /%3E%3C/svg%3E");
             height: 20px;
             background-repeat: repeat-x;
         }
@@ -204,7 +206,7 @@
         }
         
         .film-strip {
-            background-image: url("data:image/svg+xml,%3Csvg width='50' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0' y='0' width='50' height='200' fill='%23000000' /%3E%3Crect x='10' y='10' width='30' height='30' fill='none' stroke='%23e63946' stroke-width='2' /%3E%3Crect x='10' y='50' width='30' height='30' fill='none' stroke='%23e63946' stroke-width='2' /%3E%3Crect x='10' y='90' width='30' height='30' fill='none' stroke='%23e63946' stroke-width='2' /%3E%3Crect x='10' y='130' width='30' height='30' fill='none' stroke='%23e63946' stroke-width='2' /%3E%3Crect x='10' y='170' width='30' height='30' fill='none' stroke='%23e63946' stroke-width='2' /%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='50' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0' y='0' width='50' height='200' fill='%23000000' /%3E%3Crect x='10' y='10' width='30' height='30' fill='none' stroke='%23EAA124' stroke-width='2' /%3E%3Crect x='10' y='50' width='30' height='30' fill='none' stroke='%23EAA124' stroke-width='2' /%3E%3Crect x='10' y='90' width='30' height='30' fill='none' stroke='%23EAA124' stroke-width='2' /%3E%3Crect x='10' y='130' width='30' height='30' fill='none' stroke='%23EAA124' stroke-width='2' /%3E%3Crect x='10' y='170' width='30' height='30' fill='none' stroke='%23EAA124' stroke-width='2' /%3E%3C/svg%3E");
             background-repeat: repeat-y;
         }
         
@@ -262,7 +264,7 @@
     <!-- Header Navigation -->
     <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-opacity-0 bg-black">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-white font-['Pacifico'] text-2xl">prodbylelya</a>
+            <a href="/" class="text-white font-['Pacifico'] text-2xl">prodbylelya</a>
             
             <div class="hamburger-menu md:hidden flex flex-col justify-center items-center w-10 h-10 cursor-pointer z-50">
                 <span class="bar w-6 h-0.5 bg-white mb-1.5 transition-all"></span>
@@ -337,7 +339,7 @@
                 <div class="project-card rounded overflow-hidden relative h-80">
                     <img src="source/russianking.png" alt="Conversations" class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
                     <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
-                        <h3 class="text-xl font-bold mb-2">Русский король рок-н-ролла</h3>
+                        <h3 class="text-xl font-bold mb-2">Российский король рок-н-ролла</h3>
                         <p class="text-sm opacity-80">Документальное • 2025</p>
                     </div>
                 </div>
@@ -386,14 +388,14 @@
         <div class="container mx-auto px-6">
             <h2 class="heading-font text-4xl md:text-5xl font-bold mb-16 text-center">Шоукейс <span class="text-primary">проектов</span></h2>
             
-            <div class="film-reel-divider mb-16"></div>
+            <div style="color: #EAA124;" class="film-reel-divider mb-16"></div>
             
             <div class="featured-project mb-32">
                 <div class="relative h-[70vh] rounded-lg overflow-hidden mb-12">
                     <img src="source/russianking.png" alt="Urban Nights" class="w-full h-full object-cover object-top">
                     <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-12">
-                        <h3 class="heading-font text-3xl md:text-4xl font-bold mb-4">Русский король рок-н-ролла</h3>
+                        <h3 class="heading-font text-3xl md:text-4xl font-bold mb-4">Российский король рок-н-ролла</h3>
                         <p class="text-lg max-w-2xl opacity-80 mb-6">Бла бла бла тут будет описание.</p>
                         <div class="flex space-x-4">
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Документальное</span>
@@ -736,7 +738,7 @@
     <footer class="py-12 bg-black">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center mb-12">
-                <a href="#" class="text-white font-['Pacifico'] text-2xl mb-6 md:mb-0">prodbylelya</a>
+                <a href="/" class="text-white font-['Pacifico'] text-2xl mb-6 md:mb-0">prodbylelya</a>
                 
                 <nav class="flex flex-wrap justify-center gap-x-8 gap-y-4">
                     <a href="#portfolio" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Портфолио</a>
@@ -763,7 +765,7 @@
         </div>
         
         <div class="mt-8 text-center">
-            <a href="#" class="inline-block back-to-top w-10 h-10 flex items-center justify-center bg-black bg-opacity-30 rounded-full border border-white border-opacity-10">
+            <a href="#" class="inline-block back-to-top w-10 h-10 flex items-center justify-center bg-black bg-opacity-30 rounded-full border border-white border-opacity-10 ml-5">
                 <i class="ri-arrow-up-line text-white"></i>
             </a>
         </div>
