@@ -264,7 +264,7 @@
     <!-- Header Navigation -->
     <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-opacity-0 bg-black">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-white font-['Pacifico'] text-2xl">prodbylelya</a>
+            <a href="#hero" class="text-white font-['Pacifico'] text-2xl">prodbylelya</a>
             
             <div class="hamburger-menu md:hidden flex flex-col justify-center items-center w-10 h-10 cursor-pointer z-50">
                 <span class="bar w-6 h-0.5 bg-white mb-1.5 transition-all"></span>
@@ -291,7 +291,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
         <video class="video-bg" autoplay muted loop playsinline>
             <source src="https://readdy.ai/api/search-image?query=cinematic%2520film%2520reel%2520montage%2520with%2520dramatic%2520lighting%2520showing%2520various%2520film%2520scenes%2520with%2520rich%2520colors%2520and%2520contrast%2520professional%2520cinematography%2520with%2520smooth%2520camera%2520movements%2520film%2520grain%2520texture%2520overlaid%2520on%2520footage&width=1920&height=1080&seq=1&orientation=landscape" type="video/mp4">
         </video>
@@ -324,7 +324,7 @@
     <section id="portfolio" class="py-24 bg-black">
         <div class="container mx-auto px-6">
             <h2 class="heading-font text-4xl md:text-5xl font-bold mb-16 text-center">Избранные <span class="text-primary">работы</span></h2>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
                 <div class="project-card rounded overflow-hidden relative h-80">
@@ -388,7 +388,7 @@
         <div class="container mx-auto px-6">
             <h2 class="heading-font text-4xl md:text-5xl font-bold mb-16 text-center">Шоукейс <span class="text-primary">проектов</span></h2>
             
-            <div style="color: #EAA124;" class="film-reel-divider mb-16"></div>
+            <div class="film-reel-divider mb-16"></div>
             
             <div class="featured-project mb-32">
                 <div class="relative h-[70vh] rounded-lg overflow-hidden mb-12">
@@ -668,7 +668,11 @@
                             </div>
                             <div>
                                 <h4 class="font-bold mb-1">Почта</h4>
-                                <p class="opacity-80">ab.kozlovskaya@gmail.com</p>
+                                <p class="opacity-80 cursor-pointer hover:text-primary transition-colors flex items-center" 
+                                    id="emailCopy" onclick="copyToClipboard('ab.kozlovskaya@gmail.com', this)">
+                                    ab.kozlovskaya@gmail.com
+                                    <i class="ri-file-copy-line ml-2 text-sm"></i>
+                                </p>
                             </div>
                         </div>
                         
@@ -678,7 +682,11 @@
                             </div>
                             <div>
                                 <h4 class="font-bold mb-1">Телефон</h4>
-                                <p class="opacity-80">+7 (985) 437-73-88</p>
+                                <p class="opacity-80 cursor-pointer hover:text-primary transition-colors flex items-center" 
+                                    id="phoneCopy" onclick="copyToClipboard('+79854377388', this)">
+                                    +7 (985) 437-73-88
+                                    <i class="ri-file-copy-line ml-2 text-sm"></i>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -738,7 +746,7 @@
     <footer class="py-12 bg-black">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center mb-12">
-                <a href="#" class="text-white font-['Pacifico'] text-2xl mb-6 md:mb-0">prodbylelya</a>
+                <a href="#hero" class="text-white font-['Pacifico'] text-2xl mb-6 md:mb-0">prodbylelya</a>
                 
                 <nav class="flex flex-wrap justify-center gap-x-8 gap-y-4">
                     <a href="#portfolio" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Портфолио</a>
@@ -772,6 +780,7 @@
     </footer>
 
     <script>
+        
         document.addEventListener('DOMContentLoaded', function() {
             // Header scroll effect
             const header = document.querySelector('header');
@@ -878,6 +887,23 @@
                 });
             });
         });
+
+        function copyToClipboard(text, element) {
+            navigator.clipboard.writeText(text).then(function() {
+                // Временно изменяем содержимое для обратной связи
+                const originalContent = element.innerHTML;
+                element.innerHTML = 'Скопировано! <i class="ri-check-line ml-2 text-sm"></i>';
+                element.classList.add('text-primary');
+                
+                // Через 2 секунды возвращаем оригинальное содержимое
+                setTimeout(function() {
+                    element.innerHTML = originalContent;
+                    element.classList.remove('text-primary');
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Ошибка при копировании: ', err);
+            });
+        }
     </script>
 </body>
 </html>
