@@ -1,3 +1,72 @@
+// Оптимизация загрузки для мобильных устройств
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || window.innerWidth <= 768;
+
+// Функция отложенного запуска нужной функциональности
+function deferNonEssentialScripts() {
+    if (isMobile) {
+        // Для мобильных устройств приоритизируем скорость загрузки
+        window.addEventListener('load', initializeCustomCursor);
+        window.addEventListener('load', initializeParallaxEffects);
+    } else {
+        // Для десктопов сразу инициализируем все эффекты
+        initializeCustomCursor();
+        initializeParallaxEffects();
+    }
+}
+
+// Функции-обертки для существующего кода
+function initializeCustomCursor() {
+    // Ваш существующий код для курсора
+    const cursor = document.querySelector('.custom-cursor');
+    const cursorDot = document.querySelector('.custom-cursor-dot');
+    
+    if (!cursor || !cursorDot) return;
+    
+    document.addEventListener('mousemove', function(e) {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+        
+        cursorDot.style.left = e.clientX + 'px';
+        cursorDot.style.top = e.clientY + 'px';
+    });
+    
+    // Cursor hover effect
+    const links = document.querySelectorAll('a, button, input, textarea, .project-card');
+    links.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
+            cursor.style.opacity = '0.5';
+        });
+        
+        link.addEventListener('mouseleave', function() {
+            cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+            cursor.style.opacity = '1';
+        });
+    });
+}
+
+function initializeParallaxEffects() {
+    // Parallax effect
+    const parallaxElements = document.querySelectorAll('.parallax');
+    window.addEventListener('scroll', function() {
+        if (window.innerWidth <= 640) return; // Отключаем эффект на мобильных
+        
+        parallaxElements.forEach(element => {
+            const scrollPosition = window.pageYOffset;
+            const elementPosition = element.offsetTop;
+            const distance = (scrollPosition - elementPosition) * 0.1;
+                
+            if (scrollPosition > elementPosition - window.innerHeight && 
+                scrollPosition < elementPosition + element.offsetHeight) {
+                element.style.transform = `translateY(${distance}px)`;
+            }
+        });
+    });
+}
+
+// Запускаем функцию отложенной загрузки
+deferNonEssentialScripts();
+
 document.addEventListener('DOMContentLoaded', function() {
     // Header scroll effect
     const header = document.querySelector('header');
@@ -234,4 +303,38 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+});
+
+// Улучшения для мобильных устройств
+document.addEventListener('DOMContentLoaded', function() {
+    // Закрытие мобильного меню при повороте устройства
+    window.addEventListener('orientationchange', function() {
+        const hamburger = document.querySelector('.hamburger-menu');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        if (hamburger.classList.contains('active')) {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        }
+    });
+    
+    // Улучшение работы свайпера на мобильных устройствах
+    if (window.innerWidth <= 640) {
+        const projectSwiper = document.querySelector('.project-swiper').swiper;
+        if (projectSwiper) {
+            projectSwiper.params.slidesPerView = 1.2;
+            projectSwiper.params.spaceBetween = 10;
+            projectSwiper.update();
+        }
+    }
+    
+    // Упрощение анимации на маломощных устройствах
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+        window.innerWidth <= 640) {
+        document.querySelectorAll('.floating').forEach(element => {
+            element.style.animationDuration = '0s';
+        });
+    }
 });

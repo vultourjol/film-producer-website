@@ -21,7 +21,7 @@
     <div class="custom-cursor-dot hidden md:block"></div>
     <!-- Header Navigation -->
     <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-opacity-0 bg-black">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="mx-auto px-6 w-full py-4 flex justify-between items-center">
             <a href="#hero" class="text-white font-['Pacifico'] text-2xl">prodbylelya</a>
             
             <div class="hamburger-menu md:hidden flex flex-col justify-center items-center w-10 h-10 cursor-pointer z-50">
@@ -31,10 +31,10 @@
             </div>
             
             <nav class="hidden md:flex space-x-8">
-                <a href="#portfolio" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Портфолио</a>
-                <a href="#showcase" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Крайние</a>
-                <a href="#about" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Обо мне</a>
-                <a href="#contact" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Контакты</a>
+                <a href="#portfolio" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1">Портфолио</a>
+                <a href="#showcase" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1">Крайние</a>
+                <a href="#about" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1">Обо мне</a>
+                <a href="#contact" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1">Контакты</a>
             </nav>
             
             <div class="mobile-menu fixed inset-0 bg-black bg-opacity-95 flex-col justify-center items-center z-40 hidden">
@@ -55,7 +55,7 @@
         </video>
         <div class="video-overlay"></div>
         
-        <div class="container mx-auto px-6 z-10 text-center">
+        <div class="mx-auto px-6 w-full z-10 text-center">
             <h1 class="heading-font text-5xl md:text-7xl font-bold mb-6 typewriter inline-block">PRODBYLELYA</h1>
             <p class="text-xl md:text-2xl text-white opacity-80 mb-12 max-w-2xl mx-auto"></p>
             
@@ -81,7 +81,7 @@
 
     <!-- Portfolio Grid Section -->
     <section id="portfolio" class="py-24 bg-black">
-        <div class="container mx-auto px-6">
+        <div class="mx-auto px-6 w-full">
             <h2 class="heading-font text-4xl md:text-5xl font-bold mb-16 text-center">Мои <span class="text-primary">Проекты</span></h2>
             
             <!-- Добавляем элементы навигации слайдера -->
@@ -96,7 +96,7 @@
             </div>
     
             <!-- Swiper слайдер -->
-            <div class="swiper project-swiper">
+            <div class="swiper project-swiper pt-10">
                 <div class="swiper-wrapper">
                     <!-- Project 1 -->
                     <div class="swiper-slide">
@@ -222,10 +222,10 @@
 
     <!-- Project Showcase Section -->
     <section id="showcase" class="py-24 bg-black">
-        <div class="container mx-auto px-6">
+        <div class="mx-auto px-6 w-full">
             <h2 class="heading-font text-4xl md:text-5xl font-bold mb-16 text-center">Крайние <span class="text-primary">Проекты</span></h2>
             
-            <div class="film-reel-divider mb-16"></div>
+            <!-- <div class="film-reel-divider mb-16"></div> -->
             
             <div class="featured-project mb-32">
                 <div class="relative h-[70vh] rounded-lg overflow-hidden mb-12">
@@ -275,7 +275,7 @@
                             </div>
                             <div class="bg-black bg-opacity-30 p-4 rounded">
                                 <div class="w-10 h-10 flex items-center justify-center mb-2">
-                                    <i class="ri-drone-li       ne text-primary text-2xl"></i>
+                                    <i class="ri-drone-line text-primary text-2xl"></i>
                                 </div>
                                 <h5 class="font-bold mb-1">Оптика</h5>
                                 <p class="text-sm opacity-80">Sony SEL 24-105 f/4 G OSS</p>
@@ -307,7 +307,7 @@
                 </div>
             </div>
             
-            <div class="film-reel-divider mb-16"></div>
+            <!-- <div class="film-reel-divider mb-16"></div> -->
             
             <div class="featured-project">
                 <div class="relative h-[70vh] rounded-lg overflow-hidden mb-12">
@@ -387,7 +387,7 @@
 
     <!-- About Section -->
     <section id="about" class="py-24 bg-black">
-        <div class="container mx-auto px-6">
+        <div class="mx-auto px-6 w-full">
             <h2 class="heading-font text-4xl md:text-5xl font-bold mb-16 text-center">Обо <span class="text-primary">Мне</span></h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -525,7 +525,7 @@
 
     <!-- Contact Section -->
     <section id="contact" class="py-24 bg-black">
-        <div class="container mx-auto px-6">
+        <div class="mx-auto px-6 w-full">
             <h2 class="heading-font text-4xl md:text-5xl font-bold mb-16 text-center">Остаемся на <span class="text-primary">Связи</span></h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -584,26 +584,26 @@
                 </div>
                 
                 <div>
-                    <form class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <form class="space-y-4 md:space-y-6"> <!-- Уменьшение вертикальных отступов для мобильных -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6"> <!-- Уменьшение зазоров для мобильных -->
                             <div>
-                                <label for="name" class="block mb-2 text-sm font-medium">Ваше имя</label>
-                                <input type="text" id="name" class="custom-input w-full p-3 rounded border-none focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Имя">
+                                <label for="name" class="block mb-1 md:mb-2 text-sm font-medium">Ваше имя</label>
+                                <input type="text" id="name" class="custom-input w-full p-2 md:p-3 rounded border-none focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Имя">
                             </div>
                             <div>
-                                <label for="email" class="block mb-2 text-sm font-medium">Ваша почта</label>
-                                <input type="email" id="email" class="custom-input w-full p-3 rounded border-none focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Почта">
+                                <label for="email" class="block mb-1 md:mb-2 text-sm font-medium">Ваша почта</label>
+                                <input type="email" id="email" class="custom-input w-full p-2 md:p-3 rounded border-none focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Почта">
                             </div>
                         </div>
                         
                         <div>
-                            <label for="subject" class="block mb-2 text-sm font-medium">Ваша тема</label>
-                            <input type="text" id="subject" class="custom-input w-full p-3 rounded border-none focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Тема">
+                            <label for="subject" class="block mb-1 md:mb-2 text-sm font-medium">Ваша тема</label>
+                            <input type="text" id="subject" class="custom-input w-full p-2 md:p-3 rounded border-none focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Тема">
                         </div>
                         
                         <div>
-                            <label for="message" class="block mb-2 text-sm font-medium">Ваше сообщение</label>
-                            <textarea id="message" rows="5" class="custom-input w-full p-3 rounded border-none focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Сообщение"></textarea>
+                            <label for="message" class="block mb-1 md:mb-2 text-sm font-medium">Ваше сообщение</label>
+                            <textarea id="message" rows="4" class="custom-input w-full p-2 md:p-3 rounded border-none focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Сообщение"></textarea>
                         </div>
                         
                         <div class="flex items-center mb-4">
@@ -626,7 +626,7 @@
 
     <!-- Footer -->
     <footer class="py-12 bg-black">
-        <div class="container mx-auto px-6">
+        <div class="mx-auto px-6 w-full">
             <div class="flex flex-col md:flex-row justify-between items-center mb-12">
                 <a href="#hero" class="text-white font-['Pacifico'] text-2xl mb-6 md:mb-0">prodbylelya</a>
                 
