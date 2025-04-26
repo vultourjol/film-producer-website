@@ -16,6 +16,9 @@ function deferNonEssentialScripts() {
 
 // Функции-обертки для существующего кода
 function initializeCustomCursor() {
+    // Не инициализируем курсор на мобильных устройствах
+    if (window.innerWidth <= 768) return;
+    
     // Ваш существующий код для курсора
     const cursor = document.querySelector('.custom-cursor');
     const cursorDot = document.querySelector('.custom-cursor-dot');
