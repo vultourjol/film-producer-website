@@ -487,3 +487,19 @@ input:checked + .slider:before {
 .druk-font {
     font-family: "Druk Wide Cyr";
 }
+
+
+.text-justify-mobile {
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .text-justify-mobile {
+        text-align: justify;
+        text-justify: inter-word;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        word-break: break-word;
+    }
+}
