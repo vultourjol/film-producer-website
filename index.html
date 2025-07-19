@@ -19,11 +19,12 @@
     <div class="film-grain"></div>
     <div class="custom-cursor hidden md:block"></div>
     <div class="custom-cursor-dot hidden md:block"></div>
+
     <!-- Header Navigation -->
     <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-opacity-0 bg-black">
         <div class="mx-auto px-6 w-full py-4 flex justify-between items-center">
             <a href="#hero" class="text-white font-['Pacifico'] text-2xl">prodbylelya</a>
-            
+
             <div class="hamburger-menu md:hidden flex flex-col justify-center items-center w-10 h-10 cursor-pointer z-50">
                 <span class="bar w-6 h-0.5 bg-white mb-1.5 transition-all"></span>
                 <span class="bar w-6 h-0.5 bg-white mb-1.5 transition-all"></span>
@@ -34,6 +35,7 @@
                 <a href="#portfolio" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1">Портфолио</a>
                 <a href="#showcase" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1">Новое</a>
                 <a href="#about" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1">Обо мне</a>
+                <a href="#team" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1">Команда</a>
                 <a href="#contact" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1">Контакты</a>
             </nav>
             
@@ -42,6 +44,7 @@
                     <a href="#portfolio" class="text-white hover:text-primary transition-colors text-2xl uppercase tracking-wider">Портфолио</a>
                     <a href="#showcase" class="text-white hover:text-primary transition-colors text-2xl uppercase tracking-wider">Новое</a>
                     <a href="#about" class="text-white hover:text-primary transition-colors text-2xl uppercase tracking-wider">Обо мне</a>
+                    <a href="#team" class="text-white hover:text-primary transition-colors text-2xl uppercase tracking-wider">Команда</a>
                     <a href="#contact" class="text-white hover:text-primary transition-colors text-2xl uppercase tracking-wider">Контакты</a>
                 </nav>
             </div>
@@ -50,13 +53,10 @@
 
     <!-- Hero Section -->
     <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-        <video class="video-bg" autoplay muted loop playsinline>
-            <source src="https://readdy.ai/api/search-image?query=cinematic%2520film%2520reel%2520montage%2520with%2520dramatic%2520lighting%2520showing%2520various%2520film%2520scenes%2520with%2520rich%2520colors%2520and%2520contrast%2520professional%2520cinematography%2520with%2520smooth%2520camera%2520movements%2520film%2520grain%2520texture%2520overlaid%2520on%2520footage&width=1920&height=1080&seq=1&orientation=landscape" type="video/mp4">
-        </video>
         <div class="video-overlay"></div>
         
         <div class="mx-auto px-6 w-full z-10 text-center">
-            <h1 class="heading-font text-4xl md:text-5xl font-bold mb-6 typewriter inline-block">PRODBYLELYA</h1>
+            <h1 class="heading-font text-4xl md:text-8xl font-bold mb-6 typewriter inline-block">PRODBYLELYA</h1>
             <p class="text-xl md:text-2xl text-white opacity-80 mb-12 max-w-2xl mx-auto"></p>
             
             <div class="flex justify-center space-x-16 mb-16">
@@ -80,9 +80,9 @@
     </section>
 
     <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="py-24 bg-black">
+    <section id="portfolio" class="py-12 bg-black">
         <div class="container mx-auto px-6 w-full">
-            <h2 class="heading-font text-4xl md:text-5xl font-bold mb-16 text-center">Мои <span class="text-primary">Проекты</span></h2>
+            <h2 class="heading-font text-4xl md:text-5xl font-bold text-center">Мои <span class="text-primary">Проекты</span></h2>
             <!-- Swiper elements navigation -->
             <div class="flex justify-between items-center mb-8">
                 <div class="swiper-button-prev-custom w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
@@ -95,7 +95,7 @@
             </div>
     
             <!-- Swiper -->
-            <div class="swiper project-swiper pt-10">
+            <div class="swiper project-swiper pt-3">
                 <div class="swiper-wrapper">
                     <!-- Project 1 -->
                     <div class="swiper-slide">
@@ -219,12 +219,12 @@
     </section>
 
     <!-- Project Showcase Section -->
-    <section id="showcase" class="py-24 bg-black">
+    <section id="showcase" class="py-12 bg-black">
         <div class="container mx-auto px-6 w-full">
             <h2 class="heading-font text-4xl md:text-5xl font-bold mb-16 text-center">Крайние <span class="text-primary">Проекты</span></h2>
                         
-            <div class="featured-project mb-32">
-                <div class="relative h-[70vh] rounded-lg overflow-hidden mb-12">
+            <div class="featured-project mb-6">
+                <div class="relative h-[70vh] rounded-lg overflow-hidden mb-6">
                     <picture>
                         <source srcset="source/rukingg.webp" media="(max-width: 480)" type="image/webp">
                         <source srcset="source/rukingg.webp" media="(max-width: 720)" type="image/webp">
@@ -303,11 +303,9 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="film-reel-divider mb-16"></div>
-            
+                        
             <div class="featured-project">
-                <div class="relative h-[70vh] rounded-lg overflow-hidden mb-12">
+                <div class="relative h-[70vh] rounded-lg overflow-hidden mb-6">
                     <picture>
                         <source srcset="source/coolnumbers.webp" media="(max-width: 480)" type="image/webp">
                         <source srcset="source/coolnumbers.webp" media="(max-width: 720)" type="image/webp">
@@ -330,7 +328,7 @@
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div>
+                    <div">
                         <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
                         <p class="opacity-80">Авторы сценария - Глеб Лабковский, Ирина Глебова, Виталий Хачатурянц</p>
                         <p class="opacity-80">Режиссёр постановщик - Ирина Глебова</p>
@@ -384,7 +382,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-24 bg-black">
+    <section id="about" class="py-6 bg-black">
         <div class="container mx-auto px-6 w-full">
             <h2 class="heading-font text-4xl md:text-5xl font-bold mb-16 text-center">Обо <span class="text-primary">Мне</span></h2>
             
@@ -461,7 +459,7 @@
                 </div>
             </div>
             
-            <div class="mt-24">
+            <div class="mt-16">
                 <h3 class="text-2xl font-bold mb-8 text-center">Моё оборудование</h3>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -521,133 +519,138 @@
         </div>
     </section>
 
+    <!-- Team Section -->
+    <section id="team" class="py-6 bg-black">
+        <div class="container mx-auto px-6 w-full">
+            <h2 class="heading-font text-4xl md:text-5xl font-bold text-center">Моя <span class="text-primary">Команда</span></h2>
+            <!-- Swiper elements navigation -->
+            <div class="flex justify-between items-center mb-8">
+                <div class="swiper-button-prev-team w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
+                    <i class="ri-arrow-left-s-line text-white text-2xl"></i>
+                </div>
+                <div class="swiper-pagination-team"></div>
+                <div class="swiper-button-next-team w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
+                    <i class="ri-arrow-right-s-line text-white text-2xl"></i>
+                </div>
+            </div>
+    
+            <!-- Team Swiper -->
+            <div class="swiper team-swiper pt-3">
+                <div class="swiper-wrapper">
+                    <!-- Team Member 1 -->
+                    <div class="swiper-slide">
+                        <div class="team-card rounded overflow-hidden relative h-160" data-member-id="1">
+                            <picture>
+                                <source srcset="source/anna.png" media="(max-width: 600px)" type="image/webp">
+                                <source srcset="source/anna.png" media="(max-width: 1200px)" type="image/webp">
+                                <source srcset="source/anna.png" type="image/webp">
+                                <img src="source/anna.png" loading="lazy" alt="Анна Николаева" 
+                                     class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                            </picture>                     
+                            <div class="team-overlay absolute inset-0 flex flex-col justify-end p-6">
+                                <h3 class="text-xl font-bold mb-2">Анна Николаева</h3>
+                                <p class="text-sm opacity-80">Исполнительный продюсер • Режиссёр монтажа</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 2 -->
+                    <div class="swiper-slide">
+                        <div class="team-card rounded overflow-hidden relative h-160" data-member-id="2">
+                            <picture>
+                                <source srcset="source/egor.png" media="(max-width: 600px)" type="image/webp">
+                                <source srcset="source/egor.png" media="(max-width: 1200px)" type="image/webp">
+                                <source srcset="source/egor.png" type="image/webp">
+                                <img src="source/egor.png" loading="lazy" alt="Егор Нуруллин" 
+                                     class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                            </picture>                     
+                            <div class="team-overlay absolute inset-0 flex flex-col justify-end p-6">
+                                <h3 class="text-xl font-bold mb-2">Егор Нуруллин</h3>
+                                <p class="text-sm opacity-80">Технический директор</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                <div class="swiper-pagination-team mt-6 md:hidden"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="py-24 bg-black">
         <div class="container mx-auto px-6 w-full">
             <h2 class="heading-font text-4xl md:text-5xl font-bold mb-16 text-center">Остаемся на <span class="text-primary">Связи</span></h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="text-2xl font-bold mb-6">Давайте создадим что-то потрясающее</h3>
-                    <p class="opacity-80 mb-8">Я всегда открыта для обсуждения новых проектов, творческих идей или возможностей стать частью вашего видения.</p>
-                    
-                    <div class="space-y-6 mb-8">
-                        <div class="flex items-start">
-                            <div class="w-10 h-10 flex items-center justify-center mr-4 text-primary">
-                                <i class="ri-map-pin-line text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold mb-1">Локация</h4>
-                                <p class="opacity-80">Россия, Москва</p>
-                            </div>
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-2xl font-bold mb-6">Давайте создадим что-то потрясающее</h3>
+                <p class="opacity-80 mb-12">Я всегда открыта для обсуждения новых проектов, творческих идей или возможностей стать частью вашего видения.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 flex items-center justify-center mb-4 text-primary bg-black bg-opacity-30 rounded-full">
+                            <i class="ri-map-pin-line text-2xl"></i>
                         </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-10 h-10 flex items-center justify-center mr-4 text-primary">
-                                <i class="ri-mail-line text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold mb-1">Почта</h4>
-                                <p class="opacity-80 cursor-pointer hover:text-primary transition-colors flex items-center" 
-                                    id="emailCopy" onclick="copyToClipboard('ab.kozlovskaya@gmail.com', this)">
-                                    ab.kozlovskaya@gmail.com
-                                    <i class="ri-file-copy-line ml-2 text-sm"></i>
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-10 h-10 flex items-center justify-center mr-4 text-primary">
-                                <i class="ri-phone-line text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold mb-1">Телефон</h4>
-                                <p class="opacity-80 cursor-pointer hover:text-primary transition-colors flex items-center" 
-                                    id="phoneCopy" onclick="copyToClipboard('+79854377388', this)">
-                                    +7 (985) 437-73-88
-                                    <i class="ri-file-copy-line ml-2 text-sm"></i>
-                                </p>
-                            </div>
-                        </div>
+                        <h4 class="font-bold mb-2">Локация</h4>
+                        <p class="opacity-80">Россия, Москва</p>
                     </div>
-                    
-                    <div class="flex space-x-4">
-                        <a href="https://www.instagram.com/prodbylelya/" class="w-10 h-10 flex items-center justify-center bg-black bg-opacity-30 rounded-full social-icon">
-                            <i class="ri-instagram-line text-white"></i>
-                        </a>
-                        <a href="https://t.me/prodbylelya" class="w-10 h-10 flex items-center justify-center bg-black bg-opacity-30 rounded-full social-icon">
-                            <i class="ri-telegram-line text-white"></i>
-                        </a>
+
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 flex items-center justify-center mb-4 text-primary bg-black bg-opacity-30 rounded-full">
+                            <i class="ri-mail-line text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Почта</h4>
+                        <p class="opacity-80 cursor-pointer hover:text-primary transition-colors flex items-center" 
+                            id="emailCopy" onclick="copyToClipboard('ab.kozlovskaya@gmail.com', this)">
+                            ab.kozlovskaya@gmail.com
+                            <i class="ri-file-copy-line ml-2 text-sm"></i>
+                        </p>
+                    </div>
+                        
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 flex items-center justify-center mb-4 text-primary bg-black bg-opacity-30 rounded-full">
+                            <i class="ri-phone-line text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Телефон</h4>
+                        <p class="opacity-80 cursor-pointer hover:text-primary transition-colors flex items-center" 
+                            id="phoneCopy" onclick="copyToClipboard('+79854377388', this)">
+                            +7 (985) 437-73-88
+                            <i class="ri-file-copy-line ml-2 text-sm"></i>
+                        </p>                            
                     </div>
                 </div>
-                
-                <div>
-                    <form class="space-y-4 md:space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                            <div>
-                                <label for="name" class="block mb-1 md:mb-2 text-sm font-medium">Ваше имя</label>
-                                <input type="text" id="name" class="custom-input w-full p-2 md:p-3 rounded border-none focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Имя">
-                            </div>
-                            <div>
-                                <label for="email" class="block mb-1 md:mb-2 text-sm font-medium">Ваша почта</label>
-                                <input type="email" id="email" class="custom-input w-full p-2 md:p-3 rounded border-none focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Почта">
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label for="subject" class="block mb-1 md:mb-2 text-sm font-medium">Ваша тема</label>
-                            <input type="text" id="subject" class="custom-input w-full p-2 md:p-3 rounded border-none focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Тема">
-                        </div>
-                        
-                        <div>
-                            <label for="message" class="block mb-1 md:mb-2 text-sm font-medium">Ваше сообщение</label>
-                            <textarea id="message" rows="4" class="custom-input w-full p-2 md:p-3 rounded border-none focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Сообщение"></textarea>
-                        </div>
-                        
-                        <div class="flex items-center mb-4">
-                            <label class="switch mr-3">
-                                <input type="checkbox">
-                                <span class="slider"></span>
-                            </label>
-                            <span class="text-sm opacity-80">Получать от меня рассылку</span>
-                        </div>
-                        
-                        <button type="submit" class="px-6 py-3 bg-primary text-white rounded-button hover:bg-opacity-90 transition-all flex items-center whitespace-nowrap">
-                            <i class="ri-send-plane-line mr-2"></i>
-                            Отправить сообщение
-                        </button>
-                    </form>
+
+                <div class="flex justify-center">
+                    <a href="https://t.me/prodbylelya" class="w-16 h-16 flex items-center justify-center bg-black bg-opacity-30 rounded-full social-icon hover:bg-primary transition-colors">
+                        <i class="ri-telegram-line text-white text-5xl"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 bg-black">
+    <footer class="py-8 bg-black">
         <div class="mx-auto px-6 w-full">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-7">
                 <a href="#hero" class="text-white font-['Pacifico'] text-2xl mb-6 md:mb-0">prodbylelya</a>
                 
                 <nav class="flex flex-wrap justify-center gap-x-8 gap-y-4">
                     <a href="#portfolio" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Портфолио</a>
                     <a href="#showcase" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Новое</a>
                     <a href="#about" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Обо мне</a>
+                    <a href="#team" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Команда</a>
                     <a href="#contact" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Контакты</a>
                 </nav>
             </div>
             
             <div class="border-t border-white border-opacity-10 pt-8">
-                <div class="flex flex-col md:flex-row justify-between mb-5">
-                    <p class="text-sm opacity-60 mb-4 md:mb-0">© 2025 Алёна Козловская. Все права защищены.</p>
+                <div class="flex justify-between items-center">
+                    <p class="text-sm opacity-60">created by <a href="https://github.com/vultourjol" class="hover:text-primary transition-colors">vultourjol</a></p>
                     
                     <div class="flex space-x-6">
-                        <a href="#" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Политика конфиденциальности</a>
-                        <a href="#" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Условия обслуживания</a>
-                        <a href="#" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Куки</a>
+                        <p class="text-sm opacity-60"><a href="source/privacy-policy.pdf" class="hover:text-primary transition-colors">Политика конфиденциальности</a></p>
+                        <p class="text-sm opacity-60"><a href="https://policies.google.com/terms?hl=ru" class="hover:text-primary transition-colors">Условия использования</a></p>
                     </div>
-                </div>
-                <div>
-                    <p class="text-sm opacity-60">created by <a href="https://github.com/vultourjol" class="hover:text-primary transition-colors">vultourjol</a></p>
                 </div>
             </div>
         </div>
@@ -968,6 +971,104 @@
                 <div class="mb-8">
                     <h4 class="text-xl font-bold mb-4">За кадром</h4>
                     <p class="opacity-80">Съемки проходили в Москве в течение 5 дней. Несмотря на ограниченный бюджет, фильм получил признание на нескольких фестивалях короткометражного кино.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Member Modals -->
+    <!-- Team Member 1 Modal - Анна Николаева -->
+    <div class="team-modal-content hidden" id="modal-member-1">
+        <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[90vh] overflow-y-auto relative z-50">
+            <button class="absolute top-4 right-4 text-white hover:text-primary transition-colors modal-close">
+                <i class="ri-close-line text-3xl"></i>
+            </button>
+            
+            <div class="relative h-[50vh]">
+                <img src="source/anna.png" alt="Анна Николаева" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-8">
+                    <h3 class="heading-font text-3xl md:text-4xl font-bold mb-4">Анна Николаева</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Исполнительный продюсер</span>
+                        <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Менеджер проектов</span>
+                        <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">5+ лет опыта</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="p-8">
+                <p class="text-lg mb-8">Анна - опытный исполнительный продюсер с более чем 5-летним опытом работы в индустрии. Она специализируется на управлении проектами и координации съёмочных процессов.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                    <div>
+                        <h4 class="text-xl font-bold mb-4">Опыт и навыки</h4>
+                        <p class="opacity-80 mb-2">• Управление бюджетом и ресурсами</p>
+                        <p class="opacity-80 mb-2">• Координация съёмочной группы</p>
+                        <p class="opacity-80 mb-2">• Планирование производства</p>
+                        <p class="opacity-80 mb-2">• Работа с локациями</p>
+                        <p class="opacity-80 mb-2">• Контроль качества</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-4">Проекты</h4>
+                        <p class="opacity-80 mb-2">• "Российский король рок-н-ролла" (2025)</p>
+                        <p class="opacity-80 mb-2">• "Крутые номера" (2025)</p>
+                        <p class="opacity-80 mb-2">• "Славянка" (2025)</p>
+                        <p class="opacity-80 mb-2">• "Shitty Story" (2024)</p>
+                    </div>
+                </div>
+                
+                <div class="mb-8">
+                    <h4 class="text-xl font-bold mb-4">Образование</h4>
+                    <p class="opacity-80">Высшее образование по специальности "Продюсерство", специализация на управлении кинопроектами и координации производства.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Member 2 Modal - Егор Нуруллин -->
+    <div class="team-modal-content hidden" id="modal-member-2">
+        <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[90vh] overflow-y-auto relative z-50">
+            <button class="absolute top-4 right-4 text-white hover:text-primary transition-colors modal-close">
+                <i class="ri-close-line text-3xl"></i>
+            </button>
+            
+            <div class="relative h-[50vh]">
+                <img src="source/egor.png" alt="Егор Нуруллин" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-8">
+                    <h3 class="heading-font text-3xl md:text-4xl font-bold mb-4">Егор Нуруллин</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Технический директор</span>
+                        <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">5+ лет опыта</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="p-8">
+                <p class="text-lg mb-8">Егор — опытный технический специалист и программист с более чем 5-летним стажем работы в киноиндустрии. Специализируется на разработке и внедрении технических решений для процессов постпродакшена и управления видеоконтентом. Объединяет знания в программировании, работе с видеоданными и современными web-технологиями, помогая команде ускорять монтаж и автоматизировать рутинные задачи.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                    <div>
+                        <h4 class="text-xl font-bold mb-4">Опыт и навыки</h4>
+                        <p class="opacity-80 mb-2">• Бэкап и организация отснятого материала</p>
+                        <p class="opacity-80 mb-2">• Конвертация и транскодинг видеофайлов</p>
+                        <p class="opacity-80 mb-2">• Работа с базами данных (PostgreSQL, MongoDB)</p>
+                        <p class="opacity-80 mb-2">• Генерация контента, анализ сцен</p>
+                        <p class="opacity-80 mb-2">• Frontend: React, Vue, TypeScript</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-4">Проекты</h4>
+                        <p class="opacity-80 mb-2">• "Российский король рок-н-ролла" (2025)</p>
+                        <p class="opacity-80 mb-2">• "Крутые номера" (2025)</p>
+                        <p class="opacity-80 mb-2">• "Славянка" (2025)</p>
+                        <p class="opacity-80 mb-2">• "Shitty Story" (2024)</p>
+                    </div>
+                </div>
+                
+                <div class="mb-8">
+                    <h4 class="text-xl font-bold mb-4">Образование</h4>
+                    <p class="opacity-80">Среднее профессиональное образование по специальности "Информационные системы и программирование". Среднее общее образование по специальности "Цифровые системы и технологии обмена данными".</p>
                 </div>
             </div>
         </div>

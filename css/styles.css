@@ -393,3 +393,74 @@ input:checked + .slider:before {
     }
 }
 
+/* Team Section Styles */
+.team-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.team-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.team-card:hover .team-overlay {
+    opacity: 1;
+}
+
+/* Team Modal Styles */
+.team-modal-content {
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .team-modal-content {
+        width: 95vw !important;
+        max-height: 95vh !important;
+    }
+    
+    .team-modal-content .heading-font {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* Swiper navigation for team */
+.swiper-button-next-team,
+.swiper-button-prev-team {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.swiper-button-next-team:hover,
+.swiper-button-prev-team:hover {
+    background: var(--accent-color);
+}
+
+.swiper-pagination-team {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.swiper-pagination-team .swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 1;
+    margin: 0 5px;
+}
+
+.swiper-pagination-team .swiper-pagination-bullet-active {
+    background: var(--accent-color);
+}
+

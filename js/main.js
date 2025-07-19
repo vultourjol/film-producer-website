@@ -1,25 +1,19 @@
-// Оптимизация загрузки для мобильных устройств
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || window.innerWidth <= 768;
 
-// Функция отложенного запуска нужной функциональности
 function deferNonEssentialScripts() {
     if (isMobile) {
         // Для мобильных устройств приоритизируем скорость загрузки
         window.addEventListener('load', initializeCustomCursor);
         window.addEventListener('load', initializeParallaxEffects);
     } else {
-        // Для десктопов сразу инициализируем все эффекты
         initializeCustomCursor();
         initializeParallaxEffects();
     }
 }
 
-// Функции-обертки для существующего кода
 function initializeCustomCursor() {
-    // Не инициализируем курсор на мобильных устройствах
     if (window.innerWidth <= 768) return;
     
-    // Ваш существующий код для курсора
     const cursor = document.querySelector('.custom-cursor');
     const cursorDot = document.querySelector('.custom-cursor-dot');
     
@@ -49,7 +43,6 @@ function initializeCustomCursor() {
 }
 
 function initializeParallaxEffects() {
-    // Parallax effect
     const parallaxElements = document.querySelectorAll('.parallax');
     window.addEventListener('scroll', function() {
         if (window.innerWidth <= 640) return; // Отключаем эффект на мобильных
@@ -67,11 +60,9 @@ function initializeParallaxEffects() {
     });
 }
 
-// Запускаем функцию отложенной загрузки
 deferNonEssentialScripts();
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Header scroll effect
     const header = document.querySelector('header');
     window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
@@ -81,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
             
-    // Mobile menu toggle
     const hamburger = document.querySelector('.hamburger-menu');
     const mobileMenu = document.querySelector('.mobile-menu');
             
@@ -92,7 +82,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.toggle('overflow-hidden');
     });
             
-    // Mobile menu links close menu when clicked
     const mobileLinks = document.querySelectorAll('.mobile-menu a');
     mobileLinks.forEach(link => {
         link.addEventListener('click', function() {
@@ -103,7 +92,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
             
-    // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -120,8 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-            
-    // Back to top button
+
     const backToTop = document.querySelector('.back-to-top');
     backToTop.addEventListener('click', function(e) {
         e.preventDefault();
@@ -130,8 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
             behavior: 'smooth'
         });
     });
-            
-    // Parallax effect
+
     const parallaxElements = document.querySelectorAll('.parallax');
     window.addEventListener('scroll', function() {
         parallaxElements.forEach(element => {
@@ -146,8 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-        
-// Custom cursor
+
 document.addEventListener('DOMContentLoaded', function() {
     const cursor = document.querySelector('.custom-cursor');
     const cursorDot = document.querySelector('.custom-cursor-dot');
@@ -161,8 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
         cursorDot.style.left = e.clientX + 'px';
         cursorDot.style.top = e.clientY + 'px';
     });
-            
-    // Cursor hover effect
+
     const links = document.querySelectorAll('a, button, input, textarea, .project-card');
     links.forEach(link => {
         link.addEventListener('mouseenter', function() {
@@ -179,12 +163,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function copyToClipboard(text, element) {
     navigator.clipboard.writeText(text).then(function() {
-        // Temporarily changing the content for feedback
         const originalContent = element.innerHTML;
         element.innerHTML = 'Скопировано! <i class="ri-check-line ml-2 text-sm"></i>';
         element.classList.add('text-primary');
                 
-        // After 2 seconds return the original content.
         setTimeout(function() {
             element.innerHTML = originalContent;
             element.classList.remove('text-primary');
@@ -194,7 +176,6 @@ function copyToClipboard(text, element) {
     });
 }
 
-// Project Modal Functions
 document.addEventListener('DOMContentLoaded', function() {
     const projectCards = document.querySelectorAll('.project-card');
     const modalBackdrop = document.getElementById('modal-backdrop');
@@ -202,7 +183,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalCloseButtons = document.querySelectorAll('.modal-close');
     const body = document.body;
     
-    // Open modal when clicking on project card
     projectCards.forEach((card, index) => {
         card.addEventListener('click', function() {
             const modalId = `modal-project-${index + 1}`;
@@ -213,7 +193,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 modal.classList.remove('hidden');
                 body.classList.add('overflow-hidden');
                 
-                // Add entrance animation
                 setTimeout(() => {
                     modalBackdrop.classList.add('opacity-100');
                     modal.classList.add('scale-100');
@@ -222,15 +201,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Close modal when clicking on close button
     modalCloseButtons.forEach(button => {
         button.addEventListener('click', closeAllModals);
     });
     
-    // Close modal when clicking outside the modal content
     modalOverlay.addEventListener('click', closeAllModals);
     
-    // Close modal with Escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             closeAllModals();
@@ -248,43 +224,34 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Initializing the project slider
 document.addEventListener('DOMContentLoaded', function() {
-    // Initializing Swiper
     const projectSwiper = new Swiper('.project-swiper', {
-        // Basic parameters
         slidesPerView: 1,
         spaceBetween: 20,
         grabCursor: true,
         
-        // Adaptive design
         breakpoints: {
-            // Screen width >= 640px
             640: {
                 slidesPerView: 2,
                 spaceBetween: 20
             },
-            // Screen width >= 1024px
             1024: {
                 slidesPerView: 3,
                 spaceBetween: 30
             }
         },
         
-        // Pagination
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
         },
         
-        // Navigation
         navigation: {
             nextEl: '.swiper-button-next-custom',
             prevEl: '.swiper-button-prev-custom',
         }
     });
     
-    // Adding click event to project cards
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach((card) => {
         const projectId = card.getAttribute('data-project-id');
@@ -298,7 +265,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 modal.classList.remove('hidden');
                 document.body.classList.add('overflow-hidden');
                 
-                // Add entrance animation
                 setTimeout(() => {
                     modalBackdrop.classList.add('opacity-100');
                     modal.classList.add('scale-100');
@@ -308,9 +274,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Улучшения для мобильных устройств
 document.addEventListener('DOMContentLoaded', function() {
-    // Закрытие мобильного меню при повороте устройства
     window.addEventListener('orientationchange', function() {
         const hamburger = document.querySelector('.hamburger-menu');
         const mobileMenu = document.querySelector('.mobile-menu');
@@ -323,7 +287,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Улучшение работы свайпера на мобильных устройствах
     if (window.innerWidth <= 640) {
         const projectSwiper = document.querySelector('.project-swiper').swiper;
         if (projectSwiper) {
@@ -333,7 +296,92 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Упрощение анимации на маломощных устройствах
+    const teamSwiper = new Swiper('.team-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        grabCursor: true,
+        
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            }
+        },
+        
+        pagination: {
+            el: '.swiper-pagination-team',
+            clickable: true,
+        },
+        
+        navigation: {
+            nextEl: '.swiper-button-next-team',
+            prevEl: '.swiper-button-prev-team',
+        }
+    });
+    
+    const teamCards = document.querySelectorAll('.team-card');
+    teamCards.forEach((card) => {
+        const memberId = card.getAttribute('data-member-id');
+        card.addEventListener('click', function() {
+            const modalId = `modal-member-${memberId}`;
+            const modal = document.getElementById(modalId);
+            
+            if (modal) {
+                const modalBackdrop = document.getElementById('modal-backdrop');
+                modalBackdrop.classList.remove('hidden');
+                modal.classList.remove('hidden');
+                
+                document.querySelectorAll('.team-modal-content').forEach(otherModal => {
+                    if (otherModal !== modal) {
+                        otherModal.classList.add('hidden');
+                    }
+                });
+                
+                document.body.classList.add('overflow-hidden');
+            }
+        });
+    });
+    
+    const allModalCloseButtons = document.querySelectorAll('.modal-close');
+    allModalCloseButtons.forEach((closeBtn) => {
+        closeBtn.addEventListener('click', function() {
+            const modalBackdrop = document.getElementById('modal-backdrop');
+            modalBackdrop.classList.add('hidden');
+            
+            document.querySelectorAll('.project-modal-content').forEach(modal => {
+                modal.classList.add('hidden');
+            });
+            
+            document.querySelectorAll('.team-modal-content').forEach(modal => {
+                modal.classList.add('hidden');
+            });
+            
+            document.body.classList.remove('overflow-hidden');
+        });
+    });
+    
+    const modalOverlay = document.getElementById('modal-overlay');
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', function() {
+            const modalBackdrop = document.getElementById('modal-backdrop');
+            modalBackdrop.classList.add('hidden');
+            
+            document.querySelectorAll('.project-modal-content').forEach(modal => {
+                modal.classList.add('hidden');
+            });
+            
+            document.querySelectorAll('.team-modal-content').forEach(modal => {
+                modal.classList.add('hidden');
+            });
+            
+            document.body.classList.remove('overflow-hidden');
+        });
+    }
+    
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
         window.innerWidth <= 640) {
         document.querySelectorAll('.floating').forEach(element => {
