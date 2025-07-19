@@ -91,6 +91,11 @@ body {
         
 .hamburger-menu {
     transition: all 0.3s ease-in-out;
+    z-index: 60; /* Поверх меню */
+}
+
+.hamburger-menu .bar {
+    transition: all 0.3s ease-in-out;
 }
         
 .hamburger-menu.active .bar:nth-child(1) {
@@ -103,6 +108,26 @@ body {
         
 .hamburger-menu.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Overlay для мобильного меню */
+.mobile-menu::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.mobile-menu:not(.translate-x-full)::before {
+    opacity: 1;
+    visibility: visible;
 }
         
 .project-card {
@@ -302,7 +327,6 @@ input:checked + .slider:before {
     transform: scale(1.1);
 }
 
-/* Adaptatiom for mobile */
 @media (max-width: 640px) {
     .swiper-button-next-custom,
     .swiper-button-prev-custom {
@@ -310,24 +334,15 @@ input:checked + .slider:before {
     }
 }
 
-/* Смартфоны (до 640px) */
 @media (max-width: 640px) {
-    /* Стили для мобильных устройств */
   }
   
-  /* Планшеты (от 641px до 1024px) */
   @media (min-width: 641px) and (max-width: 1024px) {
-    /* Стили для планшетов */
   }
   
-  /* Десктопы (больше 1024px) */
   @media (min-width: 1025px) {
-    /* Стили для больших экранов */
   }
 
-  /* ...existing code... */
-
-/* Улучшенная адаптивность для мобильных устройств */
 @media (max-width: 640px) {
     .typewriter {
       font-size: 2rem;
@@ -361,7 +376,6 @@ input:checked + .slider:before {
     }
   }
   
-  /* Планшеты (от 641px до 1024px) */
   @media (min-width: 641px) and (max-width: 1024px) {
     .featured-project .heading-font {
       font-size: 2.25rem !important;
@@ -378,7 +392,6 @@ input:checked + .slider:before {
     }
   }
   
-  /* Исправление для модальных окон на мобильных устройствах */
     @media (max-width: 640px) {
     .project-modal-content .p-8 {
       padding: 1rem !important;
@@ -393,7 +406,6 @@ input:checked + .slider:before {
     }
 }
 
-/* Team Section Styles */
 .team-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
@@ -414,7 +426,6 @@ input:checked + .slider:before {
     opacity: 1;
 }
 
-/* Team Modal Styles */
 .team-modal-content {
     position: relative;
 }
@@ -430,7 +441,6 @@ input:checked + .slider:before {
     }
 }
 
-/* Swiper navigation for team */
 .swiper-button-next-team,
 .swiper-button-prev-team {
     background: rgba(0, 0, 0, 0.5);
@@ -464,3 +474,16 @@ input:checked + .slider:before {
     background: var(--accent-color);
 }
 
+@font-face {
+    font-family: "Druk Wide Cyr";
+    src: url("https://db.onlinewebfonts.com/t/e7fa3e0f70e1466b2f73ee1ac39c8c30.eot");
+    src: url("https://db.onlinewebfonts.com/t/e7fa3e0f70e1466b2f73ee1ac39c8c30.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/e7fa3e0f70e1466b2f73ee1ac39c8c30.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/e7fa3e0f70e1466b2f73ee1ac39c8c30.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/e7fa3e0f70e1466b2f73ee1ac39c8c30.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/e7fa3e0f70e1466b2f73ee1ac39c8c30.svg#Druk Wide Cyr")format("svg");
+}
+
+.druk-font {
+    font-family: "Druk Wide Cyr";
+}

@@ -77,17 +77,24 @@ document.addEventListener('DOMContentLoaded', function() {
             
     hamburger.addEventListener('click', function() {
         hamburger.classList.toggle('active');
-        mobileMenu.classList.toggle('hidden');
-        mobileMenu.classList.toggle('flex');
-        document.body.classList.toggle('overflow-hidden');
+        
+        // Анимация слайда справа
+        if (mobileMenu.classList.contains('translate-x-full')) {
+            // Открыть меню
+            mobileMenu.classList.remove('translate-x-full');
+            document.body.classList.add('overflow-hidden');
+        } else {
+            // Закрыть меню
+            mobileMenu.classList.add('translate-x-full');
+            document.body.classList.remove('overflow-hidden');
+        }
     });
-            
+
     const mobileLinks = document.querySelectorAll('.mobile-menu a');
     mobileLinks.forEach(link => {
         link.addEventListener('click', function() {
             hamburger.classList.remove('active');
-            mobileMenu.classList.add('hidden');
-            mobileMenu.classList.remove('flex');
+            mobileMenu.classList.add('translate-x-full');
             document.body.classList.remove('overflow-hidden');
         });
     });
@@ -281,8 +288,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (hamburger.classList.contains('active')) {
             hamburger.classList.remove('active');
-            mobileMenu.classList.add('hidden');
-            mobileMenu.classList.remove('flex');
+            mobileMenu.classList.add('translate-x-full');
             document.body.classList.remove('overflow-hidden');
         }
     });
@@ -387,5 +393,18 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.floating').forEach(element => {
             element.style.animationDuration = '0s';
         });
+    }
+});
+
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    const scrollPosition = window.scrollY;
+    
+    if (scrollPosition > 100) {
+        header.classList.remove('-translate-y-full');
+        header.classList.add('translate-y-0', 'bg-opacity-90');
+    } else {
+        header.classList.add('-translate-y-full');
+        header.classList.remove('translate-y-0', 'bg-opacity-90');
     }
 });
