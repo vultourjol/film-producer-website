@@ -447,23 +447,40 @@ html {
     touch-action: pan-y;
     user-select: none;
     -webkit-user-select: none;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    will-change: transform, opacity;
 }
 
 .project-modal-content:active {
     cursor: grabbing;
 }
 
+.team-modal-content {
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    will-change: transform, opacity;
+}
+
+.team-modal-content:active {
+    cursor: grabbing;
+}
+
+/* Индикатор свайпа для мобильных устройств */
 @media (max-width: 768px) {
-    .project-modal-content::before {
+    .project-modal-content::before,
+    .team-modal-content::before {
         content: '';
         position: absolute;
-        top: 8px;
+        top: 12px;
         left: 50%;
         transform: translateX(-50%);
         width: 40px;
         height: 4px;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: var(--indicator-color, rgba(255, 255, 255, 0.3));
         border-radius: 2px;
         z-index: 60;
+        transition: background-color 0.2s ease;
     }
 }

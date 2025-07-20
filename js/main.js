@@ -162,6 +162,10 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelectorAll(".project-modal-content, .team-modal-content").forEach(modal => {
             modal.classList.add("hidden");
             modal.classList.remove("opacity-100", "scale-100"); 
+            // Сбрасываем индикатор при закрытии
+            if (window.innerWidth <= 768) {
+                modal.style.removeProperty('--indicator-color');
+            }
         });
         if (modalBackdrop) {
             modalBackdrop.classList.add("hidden");
@@ -300,23 +304,44 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     let touchStartY = 0;
+    let touchStartX = 0;
     let touchEndY = 0;
     let isDragging = false;
-    let initialModalTransform = 0;
+    let canClose = false;
+    let modalContent = null;
 
     function handleTouchStart(e) {
         touchStartY = e.touches[0].clientY;
+        touchStartX = e.touches[0].clientX;
         isDragging = true;
-        initialModalTransform = 0;
+        modalContent = e.currentTarget;
+        
+        // Находим прокручиваемый контейнер внутри модального окна
+        const scrollableContainer = modalContent.querySelector('div[class*="overflow-y-auto"]');
+        const isAtTop = scrollableContainer ? scrollableContainer.scrollTop === 0 : modalContent.scrollTop === 0;
+        const touchFromTop = touchStartY < 100; // касание в верхней части экрана (первые 100px)
+        
+        canClose = isAtTop && touchFromTop;
+        
+        // Визуальная обратная связь - меняем цвет индикатора при возможности закрытия
+        if (canClose && window.innerWidth <= 768) {
+            modalContent.style.setProperty('--indicator-color', 'rgba(234, 161, 36, 0.8)');
+        }
     }
 
     function handleTouchMove(e) {
-        if (!isDragging) return;
+        if (!isDragging || !canClose) return;
         
         touchEndY = e.touches[0].clientY;
+        const touchCurrentX = e.touches[0].clientX;
         const deltaY = touchEndY - touchStartY;
+        const deltaX = touchCurrentX - touchStartX;
+        
+        // Проверяем, что это вертикальный свайп вниз
+        if (Math.abs(deltaX) > Math.abs(deltaY)) return;
         
         if (deltaY > 0) {
+            e.preventDefault(); // Предотвращаем скролл страницы
             const modal = e.currentTarget;
             const translateY = Math.min(deltaY, 300); // Limit max translate
             modal.style.transform = `translateY(${translateY}px)`;
@@ -339,7 +364,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const modal = e.currentTarget;
         const backdrop = document.getElementById('modal-backdrop');
         
-        if (deltaY > 100) {
+        if (canClose && deltaY > 150) { // Закрываем только если разрешено и свайп больше 150px
             // Animate close
             modal.style.transition = 'transform 0.3s ease-out, opacity 0.3s ease-out';
             modal.style.transform = 'translateY(100vh)';
@@ -361,6 +386,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }, 300);
         } else {
+            // Возвращаем модальное окно в исходное положение
             modal.style.transition = 'transform 0.3s ease-out, opacity 0.3s ease-out';
             modal.style.transform = 'translateY(0)';
             modal.style.opacity = '1';
@@ -378,23 +404,42 @@ document.addEventListener("DOMContentLoaded", function() {
             }, 300);
         }
         
+        // Сбрасываем состояние
         isDragging = false;
+        canClose = false;
         touchStartY = 0;
+        touchStartX = 0;
         touchEndY = 0;
+        modalContent = null;
+        
+        // Сбрасываем визуальную обратную связь
+        if (window.innerWidth <= 768) {
+            modal.style.removeProperty('--indicator-color');
+        }
     }
 
     function addSwipeToModals() {
         const modals = document.querySelectorAll('.project-modal-content, .team-modal-content');
         modals.forEach(modal => {
-            modal.addEventListener('touchstart', handleTouchStart, { passive: false });
+            modal.addEventListener('touchstart', handleTouchStart, { passive: true });
             modal.addEventListener('touchmove', handleTouchMove, { passive: false });
-            modal.addEventListener('touchend', handleTouchEnd, { passive: false });
+            modal.addEventListener('touchend', handleTouchEnd, { passive: true });
             
-            modal.addEventListener('touchmove', (e) => {
-                if (isDragging && (touchEndY - touchStartY) > 0) {
-                    e.preventDefault();
-                }
-            }, { passive: false });
+            // Добавляем обработчик прокрутки для обновления возможности закрытия
+            const scrollableContainer = modal.querySelector('div[class*="overflow-y-auto"]');
+            if (scrollableContainer) {
+                scrollableContainer.addEventListener('scroll', function() {
+                    // Обновляем визуальную обратную связь при прокрутке
+                    if (window.innerWidth <= 768) {
+                        const isAtTop = scrollableContainer.scrollTop === 0;
+                        if (isAtTop) {
+                            modal.style.setProperty('--indicator-color', 'rgba(255, 255, 255, 0.5)');
+                        } else {
+                            modal.style.setProperty('--indicator-color', 'rgba(255, 255, 255, 0.2)');
+                        }
+                    }
+                });
+            }
         });
     }
 
