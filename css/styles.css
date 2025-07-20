@@ -1,8 +1,8 @@
 :where([class^="ri-"])::before { content: "\f3c2"; }
         
 :root {
-    --dark-bg: #121212;
-    --dark-surface: #1e1e1e;
+    --dark-bg: #000000;
+    --dark-surface: #000000;
     --accent-color: #EAA124;
     --text-primary: #ffffff;
     --text-secondary: rgba(255, 255, 255, 0.7);
@@ -10,7 +10,7 @@
         
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--dark-bg);
+    background-color: #000000;
     color: var(--text-primary);
     overflow-x: hidden;
     padding-top: env(safe-area-inset-top);
@@ -411,5 +411,9 @@ input:checked + .slider:before {
 
 header {
     padding-top: env(safe-area-inset-top);
-    background-color: #121212;
+    background-color: #000000;
+}
+
+html {
+    background-color: #000000;
 }

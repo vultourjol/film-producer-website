@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#121212">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#000000">
     <title>PRODBYLELYA</title>
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
     <script>
@@ -43,7 +43,7 @@
     <div class="custom-cursor-dot hidden md:block"></div>
 
     <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-opacity-0 bg-black transform -translate-y-full">
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-opacity-100 bg-black transform -translate-y-full">
         <div class="mx-auto px-6 w-full py-4 flex justify-between items-center">
             <a href="#hero" class="text-white druk-font text-2xl">prodbylelya</a>
 
@@ -625,15 +625,15 @@
                 <h3 class="text-2xl font-bold mb-6">Давайте создадим что-то потрясающее</h3>
                 <p class="opacity-80 text-sm md:text-lg mb-6">Я всегда открыта для обсуждения новых проектов, творческих идей или возможностей стать частью вашего видения.</p>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-x-11">
-                    <div class="flex flex-col items-center">
-                        <div class="w-16 h-16 flex items-center justify-center text-primary bg-black bg-opacity-30 rounded-full">
-                            <i class="ri-map-pin-line text-3xl md:text-4xl"></i>
-                        </div>
-                        <h4 class="font-bold text-lg">Локация</h4>
-                        <p class="text-lg opacity-80">Россия, Москва</p>
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 flex items-center justify-center text-primary bg-black bg-opacity-30 rounded-full">
+                        <i class="ri-map-pin-line text-3xl md:text-4xl"></i>
                     </div>
+                    <h4 class="font-bold text-lg">Локация</h4>
+                    <p class="text-lg opacity-80">Россия, Москва</p>
+                </div>
 
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-x-11">
                     <div class="flex flex-col items-center">
                         <div class="w-16 h-16 flex items-center justify-center text-primary bg-black bg-opacity-30 rounded-full">
                             <i class="ri-mail-line text-3xl md:text-4xl"></i>
@@ -657,16 +657,17 @@
                             <i class="ri-file-copy-line ml-2 text-lg"></i>
                         </p>                            
                     </div>
-                </div>
-                <div class="flex flex-col items-center mt-0 md:mt-6">
-                    <div class="w-16 h-16 flex items-center justify-center text-primary bg-black bg-opacity-30 rounded-full">
-                        <i class="ri-telegram-line text-3xl md:text-4xl"></i>
+
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 flex items-center justify-center text-primary bg-black bg-opacity-30 rounded-full">
+                            <i class="ri-telegram-line text-3xl md:text-4xl"></i>
+                        </div>
+                        <h4 class="font-bold text-lg">Telegram</h4>
+                        <a href="https://t.me/prodbylelya" class="text-lg opacity-80 cursor-pointer hover:text-primary transition-colors flex items-center">
+                            @prodbylelya
+                            <i class="ri-link ml-2 text-lg"></i>
+                        </a>
                     </div>
-                    <h4 class="font-bold text-lg">Telegram</h4>
-                    <a href="https://t.me/prodbylelya" class="text-lg opacity-80 cursor-pointer hover:text-primary transition-colors flex items-center">
-                        @prodbylelya
-                        <i class="ri-link ml-2 text-lg"></i>
-                    </a>
                 </div>
             </div>
         </div>
