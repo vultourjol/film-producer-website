@@ -13,6 +13,7 @@ body {
     background-color: var(--dark-bg);
     color: var(--text-primary);
     overflow-x: hidden;
+    padding-top: env(safe-area-inset-top);
 }
 
 .heading {
@@ -406,4 +407,9 @@ input:checked + .slider:before {
         -moz-hyphens: auto;
         word-break: break-word;
     }
+}
+
+header {
+    padding-top: env(safe-area-inset-top);
+    background-color: #121212;
 }
