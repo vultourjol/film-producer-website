@@ -80,7 +80,7 @@ body {
         
 .hamburger-menu {
     transition: all 0.3s ease-in-out;
-    z-index: 60; /* Поверх меню */
+    z-index: 60;
 }
 
 .hamburger-menu .bar {
@@ -123,7 +123,6 @@ body {
     cursor: pointer;
 }
 
-/* Hover эффекты только для устройств с мышью */
 @media (hover: hover) {
     .project-card:hover {
         transform: translateY(-10px);
@@ -157,7 +156,6 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* Hover эффекты только для устройств с мышью */
 @media (hover: hover) {
     .social-icon:hover {
         transform: rotate(360deg);
@@ -302,7 +300,6 @@ input:checked + .slider:before {
     transition: all 0.3s ease;
 }
 
-/* Hover эффекты только для устройств с мышью */
 @media (hover: hover) {
     .swiper-button-next-custom:hover,
     .swiper-button-prev-custom:hover {
@@ -432,7 +429,6 @@ html {
     cursor: none;
 }
 
-/* Hover эффекты для Tailwind классов - только для устройств с мышью */
 @media (hover: hover) {
     .hover\:text-primary:hover {
         color: var(--accent-color);
@@ -447,15 +443,6 @@ html {
     }
 }
 
-
-
-
-
-
-
-
-/* ...existing code... */
-
 .project-modal-content {
     touch-action: pan-y;
     user-select: none;
@@ -466,18 +453,17 @@ html {
     cursor: grabbing;
 }
 
-/* Add visual indicator for swipe */
-.project-modal-content::before {
-    content: '';
-    position: absolute;
-    top: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 4px;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 2px;
-    z-index: 60;
+@media (max-width: 768px) {
+    .project-modal-content::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 4px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 2px;
+        z-index: 60;
+    }
 }
-
-/* ...existing code... */

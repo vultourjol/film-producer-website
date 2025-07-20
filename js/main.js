@@ -299,7 +299,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Touch events for modal swipe-to-close
     let touchStartY = 0;
     let touchEndY = 0;
     let isDragging = false;
@@ -317,17 +316,14 @@ document.addEventListener("DOMContentLoaded", function() {
         touchEndY = e.touches[0].clientY;
         const deltaY = touchEndY - touchStartY;
         
-        // Only allow downward swipes
         if (deltaY > 0) {
             const modal = e.currentTarget;
             const translateY = Math.min(deltaY, 300); // Limit max translate
             modal.style.transform = `translateY(${translateY}px)`;
             
-            // Add opacity fade effect
             const opacity = Math.max(1 - (deltaY / 300), 0.3);
             modal.style.opacity = opacity;
             
-            // Add background blur effect
             const backdrop = document.getElementById('modal-backdrop');
             if (backdrop) {
                 const backdropOpacity = Math.max(0.8 - (deltaY / 400), 0);
@@ -343,7 +339,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const modal = e.currentTarget;
         const backdrop = document.getElementById('modal-backdrop');
         
-        // If swipe down is more than 100px, close modal
         if (deltaY > 100) {
             // Animate close
             modal.style.transition = 'transform 0.3s ease-out, opacity 0.3s ease-out';
@@ -357,7 +352,6 @@ document.addEventListener("DOMContentLoaded", function() {
             
             setTimeout(() => {
                 closeAllModals();
-                // Reset styles
                 modal.style.transition = '';
                 modal.style.transform = '';
                 modal.style.opacity = '';
@@ -367,7 +361,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }, 300);
         } else {
-            // Snap back to original position
             modal.style.transition = 'transform 0.3s ease-out, opacity 0.3s ease-out';
             modal.style.transform = 'translateY(0)';
             modal.style.opacity = '1';
@@ -390,7 +383,6 @@ document.addEventListener("DOMContentLoaded", function() {
         touchEndY = 0;
     }
 
-    // Add swipe functionality to modals
     function addSwipeToModals() {
         const modals = document.querySelectorAll('.project-modal-content, .team-modal-content');
         modals.forEach(modal => {
@@ -398,7 +390,6 @@ document.addEventListener("DOMContentLoaded", function() {
             modal.addEventListener('touchmove', handleTouchMove, { passive: false });
             modal.addEventListener('touchend', handleTouchEnd, { passive: false });
             
-            // Prevent scrolling when swiping modal
             modal.addEventListener('touchmove', (e) => {
                 if (isDragging && (touchEndY - touchStartY) > 0) {
                     e.preventDefault();
@@ -407,7 +398,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Initialize swipe functionality
     addSwipeToModals();
 });
 
