@@ -43,7 +43,7 @@ function initializeCustomCursor() {
 function initializeParallaxEffects() {
     const parallaxElements = document.querySelectorAll(".parallax");
     window.addEventListener("scroll", function() {
-        if (window.innerWidth <= 640) return; // Отключаем эффект на мобильных
+        if (window.innerWidth <= 640) return; 
         
         parallaxElements.forEach(element => {
             const scrollPosition = window.pageYOffset;
@@ -63,7 +63,7 @@ deferNonEssentialScripts();
 function copyToClipboard(text, element) {
     navigator.clipboard.writeText(text).then(function() {
         const originalContent = element.innerHTML;
-        element.innerHTML = "Скопировано! <i class=\"ri-check-line ml-2 text-sm\"></i>";
+        element.innerHTML = "Скопировано! <i class=\"ri-check-line ml-2 text-lg\"></i>";
         element.classList.add("text-primary");
                 
         setTimeout(function() {

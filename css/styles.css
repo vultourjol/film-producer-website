@@ -271,6 +271,13 @@ input:checked + .slider:before {
     margin: -10px;
 }
 
+.project-modal-content .modal-close {
+  position: fixed;
+  top: 16px; 
+  right: 16px; 
+  z-index: 100;
+}
+
 .swiper-pagination-bullet {
     background-color: var(--accent-color);
     opacity: 0.5;
