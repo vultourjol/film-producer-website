@@ -298,6 +298,117 @@ document.addEventListener("DOMContentLoaded", function() {
             element.style.animationDuration = "0s";
         });
     }
+
+    // Touch events for modal swipe-to-close
+    let touchStartY = 0;
+    let touchEndY = 0;
+    let isDragging = false;
+    let initialModalTransform = 0;
+
+    function handleTouchStart(e) {
+        touchStartY = e.touches[0].clientY;
+        isDragging = true;
+        initialModalTransform = 0;
+    }
+
+    function handleTouchMove(e) {
+        if (!isDragging) return;
+        
+        touchEndY = e.touches[0].clientY;
+        const deltaY = touchEndY - touchStartY;
+        
+        // Only allow downward swipes
+        if (deltaY > 0) {
+            const modal = e.currentTarget;
+            const translateY = Math.min(deltaY, 300); // Limit max translate
+            modal.style.transform = `translateY(${translateY}px)`;
+            
+            // Add opacity fade effect
+            const opacity = Math.max(1 - (deltaY / 300), 0.3);
+            modal.style.opacity = opacity;
+            
+            // Add background blur effect
+            const backdrop = document.getElementById('modal-backdrop');
+            if (backdrop) {
+                const backdropOpacity = Math.max(0.8 - (deltaY / 400), 0);
+                backdrop.style.backgroundColor = `rgba(0, 0, 0, ${backdropOpacity})`;
+            }
+        }
+    }
+
+    function handleTouchEnd(e) {
+        if (!isDragging) return;
+        
+        const deltaY = touchEndY - touchStartY;
+        const modal = e.currentTarget;
+        const backdrop = document.getElementById('modal-backdrop');
+        
+        // If swipe down is more than 100px, close modal
+        if (deltaY > 100) {
+            // Animate close
+            modal.style.transition = 'transform 0.3s ease-out, opacity 0.3s ease-out';
+            modal.style.transform = 'translateY(100vh)';
+            modal.style.opacity = '0';
+            
+            if (backdrop) {
+                backdrop.style.transition = 'background-color 0.3s ease-out';
+                backdrop.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+            }
+            
+            setTimeout(() => {
+                closeAllModals();
+                // Reset styles
+                modal.style.transition = '';
+                modal.style.transform = '';
+                modal.style.opacity = '';
+                if (backdrop) {
+                    backdrop.style.transition = '';
+                    backdrop.style.backgroundColor = '';
+                }
+            }, 300);
+        } else {
+            // Snap back to original position
+            modal.style.transition = 'transform 0.3s ease-out, opacity 0.3s ease-out';
+            modal.style.transform = 'translateY(0)';
+            modal.style.opacity = '1';
+            
+            if (backdrop) {
+                backdrop.style.transition = 'background-color 0.3s ease-out';
+                backdrop.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+            }
+            
+            setTimeout(() => {
+                modal.style.transition = '';
+                if (backdrop) {
+                    backdrop.style.transition = '';
+                }
+            }, 300);
+        }
+        
+        isDragging = false;
+        touchStartY = 0;
+        touchEndY = 0;
+    }
+
+    // Add swipe functionality to modals
+    function addSwipeToModals() {
+        const modals = document.querySelectorAll('.project-modal-content, .team-modal-content');
+        modals.forEach(modal => {
+            modal.addEventListener('touchstart', handleTouchStart, { passive: false });
+            modal.addEventListener('touchmove', handleTouchMove, { passive: false });
+            modal.addEventListener('touchend', handleTouchEnd, { passive: false });
+            
+            // Prevent scrolling when swiping modal
+            modal.addEventListener('touchmove', (e) => {
+                if (isDragging && (touchEndY - touchStartY) > 0) {
+                    e.preventDefault();
+                }
+            }, { passive: false });
+        });
+    }
+
+    // Initialize swipe functionality
+    addSwipeToModals();
 });
 
 window.addEventListener("scroll", function() {
@@ -312,5 +423,3 @@ window.addEventListener("scroll", function() {
         header.classList.remove("translate-y-0", "bg-opacity-90");
     }
 });
-
-

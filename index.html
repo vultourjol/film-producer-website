@@ -45,7 +45,7 @@
     <!-- Header Navigation -->
     <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-opacity-100 bg-black transform -translate-y-full">
         <div class="mx-auto px-6 w-full py-4 flex justify-between items-center">
-            <a href="#hero" class="text-white druk-font text-2xl">prodbylelya</a>
+            <a href="#hero" class="text-white druk-font text-2xl select-none">prodbylelya</a>
 
             <div class="hamburger-menu md:hidden flex flex-col justify-center items-center w-10 h-10 cursor-pointer z-50">
                 <span class="bar w-6 h-0.5 bg-white mb-1.5 transition-all"></span>
@@ -54,11 +54,11 @@
             </div>
             
             <nav class="hidden md:flex space-x-8">
-                <a href="#portfolio" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1">Портфолио</a>
-                <a href="#showcase" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1">Новое</a>
-                <a href="#about" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1">Обо мне</a>
-                <a href="#team" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1">Команда</a>
-                <a href="#contact" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1">Контакты</a>
+                <a href="#portfolio" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1 select-none">Портфолио</a>
+                <a href="#showcase" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1 select-none">Новое</a>
+                <a href="#about" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1 select-none">Обо мне</a>
+                <a href="#team" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1 select-none">Команда</a>
+                <a href="#contact" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1 select-none">Контакты</a>
             </nav>
             
             <div class="mobile-menu fixed top-0 right-0 w-80 h-full bg-black bg-opacity-95 transform translate-x-full transition-transform duration-300 ease-in-out z-40">
@@ -79,7 +79,7 @@
         <div class="video-overlay"></div>
         
         <div class="mx-auto px-6 w-full z-10 text-center">
-            <h1 class="text-2xl md:text-8xl mb-4 md:mb-12 typewriter inline-block druk-font tracking-widest">PRODBYLELYA</h1>
+            <h1 class="text-2xl md:text-8xl mb-4 md:mb-12 typewriter inline-block druk-font tracking-widest select-none">PRODBYLELYA</h1>
             
             <div class="flex justify-center space-x-8 md:space-x-16 mb-16">
                 <div class="w-16 h-16 flex items-center justify-center floating">
@@ -104,7 +104,7 @@
     <!-- Portfolio Grid Section -->
     <section id="portfolio" class="py-6 bg-black">
         <div class="container mx-auto px-6 w-full mt-6">
-            <h2 class="heading-font text-3xl md:text-4xl text-center druk-font">Мои <span class="text-primary">Проекты</span></h2>
+            <h2 class="heading-font text-3xl md:text-4xl text-center druk-font select-none">Мои <span class="text-primary">Проекты</span></h2>
             <!-- Swiper elements navigation -->
             <div class="flex justify-between items-center mb-4">
                 <div class="swiper-button-prev-custom w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
@@ -241,9 +241,9 @@
     </section>
 
     <!-- Project Showcase Section -->
-    <section id="showcase" class="py-6 bg-black">
+    <section id="showcase" class="py-6 bg-black select-none">
         <div class="container mx-auto px-6 w-full mt-6">
-            <h2 class="heading-font text-3xl md:text-4xl mb-16 text-center druk-font">Крайние <span class="text-primary">Проекты</span></h2>
+            <h2 class="heading-font text-3xl md:text-4xl mb-16 text-center druk-font select-none">Крайние <span class="text-primary">Проекты</span></h2>
                         
             <div class="featured-project mb-10">
                 <div class="relative h-[70vh] rounded-lg overflow-hidden mb-6">
@@ -447,10 +447,10 @@
     <!-- About Section -->
     <section id="about" class="py-6 bg-black">
         <div class="container mx-auto px-6 w-full mt-6">
-            <h2 class="heading-font text-3xl md:text-4xl mb-16 text-center druk-font">Обо <span class="text-primary">Мне</span></h2>
+            <h2 class="heading-font text-3xl md:text-4xl mb-16 text-center druk-font select-none">Обо <span class="text-primary">Мне</span></h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="relative">
+                <div class="relative select-none">
                     <div class="film-strip absolute top-0 left-0 h-full w-12"></div>
                     <div class="pl-16">
                         <picture>
@@ -458,7 +458,7 @@
                             <source srcset="source/mypic.webp" media="(max-width: 1200px)" type="image/webp">
                             <source srcset="source/mypic.webp" type="image/webp">
                             <img src="source/mypic.webp" loading="lazy" alt="Портрет" 
-                                 class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                                 class="rounded-lg w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
                         </picture>                    
                     </div>
                     
@@ -468,7 +468,7 @@
                     </div>
                 </div>
                 
-                <div>
+                <div class="select-none">
                     <h3 class="text-xl md:text-3xl mb-6 druk-font">Лёля Козловская</h3>
                     <p class="opacity-80 mb-6 text-sm md:text-lg">Привет, я молодой продюсер и режиссёр из Москвы. В 2020 году поступила в Институт кино телевидения ГИТР на продюсерский факультет. В 2024 году, осознав, что почти все мои съемочные работы как продюсера я также вела в качестве режиссёра, я решила поступить на факультет режиссуры. В 2025 году выпустилась в 2-мя высшими образованиями. </p>
                     <p class="opacity-80 mb-8 text-sm md:text-lg">С самого детства я любила смотреть фильмы. Потом меня заинтересовала музыка и я начала писать собственные песни, ездила на студию, записывалась. Когда вышла телепередача "Песни" на ТНТ, начала писать сценарии к клипам для песен артистов, мечтая когда нибудь их снять.</p>
@@ -525,9 +525,9 @@
             </div>
             
             <div class="mt-16">
-                <h3 class="text-xl md:text-2xl mb-8 text-center druk-font">Рабочее пространство</h3>
+                <h3 class="text-xl md:text-2xl mb-8 text-center druk-font select-none">Рабочее пространство</h3>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 select-none">
                     <div class="text-left md:text-right">
                         <div class="w-12 h-12 flex items-center justify-center mb-4 md:ml-auto">
                             <i class="ri-hq-line text-primary text-3xl md:text-4xl"></i>
@@ -560,7 +560,7 @@
     <!-- Team Grid Section -->
     <section id="team" class="py-6 bg-black">
         <div class="container mx-auto px-6 w-full mt-6">
-            <h2 class="heading-font text-3xl md:text-4xl text-center druk-font">Моя <span class="text-primary">Команда</span></h2>
+            <h2 class="heading-font text-3xl md:text-4xl text-center druk-font select-none">Моя <span class="text-primary">Команда</span></h2>
             <!-- Swiper elements navigation -->
             <div class="flex justify-between items-center mb-4">
                 <div class="swiper-button-prev-custom w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
@@ -573,7 +573,7 @@
             </div>
     
             <!-- Swiper -->
-            <div class="swiper project-swiper pt-3">
+            <div class="swiper project-swiper pt-3 select-none">
                 <div class="swiper-wrapper">
                     <!-- Project 7 -->
                     <div class="swiper-slide">
@@ -619,18 +619,18 @@
     <!-- Contact Section -->
     <section id="contact" class="py-6 bg-black">
         <div class="container mx-auto px-6 w-full mt-6">
-            <h2 class="heading-font text-3xl md:text-4xl mb-16 text-center druk-font">Остаемся на <span class="text-primary">Связи</span></h2>
+            <h2 class="heading-font text-3xl md:text-4xl mb-16 text-center druk-font select-none">Остаемся на <span class="text-primary">Связи</span></h2>
             
             <div class="max-w-4xl mx-auto text-left md:text-center">
-                <h3 class="text-2xl font-bold mb-6">Давайте создадим что-то потрясающее</h3>
-                <p class="opacity-80 text-sm md:text-lg mb-6">Я всегда открыта для обсуждения новых проектов, творческих идей или возможностей стать частью вашего видения.</p>
+                <h3 class="text-2xl font-bold mb-6 select-none">Давайте создадим что-то потрясающее</h3>
+                <p class="opacity-80 text-sm md:text-lg mb-6 select-none">Я всегда открыта для обсуждения новых проектов, творческих идей или возможностей стать частью вашего видения.</p>
 
                 <div class="flex flex-col items-center">
                     <div class="w-16 h-16 flex items-center justify-center text-primary bg-black bg-opacity-30 rounded-full">
                         <i class="ri-map-pin-line text-3xl md:text-4xl"></i>
                     </div>
-                    <h4 class="font-bold text-lg">Локация</h4>
-                    <p class="text-lg opacity-80">Россия, Москва</p>
+                    <h4 class="font-bold text-lg select-none">Локация</h4>
+                    <p class="text-lg opacity-80 select-none">Россия, Москва</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-x-11">
@@ -638,8 +638,8 @@
                         <div class="w-16 h-16 flex items-center justify-center text-primary bg-black bg-opacity-30 rounded-full">
                             <i class="ri-mail-line text-3xl md:text-4xl"></i>
                         </div>
-                        <h4 class="font-bold text-lg">Почта</h4>
-                        <p class="text-lg opacity-80 cursor-pointer hover:text-primary transition-colors flex items-center" 
+                        <h4 class="font-bold text-lg select-none">Почта</h4>
+                        <p class="text-lg opacity-80 cursor-pointer hover:text-primary transition-colors flex items-center select-none" 
                             id="emailCopy" onclick="copyToClipboard('ab.kozlovskaya@gmail.com', this)">
                             ab.kozlovskaya@gmail.com
                             <i class="ri-file-copy-line ml-2 text-lg"></i>
@@ -650,8 +650,8 @@
                         <div class="w-16 h-16 flex items-center justify-center text-primary bg-black bg-opacity-30 rounded-full">
                             <i class="ri-phone-line text-3xl md:text-4xl"></i>
                         </div>
-                        <h4 class="font-bold text-lg">Телефон</h4>
-                        <p class="text-lg opacity-80 cursor-pointer hover:text-primary transition-colors flex items-center" 
+                        <h4 class="font-bold text-lg select-none">Телефон</h4>
+                        <p class="text-lg opacity-80 cursor-pointer hover:text-primary transition-colors flex items-center select-none" 
                             id="phoneCopy" onclick="copyToClipboard('+79854377388', this)">
                             +7 (985) 437-73-88
                             <i class="ri-file-copy-line ml-2 text-lg"></i>
@@ -662,8 +662,8 @@
                         <div class="w-16 h-16 flex items-center justify-center text-primary bg-black bg-opacity-30 rounded-full">
                             <i class="ri-telegram-line text-3xl md:text-4xl"></i>
                         </div>
-                        <h4 class="font-bold text-lg">Telegram</h4>
-                        <a href="https://t.me/prodbylelya" class="text-lg opacity-80 cursor-pointer hover:text-primary transition-colors flex items-center">
+                        <h4 class="font-bold text-lg select-none">Telegram</h4>
+                        <a href="https://t.me/prodbylelya" class="text-lg opacity-80 cursor-pointer hover:text-primary transition-colors flex items-center select-none">
                             @prodbylelya
                             <i class="ri-link ml-2 text-lg"></i>
                         </a>
@@ -677,24 +677,24 @@
     <footer class="py-6 bg-black">
         <div class="mx-auto px-6 w-full">
             <div class="flex flex-col md:flex-row justify-between mb-6 md:mb-0">
-                <a href="#hero" class="text-white druk-font text-2xl mt-6 mb-6">prodbylelya</a>
+                <a href="#hero" class="text-white druk-font text-2xl mt-6 mb-6 select-none">prodbylelya</a>
 
                 <nav class="flex flex-wrap gap-x-8 gap-y-6 md:gap-y-0 mt-8">
-                    <a href="#portfolio" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Портфолио</a>
-                    <a href="#showcase" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Новое</a>
-                    <a href="#about" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Обо мне</a>
-                    <a href="#team" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Команда</a>
-                    <a href="#contact" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Контакты</a>
+                    <a href="#portfolio" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider select-none">Портфолио</a>
+                    <a href="#showcase" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider select-none">Новое</a>
+                    <a href="#about" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider select-none">Обо мне</a>
+                    <a href="#team" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider select-none">Команда</a>
+                    <a href="#contact" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider select-none">Контакты</a>
                 </nav>
             </div>
             
             <div class="border-t border-white border-opacity-10 pt-6">
                 <div class="flex flex-col md:flex-row justify-center md:justify-end space-y-0 md:space-x-6 md:text-right gap-y-3 md:gap-y-0">
-                    <p class="text-sm opacity-60"><a href="source/privacy-policy.pdf" class="hover:text-primary transition-colors">Политика конфиденциальности</a></p>
-                    <p class="text-sm opacity-60"><a href="https://policies.google.com/terms?hl=ru" class="hover:text-primary transition-colors">Условия использования</a></p>
-                        
+                    <p class="text-sm opacity-60"><a href="source/privacy-policy.pdf" class="hover:text-primary transition-colors select-none">Политика конфиденциальности</a></p>
+                    <p class="text-sm opacity-60"><a href="https://policies.google.com/terms?hl=ru" class="hover:text-primary transition-colors select-none">Условия использования</a></p>
+
                     <div>
-                        <p class="text-sm opacity-60 md:text-left">created by <a href="https://t.me/vultourjol" class="hover:text-primary transition-colors">vultourjol</a></p>
+                        <p class="text-sm opacity-60 md:text-left select-none">created by <a href="https://t.me/vultourjol" class="hover:text-primary transition-colors">vultourjol</a></p>
                     </div>
                 </div>
 
@@ -708,8 +708,8 @@
         
         <!-- Project 1 Modal -->
         <div class="project-modal-content hidden" id="modal-project-1">
-            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50">
-                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 hidden md:flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
                     <i class="ri-close-line text-white text-2xl"></i>
                 </button>
                 <div class="relative h-[50vh]">
@@ -755,8 +755,8 @@
         
         <!-- Project 2 Modal -->
         <div class="project-modal-content hidden" id="modal-project-2">
-            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50">
-                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 hidden md:flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
                     <i class="ri-close-line text-white text-2xl"></i>
                 </button>
                 <div class="relative h-[50vh]">
@@ -804,8 +804,8 @@
         
         <!-- Project 3 Modal -->
         <div class="project-modal-content hidden" id="modal-project-3">
-            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50">
-                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 hidden md:flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
                     <i class="ri-close-line text-white text-2xl"></i>
                 </button>
                 <div class="relative h-[50vh]">
@@ -852,8 +852,8 @@
 
         <!-- Project 4 Modal -->
         <div class="project-modal-content hidden" id="modal-project-4">
-            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50">
-                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 hidden md:flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
                     <i class="ri-close-line text-white text-2xl"></i>
                 </button>
                 <div class="relative h-[50vh]">
@@ -901,8 +901,8 @@
 
         <!-- Project 5 Modal -->
         <div class="project-modal-content hidden" id="modal-project-5">
-            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50">
-                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 hidden md:flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
                     <i class="ri-close-line text-white text-2xl"></i>
                 </button>
                 <div class="relative h-[50vh]">
@@ -949,8 +949,8 @@
 
         <!-- Project 6 Modal -->
         <div class="project-modal-content hidden" id="modal-project-6">
-            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50">
-                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 hidden md:flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
                     <i class="ri-close-line text-white text-2xl"></i>
                 </button>
                 <div class="relative h-[50vh]">
@@ -997,8 +997,8 @@
         <!-- Project 7 Modal -->
         <!-- Team member 1 Modal - Анна Николаева -->
         <div class="project-modal-content hidden" id="modal-project-7">
-            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50">
-                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 hidden md:flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
                     <i class="ri-close-line text-white text-2xl"></i>
                 </button>
                 <div class="relative h-[50vh]">
@@ -1044,8 +1044,8 @@
         <!-- Project 8 Modal -->
         <!-- Team member 2 Modal - Егор Нуруллин -->
         <div class="project-modal-content hidden" id="modal-project-8">
-            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50">
-                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 hidden md:flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
                     <i class="ri-close-line text-white text-2xl"></i>
                 </button>
                 <div class="relative h-[50vh]">
