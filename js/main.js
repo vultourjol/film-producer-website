@@ -91,13 +91,10 @@ document.addEventListener("DOMContentLoaded", function() {
     hamburger.addEventListener("click", function() {
         hamburger.classList.toggle("active");
         
-        // Анимация слайда справа
         if (mobileMenu.classList.contains("translate-x-full")) {
-            // Открыть меню
             mobileMenu.classList.remove("translate-x-full");
             document.body.classList.add("overflow-hidden");
         } else {
-            // Закрыть меню
             mobileMenu.classList.add("translate-x-full");
             document.body.classList.remove("overflow-hidden");
         }
@@ -159,17 +156,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const body = document.body;
 
     function closeAllModals() {
+        // Instant modal close without animation delay
         document.querySelectorAll(".project-modal-content, .team-modal-content").forEach(modal => {
             modal.classList.add("hidden");
             modal.classList.remove("opacity-100", "scale-100"); 
-            // Сбрасываем индикатор при закрытии
-            if (window.innerWidth <= 768) {
-                modal.style.removeProperty('--indicator-color');
-            }
         });
         if (modalBackdrop) {
             modalBackdrop.classList.add("hidden");
-            modalBackdrop.classList.remove("opacity-100");
+            modalBackdrop.classList.remove("opacity-100", "show");
         }
         body.classList.remove("overflow-hidden");
     }
@@ -197,25 +191,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 modal.classList.remove("hidden");
                 body.classList.add("overflow-hidden");
                 setTimeout(() => {
-                    modalBackdrop.classList.add("opacity-100");
-                    modal.classList.add("opacity-100", "scale-100");
-                }, 10);
-            }
-        });
-    });
-
-    document.querySelectorAll(".team-card").forEach(card => {
-        card.addEventListener("click", function() {
-            const memberId = card.getAttribute("data-member-id");
-            const modalId = `modal-member-${memberId}`;
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                closeAllModals();
-                modalBackdrop.classList.remove("hidden");
-                modal.classList.remove("hidden");
-                body.classList.add("overflow-hidden");
-                setTimeout(() => {
-                    modalBackdrop.classList.add("opacity-100");
+                    modalBackdrop.classList.add("opacity-100", "show"); // Add show class for blur
                     modal.classList.add("opacity-100", "scale-100");
                 }, 10);
             }
@@ -302,148 +278,6 @@ document.addEventListener("DOMContentLoaded", function() {
             element.style.animationDuration = "0s";
         });
     }
-
-    let touchStartY = 0;
-    let touchStartX = 0;
-    let touchEndY = 0;
-    let isDragging = false;
-    let canClose = false;
-    let modalContent = null;
-
-    function handleTouchStart(e) {
-        touchStartY = e.touches[0].clientY;
-        touchStartX = e.touches[0].clientX;
-        isDragging = true;
-        modalContent = e.currentTarget;
-        
-        // Находим прокручиваемый контейнер внутри модального окна
-        const scrollableContainer = modalContent.querySelector('div[class*="overflow-y-auto"]');
-        const isAtTop = scrollableContainer ? scrollableContainer.scrollTop === 0 : modalContent.scrollTop === 0;
-        const touchFromTop = touchStartY < 100; // касание в верхней части экрана (первые 100px)
-        
-        canClose = isAtTop && touchFromTop;
-        
-        // Визуальная обратная связь - меняем цвет индикатора при возможности закрытия
-        if (canClose && window.innerWidth <= 768) {
-            modalContent.style.setProperty('--indicator-color', 'rgba(234, 161, 36, 0.8)');
-        }
-    }
-
-    function handleTouchMove(e) {
-        if (!isDragging || !canClose) return;
-        
-        touchEndY = e.touches[0].clientY;
-        const touchCurrentX = e.touches[0].clientX;
-        const deltaY = touchEndY - touchStartY;
-        const deltaX = touchCurrentX - touchStartX;
-        
-        // Проверяем, что это вертикальный свайп вниз
-        if (Math.abs(deltaX) > Math.abs(deltaY)) return;
-        
-        if (deltaY > 0) {
-            e.preventDefault(); // Предотвращаем скролл страницы
-            const modal = e.currentTarget;
-            const translateY = Math.min(deltaY, 300); // Limit max translate
-            modal.style.transform = `translateY(${translateY}px)`;
-            
-            const opacity = Math.max(1 - (deltaY / 300), 0.3);
-            modal.style.opacity = opacity;
-            
-            const backdrop = document.getElementById('modal-backdrop');
-            if (backdrop) {
-                const backdropOpacity = Math.max(0.8 - (deltaY / 400), 0);
-                backdrop.style.backgroundColor = `rgba(0, 0, 0, ${backdropOpacity})`;
-            }
-        }
-    }
-
-    function handleTouchEnd(e) {
-        if (!isDragging) return;
-        
-        const deltaY = touchEndY - touchStartY;
-        const modal = e.currentTarget;
-        const backdrop = document.getElementById('modal-backdrop');
-        
-        if (canClose && deltaY > 150) { // Закрываем только если разрешено и свайп больше 150px
-            // Animate close
-            modal.style.transition = 'transform 0.3s ease-out, opacity 0.3s ease-out';
-            modal.style.transform = 'translateY(100vh)';
-            modal.style.opacity = '0';
-            
-            if (backdrop) {
-                backdrop.style.transition = 'background-color 0.3s ease-out';
-                backdrop.style.backgroundColor = 'rgba(0, 0, 0, 0)';
-            }
-            
-            setTimeout(() => {
-                closeAllModals();
-                modal.style.transition = '';
-                modal.style.transform = '';
-                modal.style.opacity = '';
-                if (backdrop) {
-                    backdrop.style.transition = '';
-                    backdrop.style.backgroundColor = '';
-                }
-            }, 300);
-        } else {
-            // Возвращаем модальное окно в исходное положение
-            modal.style.transition = 'transform 0.3s ease-out, opacity 0.3s ease-out';
-            modal.style.transform = 'translateY(0)';
-            modal.style.opacity = '1';
-            
-            if (backdrop) {
-                backdrop.style.transition = 'background-color 0.3s ease-out';
-                backdrop.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-            }
-            
-            setTimeout(() => {
-                modal.style.transition = '';
-                if (backdrop) {
-                    backdrop.style.transition = '';
-                }
-            }, 300);
-        }
-        
-        // Сбрасываем состояние
-        isDragging = false;
-        canClose = false;
-        touchStartY = 0;
-        touchStartX = 0;
-        touchEndY = 0;
-        modalContent = null;
-        
-        // Сбрасываем визуальную обратную связь
-        if (window.innerWidth <= 768) {
-            modal.style.removeProperty('--indicator-color');
-        }
-    }
-
-    function addSwipeToModals() {
-        const modals = document.querySelectorAll('.project-modal-content, .team-modal-content');
-        modals.forEach(modal => {
-            modal.addEventListener('touchstart', handleTouchStart, { passive: true });
-            modal.addEventListener('touchmove', handleTouchMove, { passive: false });
-            modal.addEventListener('touchend', handleTouchEnd, { passive: true });
-            
-            // Добавляем обработчик прокрутки для обновления возможности закрытия
-            const scrollableContainer = modal.querySelector('div[class*="overflow-y-auto"]');
-            if (scrollableContainer) {
-                scrollableContainer.addEventListener('scroll', function() {
-                    // Обновляем визуальную обратную связь при прокрутке
-                    if (window.innerWidth <= 768) {
-                        const isAtTop = scrollableContainer.scrollTop === 0;
-                        if (isAtTop) {
-                            modal.style.setProperty('--indicator-color', 'rgba(255, 255, 255, 0.5)');
-                        } else {
-                            modal.style.setProperty('--indicator-color', 'rgba(255, 255, 255, 0.2)');
-                        }
-                    }
-                });
-            }
-        });
-    }
-
-    addSwipeToModals();
 });
 
 window.addEventListener("scroll", function() {

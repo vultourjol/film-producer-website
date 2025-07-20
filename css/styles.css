@@ -14,6 +14,20 @@ body {
     color: var(--text-primary);
     overflow-x: hidden;
     padding-top: env(safe-area-inset-top);
+    cursor: none;
+}
+
+header {
+    padding-top: env(safe-area-inset-top);
+    background-color: #000000;
+}
+
+html {
+    background-color: #000000;
+}
+
+* {
+    cursor: none;
 }
 
 .heading {
@@ -80,7 +94,7 @@ body {
         
 .hamburger-menu {
     transition: all 0.3s ease-in-out;
-    z-index: 60;
+    z-index: 60; /* Поверх меню */
 }
 
 .hamburger-menu .bar {
@@ -123,6 +137,7 @@ body {
     cursor: pointer;
 }
 
+/* Hover эффекты только для устройств с мышью */
 @media (hover: hover) {
     .project-card:hover {
         transform: translateY(-10px);
@@ -156,6 +171,7 @@ body {
     transition: transform 0.3s ease;
 }
 
+/* Hover эффекты только для устройств с мышью */
 @media (hover: hover) {
     .social-icon:hover {
         transform: rotate(360deg);
@@ -246,7 +262,7 @@ input:checked + .slider:before {
 
 .project-modal {
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 1s ease-in-out;
 }
 
 .project-modal.hidden {
@@ -257,10 +273,20 @@ input:checked + .slider:before {
     opacity: 1;
 }
 
+/* Modal backdrop blur animation */
+.project-modal #modal-overlay {
+    backdrop-filter: blur(0px);
+    transition: backdrop-filter 1s ease-in-out;
+}
+
+.project-modal.show #modal-overlay {
+    backdrop-filter: blur(16px); /* equivalent to backdrop-blur-lg */
+}
+
 .project-modal-content {
     transform: scale(0.95);
     opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 1s ease, opacity 1s ease;
 }
 
 .project-modal-content.scale-100 {
@@ -300,6 +326,7 @@ input:checked + .slider:before {
     transition: all 0.3s ease;
 }
 
+/* Hover эффекты только для устройств с мышью */
 @media (hover: hover) {
     .swiper-button-next-custom:hover,
     .swiper-button-prev-custom:hover {
@@ -416,19 +443,6 @@ input:checked + .slider:before {
     }
 }
 
-header {
-    padding-top: env(safe-area-inset-top);
-    background-color: #000000;
-}
-
-html {
-    background-color: #000000;
-}
-
-* {
-    cursor: none;
-}
-
 @media (hover: hover) {
     .hover\:text-primary:hover {
         color: var(--accent-color);
@@ -440,47 +454,5 @@ html {
     
     .hover\:scale-110:hover {
         transform: scale(1.1);
-    }
-}
-
-.project-modal-content {
-    touch-action: pan-y;
-    user-select: none;
-    -webkit-user-select: none;
-    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-    will-change: transform, opacity;
-}
-
-.project-modal-content:active {
-    cursor: grabbing;
-}
-
-.team-modal-content {
-    touch-action: pan-y;
-    user-select: none;
-    -webkit-user-select: none;
-    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-    will-change: transform, opacity;
-}
-
-.team-modal-content:active {
-    cursor: grabbing;
-}
-
-/* Индикатор свайпа для мобильных устройств */
-@media (max-width: 768px) {
-    .project-modal-content::before,
-    .team-modal-content::before {
-        content: '';
-        position: absolute;
-        top: 12px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 40px;
-        height: 4px;
-        background-color: var(--indicator-color, rgba(255, 255, 255, 0.3));
-        border-radius: 2px;
-        z-index: 60;
-        transition: background-color 0.2s ease;
     }
 }
