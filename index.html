@@ -38,7 +38,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
-    <!-- <div class="film-grain"></div> -->
     <div class="custom-cursor hidden md:block"></div>
     <div class="custom-cursor-dot hidden md:block"></div>
 
@@ -79,18 +78,17 @@
         <div class="video-overlay"></div>
         
         <div class="mx-auto px-6 w-full z-10 text-center">
-            <h1 class="text-2xl md:text-8xl mb-6 typewriter inline-block druk-font tracking-widest">PRODBYLELYA</h1>
-            <p class="text-xl md:text-2xl text-white opacity-80 mb-12 max-w-2xl mx-auto"></p>
+            <h1 class="text-2xl md:text-8xl mb-4 md:mb-12 typewriter inline-block druk-font tracking-widest">PRODBYLELYA</h1>
             
-            <div class="flex justify-center space-x-16 mb-16">
+            <div class="flex justify-center space-x-8 md:space-x-16 mb-16">
                 <div class="w-16 h-16 flex items-center justify-center floating">
-                    <i class="ri-movie-2-line text-white text-4xl"></i>
+                    <i class="ri-movie-2-line text-white text-3xl md:text-4xl"></i>
                 </div>
                 <div class="w-16 h-16 flex items-center justify-center floating floating-delay-1">
-                    <i class="ri-camera-line text-white text-4xl"></i>
+                    <i class="ri-camera-line text-white text-3xl md:text-4xl"></i>
                 </div>
                 <div class="w-16 h-16 flex items-center justify-center floating floating-delay-2">
-                    <i class="ri-clapperboard-line text-white text-4xl"></i>
+                    <i class="ri-clapperboard-line text-white text-3xl md:text-4xl"></i>
                 </div>
             </div>
             
@@ -103,11 +101,11 @@
     </section>
 
     <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="py-12 bg-black">
+    <section id="portfolio" class="py-6 bg-black">
         <div class="container mx-auto px-6 w-full">
             <h2 class="heading-font text-3xl md:text-4xl text-center druk-font">Мои <span class="text-primary">Проекты</span></h2>
             <!-- Swiper elements navigation -->
-            <div class="flex justify-between items-center mb-8">
+            <div class="flex justify-between items-center mb-4">
                 <div class="swiper-button-prev-custom w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
                     <i class="ri-arrow-left-s-line text-white text-2xl"></i>
                 </div>
@@ -224,7 +222,7 @@
                     
                     <!-- Soon -->
                     <div class="swiper-slide">
-                        <div class="project-card rounded overflow-hidden relative h-80" data-project-id="7">
+                        <div class="project-card rounded overflow-hidden relative h-80" data-project-id="77">
                             <div class="bg-[#0a0a0a] w-full h-full flex items-center justify-center">
                                 <div class="text-center">
                                     <i class="ri-film-line text-primary text-5xl mb-4"></i>
@@ -242,27 +240,31 @@
     </section>
 
     <!-- Project Showcase Section -->
-    <section id="showcase" class="py-12 bg-black">
+    <section id="showcase" class="py-6 bg-black">
         <div class="container mx-auto px-6 w-full">
             <h2 class="heading-font text-3xl md:text-4xl mb-16 text-center druk-font">Крайние <span class="text-primary">Проекты</span></h2>
                         
-            <div class="featured-project mb-6">
+            <div class="featured-project mb-10">
                 <div class="relative h-[70vh] rounded-lg overflow-hidden mb-6">
                     <picture>
-                        <source srcset="source/rukingg.webp" media="(max-width: 480)" type="image/webp">
-                        <source srcset="source/rukingg.webp" media="(max-width: 720)" type="image/webp">
-                        <source srcset="source/rukingg.webp" media="(max-width: 1200px)" type="image/webp">
-                        <source srcset="source/rukingg.webp" type="image/webp">
-                        <img src="source/rukingg.webp" loading="lazy" alt="Российский король рок-н-ролла" 
+                        <source srcset="source/kinggg.webp" media="(max-width: 480)" type="image/webp">
+                        <source srcset="source/kinggg.webp" media="(max-width: 720)" type="image/webp">
+                        <source srcset="source/kinggg.webp" media="(max-width: 1200px)" type="image/webp">
+                        <source srcset="source/kinggg.webp" type="image/webp">
+                        <img src="source/kinggg.webp" loading="lazy" alt="Российский король рок-н-ролла" 
                              class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
                     </picture>
                     <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-12">
                         <h3 class="text-xl md:text-4xl mb-4 druk-font">Российский король рок-н-ролла</h3>
-                        <p class="text-lg max-w-2xl opacity-80 mb-6 text-justify-mobile">Во всём мире этот жанр музыки был запрещен, но в нашей стране нашелся человек, сумевший возродить целую музыкальную эпоху, на которой выросло не одно поколение.</p>
-                        <p class="text-lg opacity-80 mb-6 text-justify-mobile">Денис Мажуков, Валерий Сюткин, Даниил Крамер, Роберт Ленц, Роман Чащин</p>
+                        <p class="text-sm md:text-lg max-w-2xl opacity-80 mb-6">Во всём мире этот жанр музыки был запрещен, но в нашей стране нашелся человек, сумевший возродить целую музыкальную эпоху, на которой выросло не одно поколение.</p>
                         <div class="flex space-x-4">
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Документальный короткометражный фильм</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Денис Мажуков</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Валерий Сюткин</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Даниил Крамер</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Роберт Ленц</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Роман Чащин</span>
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">15 мин</span>
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2025</span>
                         </div>
@@ -272,76 +274,57 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div>
                         <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
-                        <p class="opacity-80">• Режиссёр постановщик - Лёля Козловская</p>
-                        <p class="opacity-80">• Режиссёр монтажа - Лёля Козловская</p>
-                        <p class="opacity-80">• Оператор постановщик - Розалия Тукаева</p>
-                        <p class="opacity-80">• Звукорежиссёр - Максим Малолеткин</p>
-                        <p class="opacity-80">• Композиторы - Денис Мажуков / Rommitz & The Ol' Time Shakers</p>
-                        <p class="opacity-80">• Музыка - БРАВО</p>
-                        <p class="opacity-80">• Продюсер постпродакшн - Лёля Козловская</p>
-                        <p class="opacity-80">• Исполнительный продюсер - Анна Николаева</p>
-                        <p class="opacity-80">• Генеральные продюсеры - Лёля Козловская & Денис Мажуков</p>
+                        <p class="text-sm md:text-lg opacity-80">• Режиссёр постановщик - Лёля Козловская</p>
+                        <p class="text-sm md:text-lg opacity-80">• Режиссёр монтажа - Лёля Козловская</p>
+                        <p class="text-sm md:text-lg opacity-80">• Оператор постановщик - Розалия Тукаева</p>
+                        <p class="text-sm md:text-lg opacity-80">• Звукорежиссёр - Максим Малолеткин</p>
+                        <p class="text-sm md:text-lg opacity-80">• Композиторы - Денис Мажуков / Rommitz & The Ol' Time Shakers</p>
+                        <p class="text-sm md:text-lg opacity-80">• Музыка - БРАВО</p>
+                        <p class="text-sm md:text-lg opacity-80">• Продюсер постпродакшн - Лёля Козловская</p>
+                        <p class="text-sm md:text-lg opacity-80">• Исполнительный продюсер - Анна Николаева</p>
+                        <p class="text-sm md:text-lg opacity-80">• Генеральные продюсеры - Лёля Козловская & Денис Мажуков</p>
                     </div>
                     <div>
                         <h4 class="text-xl font-bold mb-4">Технический подход</h4>
                         <div class="grid grid-cols-2 gap-4">
                             <div class="bg-black bg-opacity-30 p-4 rounded">
                                 <div class="w-10 h-10 flex items-center justify-center mb-2">
-                                    <i class="ri-camera-lens-line text-primary text-2xl"></i>
+                                    <i class="ri-camera-lens-line text-primary text-3xl md:text-4xl"></i>
                                 </div>
-                                <h5 class="font-bold mb-1">Камеры</h5>
-                                <p class="text-sm opacity-80">Sony Fx3</p>
-                                <p class="text-sm opacity-80">Sony a7s III</p>
+                                <h5 class="font-bold mb-1 text-sm md:text-lg">Камеры</h5>
+                                <p class="text-sm md:text-lg opacity-80">Sony Fx3</p>
+                                <p class="text-sm md:text-lg opacity-80">Sony a7s III</p>
                             </div>
                             <div class="bg-black bg-opacity-30 p-4 rounded">
                                 <div class="w-10 h-10 flex items-center justify-center mb-2">
-                                    <i class="ri-drone-line text-primary text-2xl"></i>
+                                    <i class="ri-pushpin-line text-primary text-3xl md:text-4xl"></i>
                                 </div>
-                                <h5 class="font-bold mb-1">Оптика</h5>
-                                <p class="text-sm opacity-80">Sony SEL 24-105 f/4 G OSS</p>
-                                <p class="text-sm opacity-80">Sony SEL 16-35 f/2.8 GM SSM</p>
-                                <p class="text-sm opacity-80">Sony FE 50 f/1.8</p>
-                                <p class="text-sm opacity-80">Sony FE 24-70 f/2.8 GM II</p>
-                            </div>
-                            <div class="bg-black bg-opacity-30 p-4 rounded">
-                                <div class="w-10 h-10 flex items-center justify-center mb-2">
-                                    <i class="ri-sound-module-line text-primary text-2xl"></i>
-                                </div>
-                                <h5 class="font-bold mb-1">Звук</h5>
-                                <p class="text-sm opacity-80">Zoom H8</p>
-                                <p class="text-sm opacity-80">Радиосистемы Sennheiser</p>
-                                <p class="text-sm opacity-80">RODE NTG3B</p>
-                            </div>
-                            <div class="bg-black bg-opacity-30 p-4 rounded">
-                                <div class="w-10 h-10 flex items-center justify-center mb-2">
-                                    <i class="ri-sun-foggy-line text-primary text-2xl"></i>
-                                </div>
-                                <h5 class="font-bold mb-1">Свет</h5>
-                                <p class="text-sm opacity-80">Nanlite Pavotube II 30x</p>
-                                <p class="text-sm opacity-80">Dedolight Dlh4 150w</p>
-                                <p class="text-sm opacity-80">KinoFlo 4x4</p>
-                                <p class="text-sm opacity-80">Aputure Amaran 200x LED</p>
+                                <h5 class="font-bold mb-1 text-sm md:text-lg">Локации</h5>
+                                <p class="text-sm md:text-lg opacity-80">г. Москва</p>
+                                <p class="text-sm md:text-lg opacity-80">г. Казань</p>
+                                <p class="text-sm md:text-lg opacity-80">г. Киров</p>
+                                <p class="text-sm md:text-lg opacity-80">г. Калуга</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
                         
-            <div class="featured-project">
+            <div class="featured-project mb-10">
                 <div class="relative h-[70vh] rounded-lg overflow-hidden mb-6">
                     <picture>
-                        <source srcset="source/coolnumbers.webp" media="(max-width: 480)" type="image/webp">
-                        <source srcset="source/coolnumbers.webp" media="(max-width: 720)" type="image/webp">
-                        <source srcset="source/coolnumbers.webp" media="(max-width: 1200px)" type="image/webp">
-                        <source srcset="source/coolnumbers.webp" type="image/webp">
-                        <img src="source/coolnumbers.webp" loading="lazy" alt="Крутые номера" 
+                        <source srcset="source/coolnumbers.PNG" media="(max-width: 480)" type="image/webp">
+                        <source srcset="source/coolnumbers.PNG" media="(max-width: 720)" type="image/webp">
+                        <source srcset="source/coolnumbers.PNG" media="(max-width: 1200px)" type="image/webp">
+                        <source srcset="source/coolnumbers.PNG" type="image/webp">
+                        <img src="source/coolnumbers.PNG" loading="lazy" alt="Крутые номера" 
                              class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
                       </picture>
                     <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-12">
                         <h3 class="text-xl md:text-4xl mb-4 druk-font">Крутые номера</h3>
-                        <p class="text-lg max-w-2xl opacity-80 mb-6 text-justify-mobile">Он был типичным мажором из Москвы у которого было все, но однажды, купив номера на свою новую BMW Z4, его жизнь навсегда изменилась.</p>
-                        <p class="text-lg opacity-80 mb-6 text-justify-mobile">Экранизация рассказа Александра Райна</p>
+                        <p class="text-sm md:text-lg max-w-2xl opacity-80 mb-6">Он был типичным мажором из Москвы у которого было все, но однажды, купив номера на свою новую BMW Z4, его жизнь навсегда изменилась.</p>
+                        <p class="text-sm md:text-lg opacity-80 mb-6">Экранизация рассказа Александра Райна</p>
                         <div class="flex space-x-4">
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Художественный короткометражный фильм</span>
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">23 мин</span>
@@ -353,54 +336,105 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div>
                         <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
-                        <p class="opacity-80">• Авторы сценария - Глеб Лабковский, Ирина Глебова, Виталий Хачатурянц</p>
-                        <p class="opacity-80">• Режиссёр постановщик - Ирина Глебова</p>
-                        <p class="opacity-80">• Второй режиссёр - Ясмина Мухамедова</p>
-                        <p class="opacity-80">• Режиссёр монтажа - Лёля Козловская</p>
-                        <p class="opacity-80">• Операторы-постановщики - Владислав Иванов & Николай Карбанов</p>
-                        <p class="opacity-80">• Звукорежиссёр - Максим Малолеткин</p>
-                        <p class="opacity-80">• Художник постановщик - Полина Карпенко</p>
-                        <p class="opacity-80">• Продюсер постпродакшн - Лёля Козловская</p>
-                        <p class="opacity-80">• Исполнительные продюсеры - Пётр Пецка & Юлия Белозёрова</p>
-                        <p class="opacity-80">• Генеральные продюсеры - Ирина Глебова & Борис Ханчалян</p>
+                        <p class="text-sm md:text-lg opacity-80">• Авторы сценария - Ирина Глебова, Глеб Лабковский, Виталий Хачатурянц</p>
+                        <p class="text-sm md:text-lg opacity-80">• Режиссёр постановщик - Ирина Глебова</p>
+                        <p class="text-sm md:text-lg opacity-80">• Второй режиссёр - Ясмина Мухамедова</p>
+                        <p class="text-sm md:text-lg opacity-80">• Режиссёр монтажа - Лёля Козловская</p>
+                        <p class="text-sm md:text-lg opacity-80">• Операторы-постановщики - Владислав Иванов & Николай Карабанов</p>
+                        <p class="text-sm md:text-lg opacity-80">• Звукорежиссёр / Композитор - Максим Малолеткин</p>
+                        <p class="text-sm md:text-lg opacity-80">• Художник постановщик - Полина Карпенко</p>
+                        <p class="text-sm md:text-lg opacity-80">• Продюсер постпродакшн - Лёля Козловская</p>
+                        <p class="text-sm md:text-lg opacity-80">• Исполнительные продюсеры - Пётр Пецка & Юлия Белозёрова</p>
+                        <p class="text-sm md:text-lg opacity-80">• Генеральные продюсеры - Ирина Глебова</p>
                     </div>
                     <div>
                         <h4 class="text-xl font-bold mb-4">Технический подход</h4>
                         <div class="grid grid-cols-2 gap-4">
                             <div class="bg-black bg-opacity-30 p-4 rounded">
                                 <div class="w-10 h-10 flex items-center justify-center mb-2">
-                                    <i class="ri-camera-3-line text-primary text-2xl"></i>
+                                    <i class="ri-camera-lens-line text-primary text-3xl md:text-4xl"></i>
                                 </div>
-                                <h5 class="font-bold mb-1">Камера</h5>
-                                <p class="text-sm opacity-80">BlackMagik 6K</p>
+                                <h5 class="font-bold mb-1 text-sm md:text-lg">Камера</h5>
+                                <p class="text-sm md:text-lg opacity-80">BlackMagik 6K</p>
                             </div>
                             <div class="bg-black bg-opacity-30 p-4 rounded">
                                 <div class="w-10 h-10 flex items-center justify-center mb-2">
-                                    <i class="ri-drone-line text-primary text-2xl"></i>
+                                    <i class="ri-pushpin-line text-primary text-3xl md:text-4xl"></i>
                                 </div>
-                                <h5 class="font-bold mb-1">Доп. оборудование</h5>
-                                <p class="text-sm opacity-80">Автогрип</p>
-                            </div>
-                            <div class="bg-black bg-opacity-30 p-4 rounded">
-                                <div class="w-10 h-10 flex items-center justify-center mb-2">
-                                    <i class="ri-pushpin-line text-primary text-2xl"></i>
-                                </div>
-                                <h5 class="font-bold mb-1">Локация</h5>
-                                <p class="text-sm opacity-80">г. Волоколамск</p>
-                            </div>
-                            <div class="bg-black bg-opacity-30 p-4 rounded">
-                                <div class="w-10 h-10 flex items-center justify-center mb-2">
-                                    <i class="ri-sound-module-line text-primary text-2xl"></i>
-                                </div>
-                                <h5 class="font-bold mb-1">Звук</h5>
-                                <p class="text-sm opacity-80">Zoom H8</p>
-                                <p class="text-sm opacity-80">Радиосистемы Sennheiser</p>
-                                <p class="text-sm opacity-80">RODE NTG3B</p>
+                                <h5 class="font-bold mb-1 text-sm md:text-lg">Локации</h5>
+                                <p class="text-sm md:text-lg opacity-80">г. Волоколамск</p>
+                                <p class="text-sm md:text-lg opacity-80">г. Москва - Патрики</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="featured-project">
+                <div class="relative h-[70vh] rounded-lg overflow-hidden mb-6">
+                    <picture>
+                        <source srcset="source/angel.webp" media="(max-width: 480)" type="image/webp">
+                        <source srcset="source/angel.webp" media="(max-width: 720)" type="image/webp">
+                        <source srcset="source/angel.webp" media="(max-width: 1200px)" type="image/webp">
+                        <source srcset="source/angel.webp" type="image/webp">
+                        <img src="source/angel.webp" loading="lazy" alt="Ангел был позолочен" 
+                             class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                      </picture>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-12">
+                        <h3 class="text-xl md:text-4xl mb-4 druk-font">Ангел был позолочен</h3>
+                        <p class="text-sm md:text-lg max-w-2xl opacity-80 mb-6">Цирковой артист узнает о том, что губернатор, перед которым он будет выступать - его родной отец, который жестоко унизил и бросил его мать. В отчаянном сознании Клоуна рисуется план мести.</p>
+                        <p class="text-sm md:text-lg max-w-2xl opacity-80 mb-6">По мотивам романа В. Гюго "Человек, который смеётся"</p>
+                        <div class="flex space-x-4">
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Художественный короткометражный фильм</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">25 мин</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2025</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
+                        <p class="text-sm md:text-lg opacity-80">• Авторы сценария - Маргарита Голомидова & Наталия Невская</p>
+                        <p class="text-sm md:text-lg opacity-80">• Режиссёр постановщик - Маргарита Голомидова</p>
+                        <p class="text-sm md:text-lg opacity-80">• Второй режиссёр - Анна Баранова & Надежда Краснова</p>
+                        <p class="text-sm md:text-lg opacity-80">• Режиссёр Монтажа - Маргарита Голомидова</p>
+                        <p class="text-sm md:text-lg opacity-80">• Операторы-постановщики - Анастасия Легкова</p>
+                        <p class="text-sm md:text-lg opacity-80">• Звукорежиссёр - Никита Дзюба</p>
+                        <p class="text-sm md:text-lg opacity-80">• Графика - Максим Злобин</p>
+                        <p class="text-sm md:text-lg opacity-80">• Цветокоррекция - Алёна Масленникова</p>
+                        <p class="text-sm md:text-lg opacity-80">• Художник-постановщик - Василика Цолис</p>
+                        <p class="text-sm md:text-lg opacity-80">• Художник по костюмам - Ева Варламова</p>
+                        <p class="text-sm md:text-lg opacity-80">• Художник по гриму - Варвара Боталова</p>
+                        <p class="text-sm md:text-lg opacity-80">• Кастинг-директор - Валерия Фетисова</p>
+                        <p class="text-sm md:text-lg opacity-80">• Продюссеры - Маргарита Голомидова, Анастасия Легкова, Лёля Козловская, Большой Тёма, Анастасия Окунева</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-4">Технический подход</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-black bg-opacity-30 p-4 rounded">
+                                <div class="w-10 h-10 flex items-center justify-center mb-2">
+                                    <i class="ri-camera-lens-line text-primary text-3xl md:text-4xl"></i>
+                                </div>
+                                <h5 class="font-bold mb-1 text-sm md:text-lg">Камера</h5>
+                                <p class="text-sm md:text-lg opacity-80">Arri Alexa Mini</p>
+                            </div>
+                            <div class="bg-black bg-opacity-30 p-4 rounded">
+                                <div class="w-10 h-10 flex items-center justify-center mb-2">
+                                    <i class="ri-pushpin-line text-primary text-3xl md:text-4xl"></i>
+                                </div>
+                                <h5 class="font-bold mb-1 text-sm md:text-lg">Локации</h5>
+                                <p class="text-sm md:text-lg opacity-80">г. Волоколамск</p>
+                                <p class="text-sm md:text-lg opacity-80">г. Москва</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
     </section>
 
@@ -430,111 +464,86 @@
                 
                 <div>
                     <h3 class="text-xl md:text-3xl mb-6 druk-font">Лёля Козловская</h3>
-                    <p class="opacity-80 mb-6 text-justify-mobile">Привет, я молодой продюсер и режиссёр из Москвы. В 2020 году поступила в Институт кино телевидения ГИТР на продюсерский факультет. В 2024 поступила на факультет режиссуры там же. В 2025 году получила 2 высших образования.</p>
-                    <p class="opacity-80 mb-8 text-justify-mobile">С самого детства я любила смотреть фильмы. Потом меня заинтересовала музыка и я начала писать собственные песни, ездила на студию, записывалась.</p>
-                    <p class="opacity-80 mb-8 text-justify-mobile">Моя миссия состоит в том, чтобы документировать истории людей.</p>
+                    <p class="opacity-80 mb-6 text-sm md:text-lg">Привет, я молодой продюсер и режиссёр из Москвы. В 2020 году поступила в Институт кино телевидения ГИТР на продюсерский факультет. В 2024 году, осознав, что почти все мои съемочные работы как продюсера я также вела в качестве режиссёра, я решила поступить на факультет режиссуры. В 2025 году выпустилась в 2-мя высшими образованиями. </p>
+                    <p class="opacity-80 mb-8 text-sm md:text-lg">С самого детства я любила смотреть фильмы. Потом меня заинтересовала музыка и я начала писать собственные песни, ездила на студию, записывалась. Когда вышла телепередача "Песни" на ТНТ, начала писать сценарии к клипам для песен артистов, мечтая когда нибудь их снять.</p>
+                    <p class="opacity-80 mb-8 text-sm md:text-lg">Через год меня позвали работать вторым режиссёром на съемки клипа "PEEK-A-BOO - Alice Goes to Motherland". Параллельно выходила второрежить на крупные проекты, а потом и вовсе устроилась работать в студию цветокоррекции "CVET". Проработала там 2 года и поняла, что хочу снимать своё кино.</p>
+                    <p class="opacity-80 mb-8 text-sm md:text-lg">Так и родилась <span class="text-primary">prodbylelya</span>.</p>
 
                     <div class="grid grid-cols-2 gap-6 mb-8">
                         <div class="flex items-start">
                             <div class="w-10 h-10 flex items-center justify-center mr-4">
-                                <i class="ri-award-line text-primary text-2xl"></i>
+                                <i class="ri-award-line text-primary text-3xl md:text-4xl"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-1">Награды</h4>
-                                <p class="opacity-80 text-sm">15+ наград</p>
+                                <h4 class="font-bold mb-1 text-sm md:text-lg">Награды</h4>
+                                <p class="opacity-80 text-sm md:text-lg">10+ наград</p>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <div class="w-10 h-10 flex items-center justify-center mr-4">
-                                <i class="ri-film-line text-primary text-2xl"></i>
+                                <i class="ri-film-line text-primary text-3xl md:text-4xl"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-1">Проекты</h4>
-                                <p class="opacity-80 text-sm">25+ Завершённых фильмов</p>
+                                <h4 class="font-bold mb-1 text-sm md:text-lg">Проекты</h4>
+                                <p class="opacity-80 text-sm md:text-lg">20+ Завершённых фильмов</p>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <div class="w-10 h-10 flex items-center justify-center mr-4">
-                                <i class="ri-global-line text-primary text-2xl"></i>
+                                <i class="ri-global-line text-primary text-3xl md:text-4xl"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-1">Фестивали</h4>
-                                <p class="opacity-80 text-sm">Телемания, КОРОЧЕ, Святая Анна, Белая Птица</p>
+                                <h4 class="font-bold mb-1 text-sm md:text-lg">Фестивали</h4>
+                                <p class="opacity-80 text-sm md:text-lg">Телемания, КОРОЧЕ, Святая Анна, Белая Птица, Восемь Женщин, Лучезарный Ангел, Arctic Open</p>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <div class="w-10 h-10 flex items-center justify-center mr-4">
-                                <i class="ri-team-line text-primary text-2xl"></i>
+                                <i class="ri-team-line text-primary text-3xl md:text-4xl"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-1">Коллаборации</h4>
-                                <p class="opacity-80 text-sm">10+ Креативных партнеров</p>
+                                <h4 class="font-bold mb-1 text-sm md:text-lg">Коллаборации</h4>
+                                <p class="opacity-80 text-sm md:text-lg">Лига Преподавателей высшей школы, Музей Табакова, Фонд президентских грантов, Президентских фонд культурных инициатив</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="flex flex-wrap gap-3">
                         <span class="px-4 py-2 bg-black bg-opacity-50 border border-white border-opacity-20 rounded text-sm">Продюсерство</span>
+                        <span class="px-4 py-2 bg-black bg-opacity-50 border border-white border-opacity-20 rounded text-sm">Постпродакшн</span>
                         <span class="px-4 py-2 bg-black bg-opacity-50 border border-white border-opacity-20 rounded text-sm">Режиссура</span>
-                        <span class="px-4 py-2 bg-black bg-opacity-50 border border-white border-opacity-20 rounded text-sm">Цветокоррекция</span>
                         <span class="px-4 py-2 bg-black bg-opacity-50 border border-white border-opacity-20 rounded text-sm">Монтаж</span>
+                        <span class="px-4 py-2 bg-black bg-opacity-50 border border-white border-opacity-20 rounded text-sm">Цветокоррекция</span>
                     </div>
                 </div>
             </div>
             
             <div class="mt-16">
-                <h3 class="text-xl md:text-2xl mb-8 text-center druk-font">Моё оборудование</h3>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-[#0a0a0a] p-6 rounded-lg">
-                        <div class="w-12 h-12 flex items-center justify-center mb-4">
-                            <i class="ri-camera-line text-primary text-3xl"></i>
+                <h3 class="text-xl md:text-2xl mb-8 text-center druk-font">Рабочее пространство</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="text-left md:text-right">
+                        <div class="w-12 h-12 flex items-center justify-center mb-4 md:ml-auto">
+                            <i class="ri-hq-line text-primary text-3xl md:text-4xl"></i>
                         </div>
-                        <h4 class="font-bold mb-2">Камеры</h4>
-                        <ul class="opacity-80 text-sm space-y-2">
-                            <li>ARRI Alexa Mini LF</li>
-                            <li>RED Komodo 6K</li>
-                            <li>Sony FX9</li>
-                            <li>Blackmagic URSA Mini Pro 12K</li>
+                        <h4 class="font-bold mb-2 text-sm md:text-lg">Софт</h4>
+                        <ul class="opacity-80 text-sm md:text-lg space-y-2">
+                            <li>Davinci Resolve</li>
+                            <li>Premiere Pro</li>
+                            <li>After Effects</li>
                         </ul>
                     </div>
                     
-                    <div class="bg-[#0a0a0a] p-6 rounded-lg">
+                    <div>
                         <div class="w-12 h-12 flex items-center justify-center mb-4">
-                            <i class="ri-focus-3-line text-primary text-3xl"></i>
+                            <i class="ri-hard-drive-3-fill text-primary text-3xl md:text-4xl"></i>
                         </div>
-                        <h4 class="font-bold mb-2">Линзы</h4>
-                        <ul class="opacity-80 text-sm space-y-2">
-                            <li>Panavision Anamorphic Set</li>
-                            <li>ARRI Signature Primes</li>
-                            <li>Cooke S7/i Full Frame</li>
-                            <li>Zeiss Supreme Primes</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-[#0a0a0a] p-6 rounded-lg">
-                        <div class="w-12 h-12 flex items-center justify-center mb-4">
-                            <i class="ri-flashlight-line text-primary text-3xl"></i>
-                        </div>
-                        <h4 class="font-bold mb-2">Освещение</h4>
-                        <ul class="opacity-80 text-sm space-y-2">
-                            <li>ARRI SkyPanel S60-C</li>
-                            <li>Aputure 600d Pro</li>
-                            <li>Litepanels Gemini 2x1</li>
-                            <li>Digital Sputnik DS6</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-[#0a0a0a] p-6 rounded-lg">
-                        <div class="w-12 h-12 flex items-center justify-center mb-4">
-                            <i class="ri-tools-line text-primary text-3xl"></i>
-                        </div>
-                        <h4 class="font-bold mb-2">Поддержка</h4>
-                        <ul class="opacity-80 text-sm space-y-2">
-                            <li>DJI Ronin 2 Gimbal</li>
-                            <li>O'Connor 2575 Fluid Head</li>
-                            <li>Dana Dolly System</li>
-                            <li>DJI Inspire 2 Drone</li>
+                        <h4 class="font-bold mb-2 text-sm md:text-lg">Монтажка</h4>
+                        <ul class="opacity-80 text-sm md:text-lg space-y-2">
+                            <li>RTX 4060 8GB</li>
+                            <li>Intel Xeon E5-2697 v4</li>
+                            <li>RAM 64GB</li>
+                            <li>ROM 36 TB</li>
                         </ul>
                     </div>
                 </div>
@@ -542,27 +551,27 @@
         </div>
     </section>
 
-    <!-- Team Section -->
+    <!-- Team Grid Section -->
     <section id="team" class="py-6 bg-black">
         <div class="container mx-auto px-6 w-full">
             <h2 class="heading-font text-3xl md:text-4xl text-center druk-font">Моя <span class="text-primary">Команда</span></h2>
             <!-- Swiper elements navigation -->
-            <div class="flex justify-between items-center mb-8">
-                <div class="swiper-button-prev-team w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
+            <div class="flex justify-between items-center mb-4">
+                <div class="swiper-button-prev-custom w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
                     <i class="ri-arrow-left-s-line text-white text-2xl"></i>
                 </div>
-                <div class="swiper-pagination-team"></div>
-                <div class="swiper-button-next-team w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next-custom w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
                     <i class="ri-arrow-right-s-line text-white text-2xl"></i>
                 </div>
             </div>
     
-            <!-- Team Swiper -->
-            <div class="swiper team-swiper pt-3">
+            <!-- Swiper -->
+            <div class="swiper project-swiper pt-3">
                 <div class="swiper-wrapper">
-                    <!-- Team Member 1 -->
+                    <!-- Project 7 -->
                     <div class="swiper-slide">
-                        <div class="team-card rounded overflow-hidden relative h-160" data-member-id="1">
+                        <div class="project-card rounded overflow-hidden relative h-160" data-project-id="7">
                             <picture>
                                 <source srcset="source/anna.png" media="(max-width: 600px)" type="image/webp">
                                 <source srcset="source/anna.png" media="(max-width: 1200px)" type="image/webp">
@@ -570,31 +579,33 @@
                                 <img src="source/anna.png" loading="lazy" alt="Анна Николаева" 
                                      class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
                             </picture>                     
-                            <div class="team-overlay absolute inset-0 flex flex-col justify-end p-6">
+                            <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
                                 <h3 class="text-xl mb-2 druk-font">Анна Николаева</h3>
                                 <p class="text-sm opacity-80">Исполнительный продюсер • Режиссёр монтажа</p>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Team Member 2 -->
+
+                    <!-- Project 8 -->
                     <div class="swiper-slide">
-                        <div class="team-card rounded overflow-hidden relative h-160" data-member-id="2">
+                        <div class="project-card rounded overflow-hidden relative h-160" data-project-id="8">
                             <picture>
                                 <source srcset="source/egor.png" media="(max-width: 600px)" type="image/webp">
                                 <source srcset="source/egor.png" media="(max-width: 1200px)" type="image/webp">
                                 <source srcset="source/egor.png" type="image/webp">
                                 <img src="source/egor.png" loading="lazy" alt="Егор Нуруллин" 
                                      class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
-                            </picture>                     
-                            <div class="team-overlay absolute inset-0 flex flex-col justify-end p-6">
+                            </picture>                    
+                            <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
                                 <h3 class="text-xl mb-2 druk-font">Егор Нуруллин</h3>
                                 <p class="text-sm opacity-80">Технический директор</p>
                             </div>
                         </div>
                     </div>
+                    
+                </div>
                 
-                <div class="swiper-pagination-team mt-6 md:hidden"></div>
+                <div class="swiper-pagination mt-6 md:hidden"></div>
             </div>
         </div>
     </section>
@@ -604,40 +615,40 @@
         <div class="container mx-auto px-6 w-full">
             <h2 class="heading-font text-3xl md:text-4xl mb-16 text-center druk-font">Остаемся на <span class="text-primary">Связи</span></h2>
             
-            <div class="max-w-4xl mx-auto text-center">
+            <div class="max-w-4xl mx-auto text-left md:text-center">
                 <h3 class="text-2xl font-bold mb-6">Давайте создадим что-то потрясающее</h3>
-                <p class="opacity-80">Я всегда открыта для обсуждения новых проектов, творческих идей или возможностей стать частью вашего видения.</p>
-                
+                <p class="opacity-80 text-sm md:text-lg mb-5">Я всегда открыта для обсуждения новых проектов, творческих идей или возможностей стать частью вашего видения.</p>
+
                 <div class="grid grid-cols-1 md:grid-cols-3 mb-12">
                     <div class="flex flex-col items-center">
                         <div class="w-16 h-16 flex items-center justify-center text-primary bg-black bg-opacity-30 rounded-full">
-                            <i class="ri-map-pin-line text-2xl"></i>
+                            <i class="ri-map-pin-line text-3xl md:text-4xl"></i>
                         </div>
-                        <h4 class="font-bold">Локация</h4>
-                        <p class="opacity-80">Россия, Москва</p>
+                        <h4 class="font-bold text-lg">Локация</h4>
+                        <p class="text-lg opacity-80">Россия, Москва</p>
                     </div>
 
                     <div class="flex flex-col items-center">
                         <div class="w-16 h-16 flex items-center justify-center text-primary bg-black bg-opacity-30 rounded-full">
-                            <i class="ri-mail-line text-2xl"></i>
+                            <i class="ri-mail-line text-3xl md:text-4xl"></i>
                         </div>
-                        <h4 class="font-bold">Почта</h4>
-                        <p class="opacity-80 cursor-pointer hover:text-primary transition-colors flex items-center" 
+                        <h4 class="font-bold text-lg">Почта</h4>
+                        <p class="text-lg opacity-80 cursor-pointer hover:text-primary transition-colors flex items-center" 
                             id="emailCopy" onclick="copyToClipboard('ab.kozlovskaya@gmail.com', this)">
                             ab.kozlovskaya@gmail.com
-                            <i class="ri-file-copy-line ml-2 text-sm"></i>
+                            <i class="ri-file-copy-line ml-2 text-lg"></i>
                         </p>
                     </div>
                         
                     <div class="flex flex-col items-center">
                         <div class="w-16 h-16 flex items-center justify-center text-primary bg-black bg-opacity-30 rounded-full">
-                            <i class="ri-phone-line text-2xl"></i>
+                            <i class="ri-phone-line text-3xl md:text-4xl"></i>
                         </div>
-                        <h4 class="font-bold">Телефон</h4>
-                        <p class="opacity-80 cursor-pointer hover:text-primary transition-colors flex items-center" 
+                        <h4 class="font-bold text-lg">Телефон</h4>
+                        <p class="text-lg opacity-80 cursor-pointer hover:text-primary transition-colors flex items-center" 
                             id="phoneCopy" onclick="copyToClipboard('+79854377388', this)">
                             +7 (985) 437-73-88
-                            <i class="ri-file-copy-line ml-2 text-sm"></i>
+                            <i class="ri-file-copy-line ml-2 text-lg"></i>
                         </p>                            
                     </div>
                 </div>
@@ -654,10 +665,10 @@
     <!-- Footer -->
     <footer class="py-8 bg-black">
         <div class="mx-auto px-6 w-full">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-4 md:mb-0">
+            <div class="flex flex-col md:flex-row justify-between mb-4 md:mb-0">
                 <a href="#hero" class="text-white druk-font text-2xl mb-10 md:mb-4">prodbylelya</a>
 
-                <nav class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+                <nav class="flex flex-wrap gap-x-8 gap-y-4">
                     <a href="#portfolio" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Портфолио</a>
                     <a href="#showcase" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Новое</a>
                     <a href="#about" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider">Обо мне</a>
@@ -667,12 +678,12 @@
             </div>
             
             <div class="border-t border-white border-opacity-10 pt-8">
-                <div class="flex flex-col md:flex-row justify-center md:justify-end space-y-2 md:space-y-0 md:space-x-6 text-center md:text-right">
+                <div class="flex flex-col md:flex-row justify-center md:justify-end space-y-2 md:space-y-0 md:space-x-6 md:text-right">
                     <p class="text-sm opacity-60"><a href="source/privacy-policy.pdf" class="hover:text-primary transition-colors">Политика конфиденциальности</a></p>
                     <p class="text-sm opacity-60"><a href="https://policies.google.com/terms?hl=ru" class="hover:text-primary transition-colors">Условия использования</a></p>
                         
                         <div class="space-y-4 md:space-y-0">
-                            <p class="text-sm opacity-60 text-center md:text-left">created by <a href="https://t.me/vultourjol" class="hover:text-primary transition-colors">vultourjol</a></p>
+                            <p class="text-sm opacity-60 md:text-left">created by <a href="https://t.me/vultourjol" class="hover:text-primary transition-colors">vultourjol</a></p>
                         </div>
                 </div>
 
@@ -680,310 +691,291 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
-
     <!-- Project Modals -->
     <div class="fixed inset-0 flex items-center justify-center z-50 project-modal hidden" id="modal-backdrop">
-    <div class="absolute inset-0 bg-black bg-opacity-80 backdrop-blur-sm" id="modal-overlay"></div>
-    
-    <!-- Project 1 Modal -->
-    <div class="project-modal-content hidden" id="modal-project-1">
-        <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[90vh] overflow-y-auto relative z-50">
-            
-            <div class="relative h-[50vh]">
-                <img src="source/alexstory.webp" alt="Алекс" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
-                <div class="absolute bottom-0 left-0 p-8">
-                    <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Shitty Story</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Художественный короткометражный фильм</span>
-                        <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">12 мин</span>
-                        <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2024</span>
-                        <a href="https://youtu.be/dQw4w9WgXcQ?si=jRhBYuiI8z_h5m0d" class="w-10 h-10 flex items-center justify-center bg-black bg-opacity-30 rounded-full social-icon">
-                            <i class="ri-youtube-line text-white"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="p-8">
-                <p class="text-lg mb-8 text-justify-mobile">История о человеке, который попадает в круговорот невероятных событий, что в корне меняет его жизнь.</p>
+        <div class="absolute inset-0 bg-black bg-opacity-80 backdrop-blur-sm" id="modal-overlay"></div>
+        
+        <!-- Project 1 Modal -->
+        <div class="project-modal-content hidden" id="modal-project-1">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50">
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
-                    <div>
-                        <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
-                        <p class="opacity-80 mb-2">Режиссёр - Лёля Козловская</p>
-                        <p class="opacity-80 mb-2">Сценарист - Александр Петров</p>
-                        <p class="opacity-80 mb-2">Оператор - Иван Сидоров</p>
-                        <p class="opacity-80 mb-2">Режиссёр монтажа - Лёля Козловская</p>
-                        <p class="opacity-80 mb-2">Продюсер - Лёля Козловская</p>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-bold mb-4">Технические детали</h4>
-                        <p class="opacity-80 mb-2">Камера: Sony FX6</p>
-                        <p class="opacity-80 mb-2">Оптика: Zeiss Supreme Primes</p>
-                        <p class="opacity-80 mb-2">Формат: 2.39:1 Cinemascope</p>
-                        <p class="opacity-80 mb-2">Звук: Записан в Dolby Atmos</p>
+                <div class="relative h-[50vh]">
+                    <img src="source/alexstory.webp" alt="Алекс" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Shitty Story</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Художественный короткометражный фильм</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">10 мин</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2024</span>
+                            <a href="https://youtu.be/dQw4w9WgXcQ?si=jRhBYuiI8z_h5m0d" class="w-10 h-10 flex items-center justify-center bg-black bg-opacity-30 rounded-full social-icon">
+                                <i class="ri-youtube-line text-white"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="mb-8">
-                    <h4 class="text-xl font-bold mb-4">За кадром</h4>
-                    <p class="opacity-80 text-justify-mobile">Съемки проходили в Москве в течение 5 дней. Несмотря на ограниченный бюджет, фильм получил признание на нескольких фестивалях короткометражного кино.</p>
+                <div class="p-8">
+                    <p class="text-sm md:text-lg mb-8">Техас 1921 год. Ковбои после трех дней скитания по пустынным местностям, наконец находят пристанище - салун Хью, в котором они могут отдохнуть и хорошо провести время. Однако, к путникам, присоединяется ещё один человек - София, русская эмигрантка в розыске, за голову которой назначено 10 000$. Её узнает Джо - охотник за головами, который терпеливо выжидал эту встречу последние 3 месяца.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
+                            <p class="text-sm md:text-lg opacity-80">Режиссёр - Маргарита Голомидова</p>
+                            <p class="text-sm md:text-lg opacity-80">Оператор постановщик - Анастасия Легкова</p>
+                            <p class="text-sm md:text-lg opacity-80">Режиссёр монтажа - Лёля Козловская & Маргарита Голомидова</p>
+                            <p class="text-sm md:text-lg opacity-80">Продюсер - Лёля Козловская</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Технические детали</h4>
+                            <p class="text-sm md:text-lg opacity-80">Камера: Arria Alexa Classic</p>
+                            <p class="text-sm md:text-lg opacity-80">Локации: г. Можайск</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-xl font-bold mb-4">За кадром</h4>
+                        <p class="text-sm md:text-lg opacity-80">Фильм удалось реализовать в кратчайшие сроки. На подготовку была неделя, бюджет 100.000 руб. на сложнопостановочный фильм с пиротехникой и трюками, и только 16 часов на то, чтобы это реализовать.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <!-- Project 2 Modal -->
-    <div class="project-modal-content hidden" id="modal-project-2">
-        <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[90vh] overflow-y-auto relative z-50">
-            
-            <div class="relative h-[50vh]">
-                <img src="source/fieldgreen.webp" alt="Славянка" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
-                <div class="absolute bottom-0 left-0 p-8">
-                    <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Славянка</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Художественный короткометражный фильм</span>
-                        <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">12 мин</span>
-                        <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2024</span>
-                        <a href="https://youtu.be/dQw4w9WgXcQ?si=jRhBYuiI8z_h5m0d" class="w-10 h-10 flex items-center justify-center bg-black bg-opacity-30 rounded-full social-icon">
-                            <i class="ri-youtube-line text-white"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="p-8">
-                <p class="text-lg mb-8 text-justify-mobile">История о человеке, который попадает в круговорот невероятных событий, что в корне меняет его жизнь.</p>
+        
+        <!-- Project 2 Modal -->
+        <div class="project-modal-content hidden" id="modal-project-2">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50">
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
-                    <div>
-                        <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
-                        <p class="opacity-80 mb-2">Режиссёр - Лёля Козловская</p>
-                        <p class="opacity-80 mb-2">Сценарист - Александр Петров</p>
-                        <p class="opacity-80 mb-2">Оператор - Иван Сидоров</p>
-                        <p class="opacity-80 mb-2">Режиссёр монтажа - Лёля Козловская</p>
-                        <p class="opacity-80 mb-2">Продюсер - Лёля Козловская</p>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-bold mb-4">Технические детали</h4>
-                        <p class="opacity-80 mb-2">Камера: Sony FX6</p>
-                        <p class="opacity-80 mb-2">Оптика: Zeiss Supreme Primes</p>
-                        <p class="opacity-80 mb-2">Формат: 2.39:1 Cinemascope</p>
-                        <p class="opacity-80 mb-2">Звук: Записан в Dolby Atmos</p>
+                <div class="relative h-[50vh]">
+                    <img src="source/fieldgreen.webp" alt="Славянка" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Славянка</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Документальный короткометражный фильм</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">10 мин</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2024</span>
+                            <a href="https://youtu.be/dQw4w9WgXcQ?si=jRhBYuiI8z_h5m0d" class="w-10 h-10 flex items-center justify-center bg-black bg-opacity-30 rounded-full social-icon">
+                                <i class="ri-youtube-line text-white"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="mb-8">
-                    <h4 class="text-xl font-bold mb-4">За кадром</h4>
-                    <p class="opacity-80 text-justify-mobile">Съемки проходили в Москве в течение 5 дней. Несмотря на ограниченный бюджет, фильм получил признание на нескольких фестивалях короткометражного кино.</p>
+                <div class="p-8">
+                    <p class="text-sm md:text-lg mb-8">История о любви к своим корням, о том как важно о них помнить и о том, как во все времна народная музыка сохраняла человека в человеке.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
+                            <p class="text-sm md:text-lg opacity-80">Режиссёр - Лёля Козловская</p>
+                            <p class="text-sm md:text-lg opacity-80">Оператор - Розалия Тукаева</p>
+                            <p class="text-sm md:text-lg opacity-80">Режиссёр монтажа - Лёля Козловская & Розалия Тукаева</p>
+                            <p class="text-sm md:text-lg opacity-80">Продюсер - Лёля Козловская</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Технические детали</h4>
+                            <p class="text-sm md:text-lg opacity-80">Камера: Sony ZVE10</p>
+                            <p class="text-sm md:text-lg opacity-80">Локации: г. Калуга</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-xl font-bold mb-4">За кадром</h4>
+                        <p class="text-sm md:text-lg opacity-80">Съемки проходили в городе Калуга в течении 3-ех дней. Мы с командой приехали в замечательный дачный посёлок к главной героине и в тот же день начали снимать. Нам было важно ничего не упустить, ведь режиссёру хотелось достичь максимальной достоверности деревенской жизни русско-народного ансамбля.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-    
-    <!-- Project 3 Modal -->
-    <div class="project-modal-content hidden" id="modal-project-3">
-        <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[90vh] overflow-y-auto relative z-50">
-            
-            <div class="relative h-[50vh]">
-                <img src="source/manbunker.webp" alt="Человек с бункером" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
-                <div class="absolute bottom-0 left-0 p-8">
-                    <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Человек с бункером</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Художественный короткометражный фильм</span>
-                        <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">12 мин</span>
-                        <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2024</span>
-                        <a href="https://youtu.be/dQw4w9WgXcQ?si=jRhBYuiI8z_h5m0d" class="w-10 h-10 flex items-center justify-center bg-black bg-opacity-30 rounded-full social-icon">
-                            <i class="ri-youtube-line text-white"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="p-8">
-                <p class="text-lg mb-8 text-justify-mobile">История о человеке, который попадает в круговорот невероятных событий, что в корне меняет его жизнь.</p>
+        
+        
+        <!-- Project 3 Modal -->
+        <div class="project-modal-content hidden" id="modal-project-3">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50">
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
-                    <div>
-                        <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
-                        <p class="opacity-80 mb-2">Режиссёр - Лёля Козловская</p>
-                        <p class="opacity-80 mb-2">Сценарист - Александр Петров</p>
-                        <p class="opacity-80 mb-2">Оператор - Иван Сидоров</p>
-                        <p class="opacity-80 mb-2">Режиссёр монтажа - Лёля Козловская</p>
-                        <p class="opacity-80 mb-2">Продюсер - Лёля Козловская</p>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-bold mb-4">Технические детали</h4>
-                        <p class="opacity-80 mb-2">Камера: Sony FX6</p>
-                        <p class="opacity-80 mb-2">Оптика: Zeiss Supreme Primes</p>
-                        <p class="opacity-80 mb-2">Формат: 2.39:1 Cinemascope</p>
-                        <p class="opacity-80 mb-2">Звук: Записан в Dolby Atmos</p>
+                <div class="relative h-[50vh]">
+                    <img src="source/manbunker.webp" alt="Человек с бункером" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Человек с бункером</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Документальный короткометражный фильм</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">12 мин</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2024</span>
+                            <a href="https://youtu.be/dQw4w9WgXcQ?si=jRhBYuiI8z_h5m0d" class="w-10 h-10 flex items-center justify-center bg-black bg-opacity-30 rounded-full social-icon">
+                                <i class="ri-youtube-line text-white"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="mb-8">
-                    <h4 class="text-xl font-bold mb-4">За кадром</h4>
-                    <p class="opacity-80 text-justify-mobile">Съемки проходили в Москве в течение 5 дней. Несмотря на ограниченный бюджет, фильм получил признание на нескольких фестивалях короткометражного кино.</p>
+                <div class="p-8">
+                    <p class="text-sm md:text-lg mb-8">В Самарской области один человек построил для своей семьи абсолютно автономный дом. У него есть ветрогенератор, солнечные панели и даже гигантская спутниковая тарелка. Но главное его достижение заключается в том, что под домом, он построил бункер.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
+                            <p class="text-sm md:text-lg opacity-80">Автор идеи - Евдокия Кожуханцева</p>
+                            <p class="text-sm md:text-lg opacity-80">Оператор - Илья Мискин</p>
+                            <p class="text-sm md:text-lg opacity-80">Режиссёр монтажа - Лёля Козловская</p>
+                            <p class="text-sm md:text-lg opacity-80">Продюсер - Лёля Козловская</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Технические детали</h4>
+                            <p class="text-sm md:text-lg opacity-80">Камера: Sony FX3</p>
+                            <p class="text-sm md:text-lg opacity-80">Локации: г. Самара, посёлок Большая Черниговка</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-xl font-bold mb-4">За кадром</h4>
+                        <p class="text-sm md:text-lg opacity-80">В тот год тема выживания была актуальна. Мы со съемочной командой смогли найти героя, у которого прямо под его домом построен бункер. Недолго думая, мы купили билеты на поезд и отправились в Самарскую область. По началу нам казалось, что слово "бункер" слишком громкое. Но оказавшись под домом героя, мы поняли, что "бункер" - это слабо сказано.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Project 4 Modal -->
-    <div class="project-modal-content hidden" id="modal-project-4">
-        <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[90vh] overflow-y-auto relative z-50">
-            
-            <div class="relative h-[50vh]">
-                <img src="source/firstone.webp" alt="Быть первым" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
-                <div class="absolute bottom-0 left-0 p-8">
-                    <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Быть первым</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Художественный короткометражный фильм</span>
-                        <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">12 мин</span>
-                        <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2024</span>
-                        <a href="https://youtu.be/dQw4w9WgXcQ?si=jRhBYuiI8z_h5m0d" class="w-10 h-10 flex items-center justify-center bg-black bg-opacity-30 rounded-full social-icon">
-                            <i class="ri-youtube-line text-white"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="p-8">
-                <p class="text-lg mb-8 text-justify-mobile">История о человеке, который попадает в круговорот невероятных событий, что в корне меняет его жизнь.</p>
+        <!-- Project 4 Modal -->
+        <div class="project-modal-content hidden" id="modal-project-4">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50">
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
-                    <div>
-                        <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
-                        <p class="opacity-80 mb-2">Режиссёр - Лёля Козловская</p>
-                        <p class="opacity-80 mb-2">Сценарист - Александр Петров</p>
-                        <p class="opacity-80 mb-2">Оператор - Иван Сидоров</p>
-                        <p class="opacity-80 mb-2">Режиссёр монтажа - Лёля Козловская</p>
-                        <p class="opacity-80 mb-2">Продюсер - Лёля Козловская</p>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-bold mb-4">Технические детали</h4>
-                        <p class="opacity-80 mb-2">Камера: Sony FX6</p>
-                        <p class="opacity-80 mb-2">Оптика: Zeiss Supreme Primes</p>
-                        <p class="opacity-80 mb-2">Формат: 2.39:1 Cinemascope</p>
-                        <p class="opacity-80 mb-2">Звук: Записан в Dolby Atmos</p>
+                <div class="relative h-[50vh]">
+                    <img src="source/firstone.webp" alt="Быть первым" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Быть первым</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Документальный короткометражный фильм</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Дмитрий Тюрин</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">7 мин</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2024</span>
+                            <a href="https://youtu.be/dQw4w9WgXcQ?si=jRhBYuiI8z_h5m0d" class="w-10 h-10 flex items-center justify-center bg-black bg-opacity-30 rounded-full social-icon">
+                                <i class="ri-youtube-line text-white"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="mb-8">
-                    <h4 class="text-xl font-bold mb-4">За кадром</h4>
-                    <p class="opacity-80 text-justify-mobile">Съемки проходили в Москве в течение 5 дней. Несмотря на ограниченный бюджет, фильм получил признание на нескольких фестивалях короткометражного кино.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Project 5 Modal -->
-    <div class="project-modal-content hidden" id="modal-project-5">
-        <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[90vh] overflow-y-auto relative z-50">
-            
-            <div class="relative h-[50vh]">
-                <img src="source/fatumfatum.webp" alt="Фатум" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
-                <div class="absolute bottom-0 left-0 p-8">
-                    <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Фатум</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Художественный короткометражный фильм</span>
-                        <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">12 мин</span>
-                        <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2024</span>
-                        <a href="https://youtu.be/dQw4w9WgXcQ?si=jRhBYuiI8z_h5m0d" class="w-10 h-10 flex items-center justify-center bg-black bg-opacity-30 rounded-full social-icon">
-                            <i class="ri-youtube-line text-white"></i>
-                        </a>
+                <div class="p-8">
+                    <p class="text-sm md:text-lg mb-8">Это фильм о тренере, у которого была мечта. В молодости, посмотрев фильм "Шаг вперёд", он собрал свою первую танцевальную команду, даже не догадываясь, что в 2022 году он выиграет HHI. Так мечта всей жизни воплотилась в реальность.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
+                            <p class="text-sm md:text-lg opacity-80">Режиссёр - Валерия Фетисова</p>
+                            <p class="text-sm md:text-lg opacity-80">Оператор - Розалия Тукаева</p>
+                            <p class="text-sm md:text-lg opacity-80">Режиссёр монтажа - Лёля Козловская</p>
+                            <p class="text-sm md:text-lg opacity-80">Продюсер - Лёля Козловская & Дмитрий Тюрин</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Технические детали</h4>
+                            <p class="text-sm md:text-lg opacity-80">Камера: Sony FX3</p>
+                            <p class="text-sm md:text-lg opacity-80">Локации: г. Ярославль, г. Москав, г. Электросталь</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="p-8">
-                <p class="text-lg mb-8 text-justify-mobile">История о человеке, который попадает в круговорот невероятных событий, что в корне меняет его жизнь.</p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
-                    <div>
-                        <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
-                        <p class="opacity-80 mb-2">Режиссёр - Лёля Козловская</p>
-                        <p class="opacity-80 mb-2">Сценарист - Александр Петров</p>
-                        <p class="opacity-80 mb-2">Оператор - Иван Сидоров</p>
-                        <p class="opacity-80 mb-2">Режиссёр монтажа - Лёля Козловская</p>
-                        <p class="opacity-80 mb-2">Продюсер - Лёля Козловская</p>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-xl font-bold mb-4">За кадром</h4>
+                        <p class="text-sm md:text-lg opacity-80">Съемки длились 3 месяца. Команда впервые снимала танцевально-концертный формат. После утверждения сценария счёт шёл на дни, так как уже через 3 дня должен был состояться главный танцевальный турнир в Ярославле и нам нужно было на него попасть. По возвращению в Москву предстояла череда интервью, на которой стояла нелёгкая задача выведать все сокральные воспоминания главного героя о своём пути.</p>
                     </div>
-                    <div>
-                        <h4 class="text-xl font-bold mb-4">Технические детали</h4>
-                        <p class="opacity-80 mb-2">Камера: Sony FX6</p>
-                        <p class="opacity-80 mb-2">Оптика: Zeiss Supreme Primes</p>
-                        <p class="opacity-80 mb-2">Формат: 2.39:1 Cinemascope</p>
-                        <p class="opacity-80 mb-2">Звук: Записан в Dolby Atmos</p>
-                    </div>
-                </div>
-                
-                <div class="mb-8">
-                    <h4 class="text-xl font-bold mb-4">За кадром</h4>
-                    <p class="opacity-80 text-justify-mobile">Съемки проходили в Москве в течение 5 дней. Несмотря на ограниченный бюджет, фильм получил признание на нескольких фестивалях короткометражного кино.</p>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Project 6 Modal -->
-    <div class="project-modal-content hidden" id="modal-project-6">
-        <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[90vh] overflow-y-auto relative z-50">
-            
-            <div class="relative h-[50vh]">
-                <img src="source/warclassic.webp" alt="Боевая классика" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
-                <div class="absolute bottom-0 left-0 p-8">
-                    <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Боевая классика</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Художественный короткометражный фильм</span>
-                        <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">12 мин</span>
-                        <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2024</span>
-                        <a href="https://youtu.be/dQw4w9WgXcQ?si=jRhBYuiI8z_h5m0d" class="w-10 h-10 flex items-center justify-center bg-black bg-opacity-30 rounded-full social-icon">
-                            <i class="ri-youtube-line text-white"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="p-8">
-                <p class="text-lg mb-8 text-justify-mobile">История о человеке, который попадает в круговорот невероятных событий, что в корне меняет его жизнь.</p>
+        <!-- Project 5 Modal -->
+        <div class="project-modal-content hidden" id="modal-project-5">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50">
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
-                    <div>
-                        <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
-                        <p class="opacity-80 mb-2">Режиссёр - Лёля Козловская</p>
-                        <p class="opacity-80 mb-2">Сценарист - Александр Петров</p>
-                        <p class="opacity-80 mb-2">Оператор - Иван Сидоров</p>
-                        <p class="opacity-80 mb-2">Режиссёр монтажа - Лёля Козловская</p>
-                        <p class="opacity-80 mb-2">Продюсер - Лёля Козловская</p>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-bold mb-4">Технические детали</h4>
-                        <p class="opacity-80 mb-2">Камера: Sony FX6</p>
-                        <p class="opacity-80 mb-2">Оптика: Zeiss Supreme Primes</p>
-                        <p class="opacity-80 mb-2">Формат: 2.39:1 Cinemascope</p>
-                        <p class="opacity-80 mb-2">Звук: Записан в Dolby Atmos</p>
+                <div class="relative h-[50vh]">
+                    <img src="source/fatumfatum.webp" alt="Фатум" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Фатум</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Художественный короткометражный фильм</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">22 мин</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2024</span>
+                            <a href="https://youtu.be/dQw4w9WgXcQ?si=jRhBYuiI8z_h5m0d" class="w-10 h-10 flex items-center justify-center bg-black bg-opacity-30 rounded-full social-icon">
+                                <i class="ri-youtube-line text-white"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="mb-8">
-                    <h4 class="text-xl font-bold mb-4">За кадром</h4>
-                    <p class="opacity-80 text-justify-mobile">Съемки проходили в Москве в течение 5 дней. Несмотря на ограниченный бюджет, фильм получил признание на нескольких фестивалях короткометражного кино.</p>
+                <div class="p-8">
+                    <p class="text-sm md:text-lg mb-8">Молодой и наивный парень делает первые шаги во "взрослую жизнь". Герой пробует себя в разных сферах, ищет новые знакомства и отчаянно пытается достичь той жизни, которую принято считать за идеал. Так, деньги и власть становятся для молодого человека причиной для совершения  необдуманного поступка. Однако, за любым преступлением следует и наказание, поэтому главному герою приходиться попрощаться не только со своими мечтами, но и с собственной жизнью.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
+                            <p class="text-sm md:text-lg opacity-80">Режиссёр - Маргарита Голомидова</p>
+                            <p class="text-sm md:text-lg opacity-80">Оператор - Дмитрий Журавлёв</p>
+                            <p class="text-sm md:text-lg opacity-80">Режиссёр монтажа - Маргарита Голомидова</p>
+                            <p class="text-sm md:text-lg opacity-80">Продюсер - Лёля Козловская</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Технические детали</h4>
+                            <p class="text-sm md:text-lg opacity-80">Камера: Blackmagik 6K</p>
+                            <p class="text-sm md:text-lg opacity-80">Локации: г. Москва, г. Лобня</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-xl font-bold mb-4">За кадром</h4>
+                        <p class="text-sm md:text-lg opacity-80">Это был первый крупный по студенческим меркам проект для меня. Тогда мне в руки попали 300.000 руб. на реализацию и я впервые столкнулась с масштабом. 6 смен, 2 города, огромное количество актёров, перекрытие площади Трёх вокзалов и работа с трюковой собакой.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Team Member 1 Modal - Анна Николаева -->
-        <div class="team-modal-content hidden" id="modal-member-1">
-            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[90vh] overflow-y-auto relative z-50">
+        <!-- Project 6 Modal -->
+        <div class="project-modal-content hidden" id="modal-project-6">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50">
+                
+                <div class="relative h-[50vh]">
+                    <img src="source/warclassic.webp" alt="Боевая классика" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Боевая классика</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Художественный короткометражный фильм</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2 мин</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2024</span>
+                            <a href="https://youtu.be/dQw4w9WgXcQ?si=jRhBYuiI8z_h5m0d" class="w-10 h-10 flex items-center justify-center bg-black bg-opacity-30 rounded-full social-icon">
+                                <i class="ri-youtube-line text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="p-8">
+                    <p class="text-sm md:text-lg mb-8">Культурный код 2010-ых, "жиги вазы тазы" и море стёртых покрышек. Молодёж тратила всё своё свободное время, чтобы воскресить отцовское железо, а потом выезжала боком на пустые ночные заснеженные дороги, ломая машины вновь.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
+                            <p class="text-sm md:text-lg opacity-80">Режиссёр - Илья Мискин</p>
+                            <p class="text-sm md:text-lg opacity-80">Оператор - Илья Мискин</p>
+                            <p class="text-sm md:text-lg opacity-80">Продюсер - Лёля Козловская</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Технические детали</h4>
+                            <p class="text-sm md:text-lg opacity-80">Камера: Sony A7</p>
+                            <p class="text-sm md:text-lg opacity-80">Локации: г. Пушкино</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-xl font-bold mb-4">За кадром</h4>
+                        <p class="text-sm md:text-lg opacity-80">Эта была моя первая съёмочная работа, и когда я узнала тему, сразу загорелась. К нам съехались все жиги города Пушкино для того, чтобы покрутить пятаки вокргу нашего оператора. Пара машин улетело в сугроб, к слову в одной из них была я. Ни одно колесо не улетело, ни одна коробка передачь не сломалась и оператора не сбили.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 7 Modal -->
+        <!-- Team member 1 Modal - Анна Николаева -->
+        <div class="project-modal-content hidden" id="modal-project-7">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50">
                 
                 <div class="relative h-[50vh]">
                     <img src="source/anna.png" alt="Анна Николаева" class="w-full h-full object-cover">
@@ -993,43 +985,42 @@
                         <div class="flex flex-wrap gap-2">
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Исполнительный продюсер</span>
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Менеджер проектов</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">5+ лет опыта</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Монтажёр</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">3+ лет опыта</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="p-8">
-                    <p class="text-lg mb-8 text-justify-mobile">Анна - опытный исполнительный продюсер с более чем 5-летним опытом работы в индустрии. Она специализируется на управлении проектами и координации съёмочных процессов.</p>
+                    <p class="text-sm md:text-lg mb-8">Анна - опытный исполнительный продюсер с более чем 3-летним стажем работы в индустрии. Начинала как видеоблоггер. Она специализируется на управлении проектами и координации съёмочных процессов, а также исполнением контроля качества этапов постпродакшена.</p>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
                         <div>
                             <h4 class="text-xl font-bold mb-4">Опыт и навыки</h4>
-                            <p class="opacity-80 mb-2">• Управление бюджетом и ресурсами</p>
-                            <p class="opacity-80 mb-2">• Координация съёмочной группы</p>
-                            <p class="opacity-80 mb-2">• Планирование производства</p>
-                            <p class="opacity-80 mb-2">• Работа с локациями</p>
-                            <p class="opacity-80 mb-2">• Контроль качества</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Управление бюджетом и ресурсами</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Координация съёмочной группы</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Планирование производства</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Работа с локациями</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Контроль качества</p>
                         </div>
                         <div>
                             <h4 class="text-xl font-bold mb-4">Проекты</h4>
-                            <p class="opacity-80 mb-2">• "Российский король рок-н-ролла" (2025)</p>
-                            <p class="opacity-80 mb-2">• "Крутые номера" (2025)</p>
-                            <p class="opacity-80 mb-2">• "Славянка" (2025)</p>
-                            <p class="opacity-80 mb-2">• "Shitty Story" (2024)</p>
+                            <p class="opacity-80 text-sm md:text-lg">• "Российский король рок-н-ролла" (исполнительный продюсер)</p>
                         </div>
                     </div>
                     
                     <div class="mb-8">
                         <h4 class="text-xl font-bold mb-4">Образование</h4>
-                        <p class="opacity-80 text-justify-mobile">Высшее образование по специальности "Продюсерство", специализация на управлении кинопроектами и координации производства.</p>
+                        <p class="opacity-80 text-sm md:text-lg">Высшее образование по специальности "Продюсерство" Института кино и телевидения ГИТР, дата окончания (2022 - 2027 г.).</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Team Member 2 Modal - Егор Нуруллин -->
-        <div class="team-modal-content hidden" id="modal-member-2">
-            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[90vh] overflow-y-auto relative z-50">
+        <!-- Project 8 Modal -->
+        <!-- Team member 2 Modal - Егор Нуруллин -->
+        <div class="project-modal-content hidden" id="modal-project-8">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50">
                 
                 <div class="relative h-[50vh]">
                     <img src="source/egor.png" alt="Егор Нуруллин" class="w-full h-full object-cover">
@@ -1038,39 +1029,41 @@
                         <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Егор Нуруллин</h3>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Технический директор</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Frontend</span>
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">5+ лет опыта</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="p-8">
-                    <p class="text-lg mb-8 text-justify-mobile">Егор — опытный технический специалист и программист с более чем 5-летним стажем работы в киноиндустрии. Специализируется на разработке и внедрении технических решений для процессов постпродакшена и управления видеоконтентом. Объединяет знания в программировании, работе с видеоданными и современными web-технологиями, помогая команде ускорять монтаж и автоматизировать рутинные задачи.</p>
+                    <p class="text-sm md:text-lg mb-8">Егор — опытный технический специалист и программист с более чем 5-летним стажем работы в киноиндустрии. Специализируется на разработке и внедрении технических решений для процессов постпродакшена и управления видеоконтентом. Объединяет знания в программировании, работе с видеоданными и современными web-технологиями, помогая команде ускорять монтаж и автоматизировать рутинные задачи.</p>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
                         <div>
                             <h4 class="text-xl font-bold mb-4">Опыт и навыки</h4>
-                            <p class="opacity-80 mb-2">• Бэкап и организация отснятого материала</p>
-                            <p class="opacity-80 mb-2">• Конвертация и транскодинг видеофайлов</p>
-                            <p class="opacity-80 mb-2">• Работа с базами данных (PostgreSQL, MongoDB)</p>
-                            <p class="opacity-80 mb-2">• Генерация контента, анализ сцен</p>
-                            <p class="opacity-80 mb-2">• Frontend: React, Vue, TypeScript</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Бэкап и организация отснятого материала</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Конвертация и транскодинг видеофайлов</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Работа с базами данных (PostgreSQL, MongoDB)</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Генерация контента, анализ сцен</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Frontend: React, Vue, TypeScript</p>
                         </div>
                         <div>
                             <h4 class="text-xl font-bold mb-4">Проекты</h4>
-                            <p class="opacity-80 mb-2">• "Российский король рок-н-ролла" (2025)</p>
-                            <p class="opacity-80 mb-2">• "Крутые номера" (2025)</p>
-                            <p class="opacity-80 mb-2">• "Славянка" (2025)</p>
-                            <p class="opacity-80 mb-2">• "Shitty Story" (2024)</p>
+                            <p class="opacity-80 text-sm md:text-lg">• "Российский король рок-н-ролла" (2025)</p>
+                            <p class="opacity-80 text-sm md:text-lg">• "Крутые номера" (2025)</p>
                         </div>
                     </div>
                     
                     <div class="mb-8">
                         <h4 class="text-xl font-bold mb-4">Образование</h4>
-                        <p class="opacity-80 text-justify-mobile">Среднее профессиональное образование по специальности "Информационные системы и программирование". Среднее общее образование по специальности "Цифровые системы и технологии обмена данными".</p>
+                        <p class="text-sm md:text-lg opacity-80">Среднее профессиональное образование по специальности "Информационные системы и программирование" МТКП МГТУ им. Баумана (2019 - 2023 г.). Среднее общее образование по специальности "Цифровые системы и технологии обмена данными" РосНОУ (2025 - 2029 г.).</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="js/main.js"></script>
+
 </body>
 </html>
