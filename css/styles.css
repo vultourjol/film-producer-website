@@ -94,33 +94,29 @@ html {
         border-right-color: transparent;
     }
 }
-     
-.floating {
-    animation: floating 3s ease-in-out infinite;
-    opacity: 0; /* Изначально скрыты */
-    animation-delay: 1s; /* Появляются вместе с началом мигания курсора */
-    animation-fill-mode: both; /* Сохраняет стили до и после анимации */
-}
-        
-/* ...existing code... */
 
 .floating {
     animation: 
         fade-in 1.5s ease-out 2s forwards,
         floating 3s ease-in-out 1s infinite;
     opacity: 0;
+    animation-fill-mode: both;
 }
         
 .floating-delay-1 {
     animation: 
         fade-in 1.5s ease-out 2.5s forwards,
         floating 3s ease-in-out 1.5s infinite;
+    opacity: 0;
+    animation-fill-mode: both;
 }
         
 .floating-delay-2 {
     animation: 
         fade-in 1.5s ease-out 3s forwards,
         floating 3s ease-in-out 2s infinite;
+    opacity: 0;
+    animation-fill-mode: both;
 }
 
 .scroll-indicator {

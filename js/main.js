@@ -64,16 +64,28 @@ deferNonEssentialScripts();
 
 function copyToClipboard(text, element) {
     navigator.clipboard.writeText(text).then(function() {
-        const originalContent = element.innerHTML;
-        element.innerHTML = "Скопировано! <i class=\"ri-check-line ml-2 text-lg\"></i>";
-        element.classList.add("text-primary");
-                
+        const originalText = element.innerHTML;
+        element.innerHTML = '<span class="text-primary">Скопировано! <i class=\"ri-check-line ml-2 text-lg\"></i></span>';
+
         setTimeout(function() {
-            element.innerHTML = originalContent;
-            element.classList.remove("text-primary");
+            element.innerHTML = originalText;
         }, 2000);
     }).catch(function(err) {
-        console.error("Ошибка при копировании: ", err);
+        console.error('Ошибка копирования: ', err);
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        
+        const originalText = element.innerHTML;
+        element.innerHTML = '<span class="text-primary">Скопировано! <i class=\"ri-check-line ml-2 text-lg\"></span>';
+        
+        setTimeout(function() {
+            element.innerHTML = originalText;
+        }, 2000);
     });
 }
 
@@ -244,13 +256,6 @@ document.addEventListener("DOMContentLoaded", function() {
             projectSwiperInstance.params.spaceBetween = 10;
             projectSwiperInstance.update();
         }
-    }
-    
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
-        window.innerWidth <= 640) {
-        document.querySelectorAll(".floating").forEach(element => {
-            element.style.animationDuration = "0s";
-        });
     }
 });
 
