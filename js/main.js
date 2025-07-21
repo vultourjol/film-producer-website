@@ -63,30 +63,63 @@ function initializeParallaxEffects() {
 deferNonEssentialScripts();
 
 function copyToClipboard(text, element) {
-    navigator.clipboard.writeText(text).then(function() {
-        const originalText = element.innerHTML;
-        element.innerHTML = '<span class="text-primary">Скопировано! <i class=\"ri-check-line ml-2 text-lg\"></i></span>';
+    // Проверяем доступность clipboard API
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(function() {
+            showCopySuccess(element);
+        }).catch(function(err) {
+            console.error('Ошибка clipboard API: ', err);
+            fallbackCopy(text, element);
+        });
+    } else {
+        // Используем fallback для HTTP сайтов
+        fallbackCopy(text, element);
+    }
+}
 
-        setTimeout(function() {
-            element.innerHTML = originalText;
-        }, 2000);
-    }).catch(function(err) {
-        console.error('Ошибка копирования: ', err);
-        // Fallback for older browsers
-        const textArea = document.createElement('textarea');
+function fallbackCopy(text, element) {
+    try {
+        const textArea = document.createElement('input');
         textArea.value = text;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-999999px';
+        textArea.style.top = '-999999px';
         document.body.appendChild(textArea);
+        
+        textArea.focus();
         textArea.select();
-        document.execCommand('copy');
+        textArea.setSelectionRange(0, 99999);
+        
+        const successful = document.execCommand('copy');
         document.body.removeChild(textArea);
         
-        const originalText = element.innerHTML;
-        element.innerHTML = '<span class="text-primary">Скопировано! <i class=\"ri-check-line ml-2 text-lg\"></span>';
-        
-        setTimeout(function() {
-            element.innerHTML = originalText;
-        }, 2000);
-    });
+        if (successful) {
+            showCopySuccess(element);
+        } else {
+            showCopyError(element);
+        }
+    } catch (err) {
+        console.error('Ошибка fallback копирования: ', err);
+        showCopyError(element);
+    }
+}
+
+function showCopySuccess(element) {
+    const originalText = element.innerHTML;
+    element.innerHTML = '<span class="text-primary">Скопировано! <i class="ri-check-line ml-2 text-lg"></i></span>';
+    
+    setTimeout(function() {
+        element.innerHTML = originalText;
+    }, 2000);
+}
+
+function showCopyError(element) {
+    const originalText = element.innerHTML;
+    element.innerHTML = '<span class="text-red-400">Не удалось скопировать <i class="ri-error-warning-line ml-2 text-lg"></i></span>';
+    
+    setTimeout(function() {
+        element.innerHTML = originalText;
+    }, 2000);
 }
 
 document.addEventListener("DOMContentLoaded", function() {
