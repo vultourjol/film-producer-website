@@ -156,7 +156,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const body = document.body;
 
     function closeAllModals() {
-        // Instant modal close without animation delay
         document.querySelectorAll(".project-modal-content, .team-modal-content").forEach(modal => {
             modal.classList.add("hidden");
             modal.classList.remove("opacity-100", "scale-100"); 
@@ -205,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         breakpoints: {
             640: {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 20
             },
             1024: {
@@ -224,33 +223,6 @@ document.addEventListener("DOMContentLoaded", function() {
             prevEl: ".swiper-button-prev-custom",
         }
     });
-    
-    const teamSwiper = new Swiper(".team-swiper", {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        grabCursor: true,
-        
-        breakpoints: {
-            640: {
-                slidesPerView: 2,
-                spaceBetween: 20
-            },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 30
-            }
-        },
-        
-        pagination: {
-            el: ".swiper-pagination-team",
-            clickable: true,
-        },
-        
-        navigation: {
-            nextEl: ".swiper-button-next-team",
-            prevEl: ".swiper-button-prev-team",
-        }
-    });
 
     window.addEventListener("orientationchange", function() {
         const hamburger = document.querySelector(".hamburger-menu");
@@ -266,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (window.innerWidth <= 640) {
         const projectSwiperInstance = document.querySelector(".project-swiper").swiper;
         if (projectSwiperInstance) {
-            projectSwiperInstance.params.slidesPerView = 1.2;
+            projectSwiperInstance.params.slidesPerView = 1;
             projectSwiperInstance.params.spaceBetween = 10;
             projectSwiperInstance.update();
         }

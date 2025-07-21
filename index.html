@@ -45,6 +45,7 @@
     <!-- Header Navigation -->
     <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-opacity-95 bg-black transform -translate-y-full backdrop-blur-md">
         <div class="mx-auto px-6 w-full py-4 flex justify-between items-center">
+
             <a href="#hero" class="text-white druk-font text-2xl select-none">PRODBYLELYA</a>
 
             <div class="hamburger-menu md:hidden flex flex-col justify-center items-center w-10 h-10 cursor-pointer z-50">
@@ -76,26 +77,27 @@
 
     <!-- Hero Section -->
     <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-        <div class="video-overlay"></div>
-        
+        <!-- <div class="video-overlay"></div> -->
         <div class="mx-auto px-6 w-full z-10 text-center">
-            <h1 class="text-2xl md:text-8xl mb-4 md:mb-12 typewriter inline-block druk-font tracking-widest select-none">PRODBYLELYA</h1>
+            <h1 class="text-2xl md:text-5xl lg:text-9xl mb-4 md:mb-12 typewriter inline-block druk-font tracking-widest select-none">PRODBYLELYA</h1>
             
             <div class="flex justify-center space-x-8 md:space-x-16 mb-16">
                 <div class="w-16 h-16 flex items-center justify-center floating">
                     <i class="ri-movie-2-line text-white text-3xl md:text-4xl"></i>
                 </div>
+
                 <div class="w-16 h-16 flex items-center justify-center floating floating-delay-1">
                     <i class="ri-camera-line text-white text-3xl md:text-4xl"></i>
                 </div>
+
                 <div class="w-16 h-16 flex items-center justify-center floating floating-delay-2">
                     <i class="ri-clapperboard-line text-white text-3xl md:text-4xl"></i>
                 </div>
             </div>
 
             <a href="#portfolio" class="scroll-indicator inline-block">
-                <div class="w-10 h-10 flex items-center justify-center border-2 border-white border-opacity-50 rounded-full hover:bg-primary transition-colors">
-                    <i class="ri-arrow-down-line text-white font-bold text-md"></i>
+                <div class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-primary transition-colors">
+                    <i class="ri-arrow-down-wide-line text-white font-bold text-4xl"></i>
                 </div>
             </a>
         </div>
@@ -105,8 +107,9 @@
     <section id="portfolio" class="py-6 bg-black">
         <div class="container mx-auto px-6 w-full mt-6">
             <h2 class="heading-font text-3xl md:text-4xl text-center druk-font select-none">Мои <span class="text-primary">Проекты</span></h2>
+            
             <!-- Swiper elements navigation -->
-            <div class="flex justify-between items-center mb-4">
+            <div class="flex justify-between items-center mb-4 mt-4 select-none">
                 <div class="swiper-button-prev-custom w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
                     <i class="ri-arrow-left-s-line text-white text-2xl"></i>
                 </div>
@@ -117,8 +120,9 @@
             </div>
     
             <!-- Swiper -->
-            <div class="swiper project-swiper pt-3">
+            <div class="swiper project-swiper pt-3 select-none">
                 <div class="swiper-wrapper">
+                    
                     <!-- Project 1 -->
                     <div class="swiper-slide">
                         <div class="project-card rounded overflow-hidden relative h-80" data-project-id="1">
@@ -223,7 +227,7 @@
                     
                     <!-- Soon -->
                     <div class="swiper-slide">
-                        <div class="project-card rounded overflow-hidden relative h-80" data-project-id="77">
+                        <div class="project-card rounded overflow-hidden relative h-80 border-4 border-white border-opacity-10" data-project-id="77">
                             <div class="bg-[#0a0a0a] w-full h-full flex items-center justify-center">
                                 <div class="text-center">
                                     <i class="ri-film-line text-primary text-5xl mb-4"></i>
@@ -235,7 +239,7 @@
                     </div>
                 </div>
                 
-                <div class="swiper-pagination mt-6 md:hidden"></div>
+                <!-- <div class="swiper-pagination mt-6 md:hidden"></div> -->
             </div>
         </div>
     </section>
@@ -244,7 +248,8 @@
     <section id="showcase" class="py-6 bg-black select-none">
         <div class="container mx-auto px-6 w-full mt-6">
             <h2 class="heading-font text-3xl md:text-4xl mb-16 text-center druk-font select-none">Крайние <span class="text-primary">Проекты</span></h2>
-                        
+            
+            <!-- Showcase 1 -->
             <div class="featured-project mb-10">
                 <div class="relative h-[70vh] rounded-lg overflow-hidden mb-6">
                     <picture>
@@ -261,16 +266,15 @@
                         <p class="text-sm md:text-lg max-w-2xl opacity-80 mb-6">Во всём мире этот жанр музыки был запрещен, но в нашей стране нашелся человек, сумевший возродить целую музыкальную эпоху, на которой выросло не одно поколение.</p>
                         <p class="text-sm md:text-lg max-w-2xl opacity-80 mb-6">Денис Мажуков, Валерий Сюткин, Даниил Крамер, Роберт Ленц, Роман Чащин</p>
                         <div class="flex space-x-4">
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Документальный короткометражный фильм</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">15 мин</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2025</span>
-                            <a href="#" class="w-20 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors">
-                                <span class="text-white text-sm font-bold">Трейлер</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm text-center border-2 border-white border-opacity-10">Документальный короткометражный фильм</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">15 мин</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">2025</span>
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10">
+                                <i class="ri-play-fill text-white text-2xl"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div>
                         <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
@@ -287,7 +291,7 @@
                     <div>
                         <h4 class="text-xl font-bold mb-4">Технический подход</h4>
                         <div class="grid grid-cols-2 gap-4">
-                            <div class="bg-black bg-opacity-30 p-4 rounded">
+                            <div class="bg-black bg-opacity-30 p-4 rounded border-2 border-primary border-opacity-10">
                                 <div class="w-10 h-10 flex items-center justify-center mb-2">
                                     <i class="ri-camera-lens-line text-primary text-3xl md:text-4xl"></i>
                                 </div>
@@ -295,7 +299,7 @@
                                 <p class="text-sm md:text-lg opacity-80">Sony Fx3</p>
                                 <p class="text-sm md:text-lg opacity-80">Sony a7s III</p>
                             </div>
-                            <div class="bg-black bg-opacity-30 p-4 rounded">
+                            <div class="bg-black bg-opacity-30 p-4 rounded border-2 border-primary border-opacity-10">
                                 <div class="w-10 h-10 flex items-center justify-center mb-2">
                                     <i class="ri-pushpin-line text-primary text-3xl md:text-4xl"></i>
                                 </div>
@@ -309,7 +313,17 @@
                     </div>
                 </div>
             </div>
-                        
+
+            <!-- Divider -->
+            <div class="my-16 flex items-center justify-center">
+                <div class="flex-1 border-t-2 border-dashed border-white border-opacity-20"></div>
+                <div class="mx-6">
+                    <i class="ri-film-line text-primary text-2xl"></i>
+                </div>
+                <div class="flex-1 border-t-2 border-dashed border-white border-opacity-20"></div>
+            </div>
+
+            <!-- Showcase 2 -->
             <div class="featured-project mb-10">
                 <div class="relative h-[70vh] rounded-lg overflow-hidden mb-6">
                     <picture>
@@ -326,16 +340,15 @@
                         <p class="text-sm md:text-lg max-w-2xl opacity-80 mb-6">Он был типичным мажором из Москвы у которого было все, но однажды, купив номера на свою новую BMW Z4, его жизнь навсегда изменилась.</p>
                         <p class="text-sm md:text-lg opacity-80 mb-6">Экранизация рассказа Александра Райна</p>
                         <div class="flex space-x-4">
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Художественный короткометражный фильм</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">23 мин</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2025</span>
-                            <a href="#" class="w-20 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors">
-                                <span class="text-white text-sm font-bold">Трейлер</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm text-center border-2 border-white border-opacity-10">Художественный короткометражный фильм</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">23 мин</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">2025</span>
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10">
+                                <i class="ri-play-fill text-white text-2xl"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div>
                         <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
@@ -353,14 +366,14 @@
                     <div>
                         <h4 class="text-xl font-bold mb-4">Технический подход</h4>
                         <div class="grid grid-cols-2 gap-4">
-                            <div class="bg-black bg-opacity-30 p-4 rounded">
+                            <div class="bg-black bg-opacity-30 p-4 rounded border-2 border-primary border-opacity-10">
                                 <div class="w-10 h-10 flex items-center justify-center mb-2">
                                     <i class="ri-camera-lens-line text-primary text-3xl md:text-4xl"></i>
                                 </div>
                                 <h5 class="font-bold mb-1 text-sm md:text-lg">Камера</h5>
                                 <p class="text-sm md:text-lg opacity-80">BlackMagik 6K</p>
                             </div>
-                            <div class="bg-black bg-opacity-30 p-4 rounded">
+                            <div class="bg-black bg-opacity-30 p-4 rounded border-2 border-primary border-opacity-10">
                                 <div class="w-10 h-10 flex items-center justify-center mb-2">
                                     <i class="ri-pushpin-line text-primary text-3xl md:text-4xl"></i>
                                 </div>
@@ -373,6 +386,16 @@
                 </div>
             </div>
 
+            <!-- Divider -->
+            <div class="my-16 flex items-center justify-center">
+                <div class="flex-1 border-t-2 border-dashed border-white border-opacity-20"></div>
+                <div class="mx-6">
+                    <i class="ri-film-line text-primary text-2xl"></i>
+                </div>
+                <div class="flex-1 border-t-2 border-dashed border-white border-opacity-20"></div>
+            </div>
+
+            <!-- Showcase 3 -->
             <div class="featured-project">
                 <div class="relative h-[70vh] rounded-lg overflow-hidden mb-6">
                     <picture>
@@ -389,16 +412,15 @@
                         <p class="text-sm md:text-lg max-w-2xl opacity-80 mb-6">Цирковой артист узнает о том, что губернатор, перед которым он будет выступать - его родной отец, который жестоко унизил и бросил его мать. В отчаянном сознании Клоуна рисуется план мести.</p>
                         <p class="text-sm md:text-lg max-w-2xl opacity-80 mb-6">По мотивам романа В. Гюго "Человек, который смеётся"</p>
                         <div class="flex space-x-4">
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Художественный короткометражный фильм</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">25 мин</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2025</span>
-                            <a href="#" class="w-20 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors">
-                                <span class="text-white text-sm font-bold">Трейлер</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm text-center border-2 border-white border-opacity-10">Художественный короткометражный фильм</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">25 мин</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">2025</span>
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10">
+                                <i class="ri-play-fill text-white text-2xl"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div>
                         <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
@@ -419,14 +441,14 @@
                     <div>
                         <h4 class="text-xl font-bold mb-4">Технический подход</h4>
                         <div class="grid grid-cols-2 gap-4">
-                            <div class="bg-black bg-opacity-30 p-4 rounded">
+                            <div class="bg-black bg-opacity-30 p-4 rounded border-2 border-primary border-opacity-10">
                                 <div class="w-10 h-10 flex items-center justify-center mb-2">
                                     <i class="ri-camera-lens-line text-primary text-3xl md:text-4xl"></i>
                                 </div>
                                 <h5 class="font-bold mb-1 text-sm md:text-lg">Камера</h5>
                                 <p class="text-sm md:text-lg opacity-80">Arri Alexa Mini</p>
                             </div>
-                            <div class="bg-black bg-opacity-30 p-4 rounded">
+                            <div class="bg-black bg-opacity-30 p-4 rounded border-2 border-primary border-opacity-10">
                                 <div class="w-10 h-10 flex items-center justify-center mb-2">
                                     <i class="ri-pushpin-line text-primary text-3xl md:text-4xl"></i>
                                 </div>
@@ -438,9 +460,8 @@
                     </div>
                 </div>
             </div>
-
-
-
+            
+            <!-- Showcase 4 -->
         </div>
     </section>
 
@@ -448,8 +469,9 @@
     <section id="about" class="py-6 bg-black">
         <div class="container mx-auto px-6 w-full mt-6">
             <h2 class="heading-font text-3xl md:text-4xl mb-16 text-center druk-font select-none">Обо <span class="text-primary">Мне</span></h2>
-            
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Main picture -->
                 <div class="relative select-none">
                     <div class="film-strip absolute top-0 left-0 h-full w-12"></div>
                     <div class="pl-16">
@@ -461,20 +483,21 @@
                                  class="rounded-lg w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
                         </picture>                    
                     </div>
-                    
-                    <div class="absolute -bottom-8 -right-2 bg-primary rounded-lg p-6 shadow-xl">
+                    <div class="absolute -bottom-8 -right-2 bg-primary rounded-lg p-6 shadow-x border-4 border-white border-opacity-50">
                         <p class="font-bold text-xl">6+ Лет опыта</p>
-                        <p class="opacity-80">Продюссер & Режиссёр монтажа</p>
+                        <p>Продюссер & Режиссёр монтажа</p>
                     </div>
                 </div>
-                
+
+                <!-- Description -->
                 <div class="select-none">
                     <h3 class="text-xl md:text-3xl mb-6 druk-font">Лёля Козловская</h3>
                     <p class="opacity-80 mb-6 text-sm md:text-lg">Привет, я молодой продюсер и режиссёр из Москвы. В 2020 году поступила в Институт кино телевидения ГИТР на продюсерский факультет. В 2024 году, осознав, что почти все мои съемочные работы как продюсера я также вела в качестве режиссёра, я решила поступить на факультет режиссуры. В 2025 году выпустилась в 2-мя высшими образованиями. </p>
                     <p class="opacity-80 mb-8 text-sm md:text-lg">С самого детства я любила смотреть фильмы. Потом меня заинтересовала музыка и я начала писать собственные песни, ездила на студию, записывалась. Когда вышла телепередача "Песни" на ТНТ, начала писать сценарии к клипам для песен артистов, мечтая когда нибудь их снять.</p>
                     <p class="opacity-80 mb-8 text-sm md:text-lg">Через год меня позвали работать вторым режиссёром на съемки клипа "PEEK-A-BOO - Alice Goes to Motherland". Параллельно выходила второрежить на крупные проекты, а потом и вовсе устроилась работать в студию цветокоррекции "CVET". Проработала там 2 года и поняла, что хочу снимать своё кино.</p>
-                    <p class="opacity-80 mb-8 text-sm md:text-lg">Так и родилась <span class="text-primary">prodbylelya</span>.</p>
-
+                    <p class="opacity-80 mb-8 text-sm md:text-lg">Так и родилась <span class="text-primary">prodbylelya <i class="ri-heart-3-line"></i></span></p>
+                    
+                    <!-- Rewards and Collaborations -->
                     <div class="grid grid-cols-2 gap-6 mb-8">
                         <div class="flex items-start">
                             <div class="w-10 h-10 flex items-center justify-center mr-4">
@@ -514,42 +537,61 @@
                         </div>
                     </div>
                     
+                    <!-- Tags -->
                     <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-2 bg-black bg-opacity-50 border border-white border-opacity-20 rounded text-sm">Продюсерство</span>
-                        <span class="px-4 py-2 bg-black bg-opacity-50 border border-white border-opacity-20 rounded text-sm">Постпродакшн</span>
-                        <span class="px-4 py-2 bg-black bg-opacity-50 border border-white border-opacity-20 rounded text-sm">Режиссура</span>
-                        <span class="px-4 py-2 bg-black bg-opacity-50 border border-white border-opacity-20 rounded text-sm">Монтаж</span>
-                        <span class="px-4 py-2 bg-black bg-opacity-50 border border-white border-opacity-20 rounded text-sm">Цветокоррекция</span>
+                        <span class="px-4 py-2 bg-black bg-opacity-50 border-2 border-white border-opacity-10 rounded text-sm">Продюсерство</span>
+                        <span class="px-4 py-2 bg-black bg-opacity-50 border-2 border-white border-opacity-10 rounded text-sm">Постпродакшн</span>
+                        <span class="px-4 py-2 bg-black bg-opacity-50 border-2 border-white border-opacity-10 rounded text-sm">Режиссура</span>
+                        <span class="px-4 py-2 bg-black bg-opacity-50 border-2 border-white border-opacity-10 rounded text-sm">Монтаж</span>
+                        <span class="px-4 py-2 bg-black bg-opacity-50 border-2 border-white border-opacity-10 rounded text-sm">Цветокоррекция</span>
                     </div>
                 </div>
             </div>
             
+            <!-- Workspace -->
             <div class="mt-16">
                 <h3 class="text-xl md:text-2xl mb-8 text-center druk-font select-none">Рабочее пространство</h3>
-
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 select-none">
-                    <div class="text-left md:text-right">
+                    <div class="text-left md:text-right py-6 px-6">
                         <div class="w-12 h-12 flex items-center justify-center mb-4 md:ml-auto">
-                            <i class="ri-hq-line text-primary text-3xl md:text-4xl"></i>
+                            <i class="ri-4k-line text-primary text-3xl md:text-4xl"></i>
                         </div>
                         <h4 class="font-bold mb-2 text-sm md:text-lg">Софт</h4>
                         <ul class="opacity-80 text-sm md:text-lg space-y-2">
-                            <li>Davinci Resolve</li>
-                            <li>Premiere Pro</li>
-                            <li>After Effects</li>
+                            <li class="flex items-center justify-between md:justify-end">
+                                <div class="flex items-center md:contents">
+                                    <i class="ri-image-edit-line mr-2 md:hidden"></i>
+                                    <span>Davinci Resolve</span>
+                                </div>
+                                <i class="ri-image-edit-line hidden md:inline ml-2"></i>
+                            </li>
+                            <li class="flex items-center justify-between md:justify-end">
+                                <div class="flex items-center md:contents">
+                                    <i class="ri-image-add-line mr-2 md:hidden"></i>
+                                    <span>Premiere Pro</span>
+                                </div>
+                                <i class="ri-image-add-line hidden md:inline ml-2"></i>
+                            </li>
+                            <li class="flex items-center justify-between md:justify-end">
+                                <div class="flex items-center md:contents">
+                                    <i class="ri-image-ai-line mr-2 md:hidden"></i>
+                                    <span>After Effects</span>
+                                </div>
+                                <i class="ri-image-ai-line hidden md:inline ml-2"></i>
+                            </li>
                         </ul>
                     </div>
                     
-                    <div>
+                    <div class="py-6 px-6">
                         <div class="w-12 h-12 flex items-center justify-center mb-4">
-                            <i class="ri-hard-drive-3-fill text-primary text-3xl md:text-4xl"></i>
+                            <i class="ri-computer-line text-primary text-3xl md:text-4xl"></i>
                         </div>
                         <h4 class="font-bold mb-2 text-sm md:text-lg">Монтажка</h4>
                         <ul class="opacity-80 text-sm md:text-lg space-y-2">
-                            <li>RTX 4060 8GB</li>
-                            <li>Intel Xeon E5-2697 v4</li>
-                            <li>RAM 64GB</li>
-                            <li>ROM 36 TB</li>
+                            <li><i class="ri-instance-line"></i> RTX 4060 8GB</li>
+                            <li><i class="ri-cpu-line"></i> Intel Xeon E5-2697 v4</li>
+                            <li><i class="ri-ram-line"></i> RAM 64GB</li>
+                            <li><i class="ri-hard-drive-3-line"></i> ROM 36 TB</li>
                         </ul>
                     </div>
                 </div>
@@ -561,8 +603,9 @@
     <section id="team" class="py-6 bg-black">
         <div class="container mx-auto px-6 w-full mt-6">
             <h2 class="heading-font text-3xl md:text-4xl text-center druk-font select-none">Моя <span class="text-primary">Команда</span></h2>
+            
             <!-- Swiper elements navigation -->
-            <div class="flex justify-between items-center mb-4">
+            <div class="flex justify-between items-center mb-4 mt-4">
                 <div class="swiper-button-prev-custom w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
                     <i class="ri-arrow-left-s-line text-white text-2xl"></i>
                 </div>
@@ -575,14 +618,15 @@
             <!-- Swiper -->
             <div class="swiper project-swiper pt-3 select-none">
                 <div class="swiper-wrapper">
-                    <!-- Project 7 -->
+                    
+                    <!-- Team member 1 card (Project 7) -->
                     <div class="swiper-slide">
-                        <div class="project-card rounded overflow-hidden relative h-160" data-project-id="7">
+                        <div class="project-card rounded overflow-hidden relative h-160 border-4 border-white border-opacity-10" data-project-id="7">
                             <picture>
-                                <source srcset="source/anna.png" media="(max-width: 600px)" type="image/webp">
-                                <source srcset="source/anna.png" media="(max-width: 1200px)" type="image/webp">
-                                <source srcset="source/anna.png" type="image/webp">
-                                <img src="source/anna.png" loading="lazy" alt="Анна Николаева" 
+                                <source srcset="source/anna.webp" media="(max-width: 600px)" type="image/webp">
+                                <source srcset="source/anna.webp" media="(max-width: 1200px)" type="image/webp">
+                                <source srcset="source/anna.webp" type="image/webp">
+                                <img src="source/anna.webp" loading="lazy" alt="Анна Николаева" 
                                      class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
                             </picture>                     
                             <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
@@ -592,14 +636,14 @@
                         </div>
                     </div>
 
-                    <!-- Project 8 -->
+                    <!-- Team member card 2 (Project 8) -->
                     <div class="swiper-slide">
-                        <div class="project-card rounded overflow-hidden relative h-160" data-project-id="8">
+                        <div class="project-card rounded overflow-hidden relative h-160 border-4 border-white border-opacity-10" data-project-id="8">
                             <picture>
-                                <source srcset="source/egor.png" media="(max-width: 600px)" type="image/webp">
-                                <source srcset="source/egor.png" media="(max-width: 1200px)" type="image/webp">
-                                <source srcset="source/egor.png" type="image/webp">
-                                <img src="source/egor.png" loading="lazy" alt="Егор Нуруллин" 
+                                <source srcset="source/egor.webp" media="(max-width: 600px)" type="image/webp">
+                                <source srcset="source/egor.webp" media="(max-width: 1200px)" type="image/webp">
+                                <source srcset="source/egor.webp" type="image/webp">
+                                <img src="source/egor.webp" loading="lazy" alt="Егор Нуруллин" 
                                      class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
                             </picture>                    
                             <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
@@ -611,7 +655,7 @@
                     
                 </div>
                 
-                <div class="swiper-pagination mt-6 md:hidden"></div>
+                <!-- <div class="swiper-pagination mt-6 md:hidden"></div> -->
             </div>
         </div>
     </section>
@@ -620,7 +664,6 @@
     <section id="contact" class="py-6 bg-black">
         <div class="container mx-auto px-6 w-full mt-6">
             <h2 class="heading-font text-3xl md:text-4xl mb-16 text-center druk-font select-none">Остаемся на <span class="text-primary">Связи</span></h2>
-            
             <div class="max-w-4xl mx-auto text-left md:text-center">
                 <h3 class="text-2xl font-bold mb-6 select-none">Давайте создадим что-то потрясающее</h3>
                 <p class="opacity-80 text-sm md:text-lg mb-6 select-none">Я всегда открыта для обсуждения новых проектов, творческих идей или возможностей стать частью вашего видения.</p>
@@ -660,7 +703,7 @@
 
                     <div class="flex flex-col items-center">
                         <div class="w-16 h-16 flex items-center justify-center text-primary bg-black bg-opacity-30 rounded-full">
-                            <i class="ri-telegram-line text-3xl md:text-4xl"></i>
+                            <i class="ri-telegram-2-line text-3xl md:text-4xl"></i>
                         </div>
                         <h4 class="font-bold text-lg select-none">Telegram</h4>
                         <a href="https://t.me/prodbylelya" class="text-lg opacity-80 cursor-pointer hover:text-primary transition-colors flex items-center select-none">
@@ -678,7 +721,6 @@
         <div class="mx-auto px-6 w-full">
             <div class="flex flex-col md:flex-row justify-between mb-6 md:mb-0">
                 <a href="#hero" class="text-white druk-font text-2xl mt-6 mb-6 select-none">PRODBYLELYA</a>
-
                 <nav class="flex flex-wrap gap-x-8 gap-y-6 md:gap-y-0 mt-8">
                     <a href="#portfolio" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider select-none">Портфолио</a>
                     <a href="#showcase" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider select-none">Новое</a>
@@ -692,12 +734,10 @@
                 <div class="flex flex-col md:flex-row justify-center md:justify-end space-y-0 md:space-x-6 md:text-right gap-y-3 md:gap-y-0">
                     <p class="text-sm opacity-60"><a href="source/privacy-policy.pdf" class="hover:text-primary transition-colors select-none">Политика конфиденциальности</a></p>
                     <p class="text-sm opacity-60"><a href="https://policies.google.com/terms?hl=ru" class="hover:text-primary transition-colors select-none">Условия использования</a></p>
-
                     <div>
-                        <p class="text-sm opacity-60 md:text-left select-none">created by <a href="https://t.me/vultourjol" class="hover:text-primary transition-colors">vultourjol</a></p>
+                        <p class="text-sm opacity-60 md:text-left select-none">created by <a href="https://t.me/vultourjol" class="hover:text-primary transition-colors">vultourjol <i class="ri-code-s-slash-line"></i></a></i>
                     </div>
                 </div>
-
             </div>
         </div>
     </footer>
@@ -718,16 +758,15 @@
                     <div class="absolute bottom-0 left-0 p-8">
                         <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Shitty Story</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Художественный короткометражный фильм</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">10 мин</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2024</span>
-                            <a href="#" class="w-20 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors">
-                                <span class="text-white text-sm font-bold">Трейлер</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Художественный короткометражный фильм</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">10 мин</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">2024</span>
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10">
+                                <i class="ri-play-fill text-white text-2xl"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                
                 <div class="p-8">
                     <p class="text-sm md:text-lg mb-8">Техас 1921 год. Ковбои после трех дней скитания по пустынным местностям, наконец находят пристанище - салун Хью, в котором они могут отдохнуть и хорошо провести время. Однако, к путникам, присоединяется ещё один человек - София, русская эмигрантка в розыске, за голову которой назначено 10 000$. Её узнает Джо - охотник за головами, который терпеливо выжидал эту встречу последние 3 месяца.</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
@@ -744,7 +783,6 @@
                             <p class="text-sm md:text-lg opacity-80">Локации: г. Можайск</p>
                         </div>
                     </div>
-                    
                     <div class="mb-8">
                         <h4 class="text-xl font-bold mb-4">За кадром</h4>
                         <p class="text-sm md:text-lg opacity-80">Фильм удалось реализовать в кратчайшие сроки. На подготовку была неделя, бюджет 100.000 руб. на сложнопостановочный фильм с пиротехникой и трюками, и только 16 часов на то, чтобы это реализовать.</p>
@@ -765,19 +803,17 @@
                     <div class="absolute bottom-0 left-0 p-8">
                         <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Славянка</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Документальный короткометражный фильм</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">10 мин</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2024</span>
-                            <a href="#" class="w-20 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors">
-                                <span class="text-white text-sm font-bold">Трейлер</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Документальный короткометражный фильм</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">10 мин</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">2024</span>
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10">
+                                <i class="ri-play-fill text-white text-2xl"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                
                 <div class="p-8">
                     <p class="text-sm md:text-lg mb-8">История о любви к своим корням, о том как важно о них помнить и о том, как во все времна народная музыка сохраняла человека в человеке.</p>
-                    
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
                         <div>
                             <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
@@ -792,7 +828,6 @@
                             <p class="text-sm md:text-lg opacity-80">Локации: г. Калуга</p>
                         </div>
                     </div>
-                    
                     <div class="mb-8">
                         <h4 class="text-xl font-bold mb-4">За кадром</h4>
                         <p class="text-sm md:text-lg opacity-80">Съемки проходили в городе Калуга в течении 3-ех дней. Мы с командой приехали в замечательный дачный посёлок к главной героине и в тот же день начали снимать. Нам было важно ничего не упустить, ведь режиссёру хотелось достичь максимальной достоверности деревенской жизни русско-народного ансамбля.</p>
@@ -814,19 +849,17 @@
                     <div class="absolute bottom-0 left-0 p-8">
                         <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Человек с бункером</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Документальный короткометражный фильм</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">12 мин</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2024</span>
-                            <a href="#" class="w-20 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors">
-                                <span class="text-white text-sm font-bold">Трейлер</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Документальный короткометражный фильм</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">12 мин</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">2024</span>
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10">
+                                <i class="ri-play-fill text-white text-2xl"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                
                 <div class="p-8">
                     <p class="text-sm md:text-lg mb-8">В Самарской области один человек построил для своей семьи абсолютно автономный дом. У него есть ветрогенератор, солнечные панели и даже гигантская спутниковая тарелка. Но главное его достижение заключается в том, что под домом, он построил бункер.</p>
-                    
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
                         <div>
                             <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
@@ -841,7 +874,6 @@
                             <p class="text-sm md:text-lg opacity-80">Локации: г. Самара, посёлок Большая Черниговка</p>
                         </div>
                     </div>
-                    
                     <div class="mb-8">
                         <h4 class="text-xl font-bold mb-4">За кадром</h4>
                         <p class="text-sm md:text-lg opacity-80">В тот год тема выживания была актуальна. Мы со съемочной командой смогли найти героя, у которого прямо под его домом построен бункер. Недолго думая, мы купили билеты на поезд и отправились в Самарскую область. По началу нам казалось, что слово "бункер" слишком громкое. Но оказавшись под домом героя, мы поняли, что "бункер" - это слабо сказано.</p>
@@ -862,20 +894,18 @@
                     <div class="absolute bottom-0 left-0 p-8">
                         <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Быть первым</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Документальный короткометражный фильм</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Дмитрий Тюрин</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">7 мин</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2024</span>
-                            <a href="#" class="w-20 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors">
-                                <span class="text-white text-sm font-bold">Трейлер</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Документальный короткометражный фильм</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Дмитрий Тюрин</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">7 мин</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">2024</span>
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10">
+                                <i class="ri-play-fill text-white text-2xl"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                
                 <div class="p-8">
                     <p class="text-sm md:text-lg mb-8">Это фильм о тренере, у которого была мечта. В молодости, посмотрев фильм "Шаг вперёд", он собрал свою первую танцевальную команду, даже не догадываясь, что в 2022 году он выиграет HHI. Так мечта всей жизни воплотилась в реальность.</p>
-                    
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
                         <div>
                             <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
@@ -890,7 +920,6 @@
                             <p class="text-sm md:text-lg opacity-80">Локации: г. Ярославль, г. Москав, г. Электросталь</p>
                         </div>
                     </div>
-                    
                     <div class="mb-8">
                         <h4 class="text-xl font-bold mb-4">За кадром</h4>
                         <p class="text-sm md:text-lg opacity-80">Съемки длились 3 месяца. Команда впервые снимала танцевально-концертный формат. После утверждения сценария счёт шёл на дни, так как уже через 3 дня должен был состояться главный танцевальный турнир в Ярославле и нам нужно было на него попасть. По возвращению в Москву предстояла череда интервью, на которой стояла нелёгкая задача выведать все сокральные воспоминания главного героя о своём пути.</p>
@@ -911,19 +940,17 @@
                     <div class="absolute bottom-0 left-0 p-8">
                         <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Фатум</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Художественный короткометражный фильм</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">22 мин</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2024</span>
-                            <a href="#" class="w-20 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors">
-                                <span class="text-white text-sm font-bold">Трейлер</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Художественный короткометражный фильм</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">22 мин</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">2024</span>
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10">
+                                <i class="ri-play-fill text-white text-2xl"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                
                 <div class="p-8">
                     <p class="text-sm md:text-lg mb-8">Молодой и наивный парень делает первые шаги во "взрослую жизнь". Герой пробует себя в разных сферах, ищет новые знакомства и отчаянно пытается достичь той жизни, которую принято считать за идеал. Так, деньги и власть становятся для молодого человека причиной для совершения  необдуманного поступка. Однако, за любым преступлением следует и наказание, поэтому главному герою приходиться попрощаться не только со своими мечтами, но и с собственной жизнью.</p>
-                    
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
                         <div>
                             <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
@@ -938,7 +965,6 @@
                             <p class="text-sm md:text-lg opacity-80">Локации: г. Москва, г. Лобня</p>
                         </div>
                     </div>
-                    
                     <div class="mb-8">
                         <h4 class="text-xl font-bold mb-4">За кадром</h4>
                         <p class="text-sm md:text-lg opacity-80">Это был первый крупный по студенческим меркам проект для меня. Тогда мне в руки попали 300.000 руб. на реализацию и я впервые столкнулась с масштабом. 6 смен, 2 города, огромное количество актёров, перекрытие площади Трёх вокзалов и работа с трюковой собакой.</p>
@@ -959,19 +985,17 @@
                     <div class="absolute bottom-0 left-0 p-8">
                         <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Боевая классика</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Художественный короткометражный фильм</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2 мин</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">2024</span>
-                            <a href="#" class="w-20 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors">
-                                <span class="text-white text-sm font-bold">Трейлер</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Художественный короткометражный фильм</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">2 мин</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">2024</span>
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10">
+                                <i class="ri-play-fill text-white text-2xl"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                
                 <div class="p-8">
                     <p class="text-sm md:text-lg mb-8">Культурный код 2010-ых, "жиги вазы тазы" и море стёртых покрышек. Молодёж тратила всё своё свободное время, чтобы воскресить отцовское железо, а потом выезжала боком на пустые ночные заснеженные дороги, ломая машины вновь.</p>
-                    
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
                         <div>
                             <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
@@ -985,7 +1009,6 @@
                             <p class="text-sm md:text-lg opacity-80">Локации: г. Пушкино</p>
                         </div>
                     </div>
-                    
                     <div class="mb-8">
                         <h4 class="text-xl font-bold mb-4">За кадром</h4>
                         <p class="text-sm md:text-lg opacity-80">Эта была моя первая съёмочная работа, и когда я узнала тему, сразу загорелась. К нам съехались все жиги города Пушкино для того, чтобы покрутить пятаки вокргу нашего оператора. Пара машин улетело в сугроб, к слову в одной из них была я. Ни одно колесо не улетело, ни одна коробка передачь не сломалась и оператора не сбили.</p>
@@ -1002,22 +1025,20 @@
                     <i class="ri-close-line text-white text-2xl"></i>
                 </button>
                 <div class="relative h-[50vh]">
-                    <img src="source/anna.png" alt="Анна Николаева" class="w-full h-full object-cover">
+                    <img src="source/anna.webp" alt="Анна Николаева" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-8">
                         <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Анна Николаева</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Исполнительный продюсер</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Менеджер проектов</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Монтажёр</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">3+ лет опыта</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Исполнительный продюсер</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Менеджер проектов</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Монтажёр</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">3+ лет опыта</span>
                         </div>
                     </div>
                 </div>
-                
                 <div class="p-8">
-                    <p class="text-sm md:text-lg mb-8">Анна - опытный исполнительный продюсер с более чем 3-летним стажем работы в индустрии. Начинала как видеоблоггер. Она специализируется на управлении проектами и координации съёмочных процессов, а также исполнением контроля качества этапов постпродакшена.</p>
-                    
+                    <p class="text-sm md:text-lg mb-8">Анна - опытный исполнительный продюсер с более чем 3-летним стажем работы в индустрии. Начинала как видеоблоггер. Она специализируется на управлении проектами и координации съёмочных процессов, а также исполнением контроля качества этапов постпродакшена.</p>  
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
                         <div>
                             <h4 class="text-xl font-bold mb-4">Опыт и навыки</h4>
@@ -1032,7 +1053,6 @@
                             <p class="opacity-80 text-sm md:text-lg">• "Российский король рок-н-ролла" (исполнительный продюсер)</p>
                         </div>
                     </div>
-                    
                     <div class="mb-8">
                         <h4 class="text-xl font-bold mb-4">Образование</h4>
                         <p class="opacity-80 text-sm md:text-lg">Высшее образование по специальности "Продюсерство" Института кино и телевидения ГИТР (2023 - 2028 г.).</p>
@@ -1049,21 +1069,19 @@
                     <i class="ri-close-line text-white text-2xl"></i>
                 </button>
                 <div class="relative h-[50vh]">
-                    <img src="source/egor.png" alt="Егор Нуруллин" class="w-full h-full object-cover">
+                    <img src="source/egor.webp" alt="Егор Нуруллин" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-8">
                         <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Егор Нуруллин</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Технический директор</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">Frontend</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm">5+ лет опыта</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Технический директор</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Frontend</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">5+ лет опыта</span>
                         </div>
                     </div>
                 </div>
-                
                 <div class="p-8">
                     <p class="text-sm md:text-lg mb-8">Егор — опытный технический специалист и программист с более чем 5-летним стажем работы в киноиндустрии. Специализируется на разработке и внедрении технических решений для процессов постпродакшена и управления видеоконтентом. Объединяет знания в программировании, работе с видеоданными и современными web-технологиями, помогая команде ускорять монтаж и автоматизировать рутинные задачи.</p>
-                    
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
                         <div>
                             <h4 class="text-xl font-bold mb-4">Опыт и навыки</h4>
@@ -1079,7 +1097,6 @@
                             <p class="opacity-80 text-sm md:text-lg">• "Крутые номера" (2025)</p>
                         </div>
                     </div>
-                    
                     <div class="mb-8">
                         <h4 class="text-xl font-bold mb-4">Образование</h4>
                         <p class="text-sm md:text-lg opacity-80">Среднее профессиональное образование по специальности "Информационные системы и программирование" МТКП МГТУ им. Баумана (2019 - 2023 г.). Среднее общее образование по специальности "Цифровые системы и технологии обмена данными" РосНОУ (2024 - 2028 г.).</p>

@@ -87,14 +87,14 @@ html {
 }
         
 @keyframes pulse {
-    0% { transform: scale(0.95); opacity: 0.7; }
+    0% { transform: scale(0.75); opacity: 0.5; }
     50% { transform: scale(1.05); opacity: 1; }
-    100% { transform: scale(0.95); opacity: 0.7; }
+    100% { transform: scale(0.75); opacity: 0.5; }
 }
         
 .hamburger-menu {
     transition: all 0.3s ease-in-out;
-    z-index: 60; /* Поверх меню */
+    z-index: 60; 
 }
 
 .hamburger-menu .bar {
@@ -137,7 +137,6 @@ html {
     cursor: pointer;
 }
 
-/* Hover эффекты только для устройств с мышью */
 @media (hover: hover) {
     .project-card:hover {
         transform: translateY(-10px);
@@ -171,7 +170,6 @@ html {
     transition: transform 0.3s ease;
 }
 
-/* Hover эффекты только для устройств с мышью */
 @media (hover: hover) {
     .social-icon:hover {
         transform: rotate(360deg);
@@ -326,7 +324,6 @@ input:checked + .slider:before {
     transition: all 0.3s ease;
 }
 
-/* Hover эффекты только для устройств с мышью */
 @media (hover: hover) {
     .swiper-button-next-custom:hover,
     .swiper-button-prev-custom:hover {
@@ -454,5 +451,87 @@ input:checked + .slider:before {
     
     .hover\:scale-110:hover {
         transform: scale(1.1);
+    }
+}
+
+html, body {
+    background-color: #000000;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    cursor: none;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+}
+
+*, *::before, *::after,
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,
+button, input, textarea, select, option {
+    cursor: none !important;
+}
+
+a, button, input, textarea, select, 
+.project-card, .hamburger-menu, .scroll-indicator,
+.swiper-button-next-custom, .swiper-button-prev-custom,
+.social-icon, [role="button"], [tabindex],
+.cursor-pointer {
+    cursor: none !important;
+}
+
+.swiper-slide, .swiper-container, .swiper-wrapper,
+.swiper-pagination, .swiper-pagination-bullet,
+.swiper-button-next, .swiper-button-prev {
+    cursor: none !important;
+}
+
+.hover\:bg-primary, .hover\:text-primary, .hover\:scale-110,
+.transition-colors, .transition-transform {
+    cursor: none !important;
+}
+
+@media (max-width: 768px) {
+    *, *::before, *::after {
+        cursor: auto !important;
+    }
+    
+    .custom-cursor, .custom-cursor-dot {
+        display: none !important;
+    }
+}
+
+@media (min-width: 769px) {
+    * {
+        cursor: none !important;
+    }
+    
+    body {
+        cursor: none !important;
+    }
+    
+    .custom-cursor, .custom-cursor-dot {
+        display: block !important;
     }
 }
