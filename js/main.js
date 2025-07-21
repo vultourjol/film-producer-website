@@ -26,16 +26,18 @@ function initializeCustomCursor() {
         cursorDot.style.top = e.clientY + "px";
     });
     
-    const links = document.querySelectorAll("a, button, input, textarea, .project-card");
+    const links = document.querySelectorAll("a, button, input, textarea, .project-card, [data-project-id]");
     links.forEach(link => {
         link.addEventListener("mouseenter", function() {
             cursor.style.transform = "translate(-50%, -50%) scale(1.5)";
             cursor.style.opacity = "0.5";
+            cursor.style.transition = "transform 0.3s ease, opacity 0.3s ease"; // Добавляем плавный переход
         });
         
         link.addEventListener("mouseleave", function() {
             cursor.style.transform = "translate(-50%, -50%) scale(1)";
             cursor.style.opacity = "1";
+            cursor.style.transition = "transform 0.3s ease, opacity 0.3s ease"; // Добавляем плавный переход обратно
         });
     });
 }
@@ -262,5 +264,64 @@ window.addEventListener("scroll", function() {
     } else {
         header.classList.add("-translate-y-full");
         header.classList.remove("translate-y-0", "bg-opacity-90");
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cursor = document.querySelector('.custom-cursor');
+    const cursorDot = document.querySelector('.custom-cursor-dot');
+    let hasMouseMoved = false;
+
+    function showCursorOnFirstMove(e) {
+        if (!hasMouseMoved && window.innerWidth > 1023) {
+            hasMouseMoved = true;
+            
+            if (cursor) {
+                cursor.style.left = e.clientX + "px";
+                cursor.style.top = e.clientY + "px";
+            }
+            if (cursorDot) {
+                cursorDot.style.left = e.clientX + "px";
+                cursorDot.style.top = e.clientY + "px";
+            }
+            
+            setTimeout(() => {
+                if (cursor) cursor.classList.add('active');
+                if (cursorDot) cursorDot.classList.add('active');
+            }, 100);
+            
+            document.removeEventListener('mousemove', showCursorOnFirstMove);
+        }
+    }
+
+    if (window.innerWidth > 1023) {
+        document.addEventListener('mousemove', showCursorOnFirstMove);
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cursor = document.querySelector('.custom-cursor');
+    const cursorDot = document.querySelector('.custom-cursor-dot');
+
+    if (cursor && cursorDot) {
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            cursorDot.style.left = e.clientX + 'px';
+            cursorDot.style.top = e.clientY + 'px';
+        });
+
+        // Плавное увеличение при наведении на интерактивные элементы
+        const hoverElements = document.querySelectorAll('a, button, .project-card, [data-project-id]');
+        
+        hoverElements.forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                cursor.classList.add('hover');
+            });
+            
+            element.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover');
+            });
+        });
     }
 });

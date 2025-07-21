@@ -39,8 +39,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
-    <div class="custom-cursor hidden md:block"></div>
-    <div class="custom-cursor-dot hidden md:block"></div>
+    <div class="custom-cursor hidden lg:block max-lg:!hidden"></div>
+    <div class="custom-cursor-dot hidden lg:block max-lg:!hidden"></div>    
 
     <!-- Header Navigation -->
     <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-opacity-95 bg-black transform -translate-y-full backdrop-blur-md">
@@ -48,13 +48,13 @@
 
             <a href="#hero" class="text-white druk-font text-2xl select-none">PRODBYLELYA</a>
 
-            <div class="hamburger-menu md:hidden flex flex-col justify-center items-center w-10 h-10 cursor-pointer z-50">
+            <div class="hamburger-menu lg:hidden flex flex-col justify-center items-center w-10 h-10 cursor-pointer z-50">
                 <span class="bar w-6 h-0.5 bg-white mb-1.5 transition-all"></span>
                 <span class="bar w-6 h-0.5 bg-white mb-1.5 transition-all"></span>
                 <span class="bar w-6 h-0.5 bg-white transition-all"></span>
             </div>
             
-            <nav class="hidden md:flex space-x-8">
+            <nav class="hidden lg:flex space-x-8">
                 <a href="#portfolio" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1 select-none">Портфолио</a>
                 <a href="#showcase" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1 select-none">Новое</a>
                 <a href="#about" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1 select-none">Обо мне</a>
@@ -111,11 +111,11 @@
             <!-- Swiper elements navigation -->
             <div class="flex justify-between items-center mb-4 mt-4 select-none">
                 <div class="swiper-button-prev-custom w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
-                    <i class="ri-arrow-left-s-line text-white text-2xl"></i>
+                    <i class="ri-arrow-left-wide-line text-white text-2xl"></i>
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-next-custom w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
-                    <i class="ri-arrow-right-s-line text-white text-2xl"></i>
+                    <i class="ri-arrow-right-wide-line text-white text-2xl"></i>
                 </div>
             </div>
     
@@ -265,8 +265,8 @@
                         <h3 class="text-xl md:text-4xl mb-4 druk-font">Российский король рок-н-ролла</h3>
                         <p class="text-sm md:text-lg max-w-2xl opacity-80 mb-6">Во всём мире этот жанр музыки был запрещен, но в нашей стране нашелся человек, сумевший возродить целую музыкальную эпоху, на которой выросло не одно поколение.</p>
                         <p class="text-sm md:text-lg max-w-2xl opacity-80 mb-6">Денис Мажуков, Валерий Сюткин, Даниил Крамер, Роберт Ленц, Роман Чащин</p>
-                        <div class="flex space-x-4">
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm text-center border-2 border-white border-opacity-10">Документальный короткометражный фильм</span>
+                        <div class="flex space-x-2">
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Документальный короткометражный фильм</span>
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">15 мин</span>
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">2025</span>
                             <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10">
@@ -339,8 +339,8 @@
                         <h3 class="text-xl md:text-4xl mb-4 druk-font">Крутые номера</h3>
                         <p class="text-sm md:text-lg max-w-2xl opacity-80 mb-6">Он был типичным мажором из Москвы у которого было все, но однажды, купив номера на свою новую BMW Z4, его жизнь навсегда изменилась.</p>
                         <p class="text-sm md:text-lg opacity-80 mb-6">Экранизация рассказа Александра Райна</p>
-                        <div class="flex space-x-4">
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm text-center border-2 border-white border-opacity-10">Художественный короткометражный фильм</span>
+                        <div class="flex space-x-2">
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Художественный короткометражный фильм</span>
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">23 мин</span>
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">2025</span>
                             <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10">
@@ -411,8 +411,8 @@
                         <h3 class="text-xl md:text-4xl mb-4 druk-font">Ангел был позолочен</h3>
                         <p class="text-sm md:text-lg max-w-2xl opacity-80 mb-6">Цирковой артист узнает о том, что губернатор, перед которым он будет выступать - его родной отец, который жестоко унизил и бросил его мать. В отчаянном сознании Клоуна рисуется план мести.</p>
                         <p class="text-sm md:text-lg max-w-2xl opacity-80 mb-6">По мотивам романа В. Гюго "Человек, который смеётся"</p>
-                        <div class="flex space-x-4">
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm text-center border-2 border-white border-opacity-10">Художественный короткометражный фильм</span>
+                        <div class="flex space-x-2">
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Художественный короткометражный фильм</span>
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">25 мин</span>
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">2025</span>
                             <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10">
@@ -469,10 +469,10 @@
     <section id="about" class="py-6 bg-black">
         <div class="container mx-auto px-6 w-full mt-6">
             <h2 class="heading-font text-3xl md:text-4xl mb-16 text-center druk-font select-none">Обо <span class="text-primary">Мне</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
                 
                 <!-- Main picture -->
-                <div class="relative select-none">
+                <div class="relative select-none order-2 lg:order-1">
                     <div class="film-strip absolute top-0 left-0 h-full w-12"></div>
                     <div class="pl-16">
                         <picture>
@@ -480,84 +480,84 @@
                             <source srcset="source/mypic.webp" media="(max-width: 1200px)" type="image/webp">
                             <source srcset="source/mypic.webp" type="image/webp">
                             <img src="source/mypic.webp" loading="lazy" alt="Портрет" 
-                                 class="rounded-lg w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                                class="rounded-lg w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110 max-h-[600px] md:max-h-[1000px] lg:max-h-none">
                         </picture>                    
                     </div>
-                    <div class="absolute -bottom-8 -right-2 bg-primary rounded-lg p-6 shadow-x border-4 border-white border-opacity-50">
-                        <p class="font-bold text-xl">6+ Лет опыта</p>
-                        <p>Продюссер & Режиссёр монтажа</p>
+                    <div class="absolute -bottom-4 md:-bottom-8 -right-2 bg-primary rounded-lg p-4 md:p-6 shadow-x border-4 border-white border-opacity-50">
+                        <p class="font-bold text-lg md:text-xl">6+ Лет опыта</p>
+                        <p class="text-sm md:text-base">Продюссер & Режиссёр монтажа</p>
                     </div>
                 </div>
 
                 <!-- Description -->
-                <div class="select-none">
-                    <h3 class="text-xl md:text-3xl mb-6 druk-font">Лёля Козловская</h3>
-                    <p class="opacity-80 mb-6 text-sm md:text-lg">Привет, я молодой продюсер и режиссёр из Москвы. В 2020 году поступила в Институт кино телевидения ГИТР на продюсерский факультет. В 2024 году, осознав, что почти все мои съемочные работы как продюсера я также вела в качестве режиссёра, я решила поступить на факультет режиссуры. В 2025 году выпустилась в 2-мя высшими образованиями. </p>
-                    <p class="opacity-80 mb-8 text-sm md:text-lg">С самого детства я любила смотреть фильмы. Потом меня заинтересовала музыка и я начала писать собственные песни, ездила на студию, записывалась. Когда вышла телепередача "Песни" на ТНТ, начала писать сценарии к клипам для песен артистов, мечтая когда нибудь их снять.</p>
-                    <p class="opacity-80 mb-8 text-sm md:text-lg">Через год меня позвали работать вторым режиссёром на съемки клипа "PEEK-A-BOO - Alice Goes to Motherland". Параллельно выходила второрежить на крупные проекты, а потом и вовсе устроилась работать в студию цветокоррекции "CVET". Проработала там 2 года и поняла, что хочу снимать своё кино.</p>
-                    <p class="opacity-80 mb-8 text-sm md:text-lg">Так и родилась <span class="text-primary">prodbylelya <i class="ri-heart-3-line"></i></span></p>
+                <div class="select-none order-1 lg:order-2">
+                    <h3 class="text-xl md:text-2xl lg:text-3xl mb-4 md:mb-6 druk-font">Лёля Козловская</h3>
+                    <p class="opacity-80 mb-4 md:mb-6 text-sm md:text-base lg:text-lg">Привет, я молодой продюсер и режиссёр из Москвы. В 2020 году поступила в Институт кино телевидения ГИТР на продюсерский факультет. В 2024 году, осознав, что почти все мои съемочные работы как продюсера я также вела в качестве режиссёра, я решила поступить на факультет режиссуры. В 2025 году выпустилась в 2-мя высшими образованиями. </p>
+                    <p class="opacity-80 mb-4 md:mb-6 text-sm md:text-base lg:text-lg">С самого детства я любила смотреть фильмы. Потом меня заинтересовала музыка и я начала писать собственные песни, ездила на студию, записывалась. Когда вышла телепередача "Песни" на ТНТ, начала писать сценарии к клипам для песен артистов, мечтая когда нибудь их снять.</p>
+                    <p class="opacity-80 mb-4 md:mb-6 text-sm md:text-base lg:text-lg">Через год меня позвали работать вторым режиссёром на съемки клипа "PEEK-A-BOO - Alice Goes to Motherland". Параллельно выходила второрежить на крупные проекты, а потом и вовсе устроилась работать в студию цветокоррекции "CVET". Проработала там 2 года и поняла, что хочу снимать своё кино.</p>
+                    <p class="opacity-80 mb-6 md:mb-8 text-sm md:text-base lg:text-lg">Так и родилась <span class="text-primary">prodbylelya <i class="ri-heart-3-line"></i></span></p>
                     
                     <!-- Rewards and Collaborations -->
-                    <div class="grid grid-cols-2 gap-6 mb-8">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8">
                         <div class="flex items-start">
-                            <div class="w-10 h-10 flex items-center justify-center mr-4">
-                                <i class="ri-award-line text-primary text-3xl md:text-4xl"></i>
+                            <div class="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center mr-3 md:mr-4">
+                                <i class="ri-award-line text-primary text-2xl md:text-3xl lg:text-4xl"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-1 text-sm md:text-lg">Награды</h4>
-                                <p class="opacity-80 text-sm md:text-lg">10+ наград</p>
+                                <h4 class="font-bold mb-1 text-sm md:text-base lg:text-lg">Награды</h4>
+                                <p class="opacity-80 text-sm md:text-base lg:text-lg">10+ наград</p>
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <div class="w-10 h-10 flex items-center justify-center mr-4">
-                                <i class="ri-film-line text-primary text-3xl md:text-4xl"></i>
+                            <div class="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center mr-3 md:mr-4">
+                                <i class="ri-film-line text-primary text-2xl md:text-3xl lg:text-4xl"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-1 text-sm md:text-lg">Проекты</h4>
-                                <p class="opacity-80 text-sm md:text-lg">20+ Завершённых фильмов</p>
+                                <h4 class="font-bold mb-1 text-sm md:text-base lg:text-lg">Проекты</h4>
+                                <p class="opacity-80 text-sm md:text-base lg:text-lg">20+ Завершённых фильмов</p>
                             </div>
                         </div>
-                        <div class="flex items-start">
-                            <div class="w-10 h-10 flex items-center justify-center mr-4">
-                                <i class="ri-global-line text-primary text-3xl md:text-4xl"></i>
+                        <div class="flex items-start sm:col-span-2 lg:col-span-1">
+                            <div class="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center mr-3 md:mr-4">
+                                <i class="ri-global-line text-primary text-2xl md:text-3xl lg:text-4xl"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-1 text-sm md:text-lg">Фестивали</h4>
-                                <p class="opacity-80 text-sm md:text-lg">Телемания, КОРОЧЕ, Святая Анна, Белая Птица, Восемь Женщин, Лучезарный Ангел, Arctic Open</p>
+                                <h4 class="font-bold mb-1 text-sm md:text-base lg:text-lg">Фестивали</h4>
+                                <p class="opacity-80 text-sm md:text-base lg:text-lg">Телемания, КОРОЧЕ, Святая Анна, Белая Птица, Восемь Женщин, Лучезарный Ангел, Arctic Open</p>
                             </div>
                         </div>
-                        <div class="flex items-start">
-                            <div class="w-10 h-10 flex items-center justify-center mr-4">
-                                <i class="ri-team-line text-primary text-3xl md:text-4xl"></i>
+                        <div class="flex items-start sm:col-span-2 lg:col-span-1">
+                            <div class="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center mr-3 md:mr-4">
+                                <i class="ri-team-line text-primary text-2xl md:text-3xl lg:text-4xl"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-1 text-sm md:text-lg">Коллаборации</h4>
-                                <p class="opacity-80 text-sm md:text-lg">Лига Преподавателей высшей школы, Музей Табакова, Фонд президентских грантов, Президентских фонд культурных инициатив</p>
+                                <h4 class="font-bold mb-1 text-sm md:text-base lg:text-lg">Коллаборации</h4>
+                                <p class="opacity-80 text-sm md:text-base lg:text-lg">Лига Преподавателей высшей школы, Музей Табакова, Фонд президентских грантов, Президентских фонд культурных инициатив</p>
                             </div>
                         </div>
                     </div>
                     
                     <!-- Tags -->
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-2 bg-black bg-opacity-50 border-2 border-white border-opacity-10 rounded text-sm">Продюсерство</span>
-                        <span class="px-4 py-2 bg-black bg-opacity-50 border-2 border-white border-opacity-10 rounded text-sm">Постпродакшн</span>
-                        <span class="px-4 py-2 bg-black bg-opacity-50 border-2 border-white border-opacity-10 rounded text-sm">Режиссура</span>
-                        <span class="px-4 py-2 bg-black bg-opacity-50 border-2 border-white border-opacity-10 rounded text-sm">Монтаж</span>
-                        <span class="px-4 py-2 bg-black bg-opacity-50 border-2 border-white border-opacity-10 rounded text-sm">Цветокоррекция</span>
+                    <div class="flex flex-wrap gap-2 md:gap-3">
+                        <span class="px-3 py-2 md:px-4 md:py-2 bg-black bg-opacity-50 border-2 border-white border-opacity-10 rounded text-xs md:text-sm">Продюсерство</span>
+                        <span class="px-3 py-2 md:px-4 md:py-2 bg-black bg-opacity-50 border-2 border-white border-opacity-10 rounded text-xs md:text-sm">Постпродакшн</span>
+                        <span class="px-3 py-2 md:px-4 md:py-2 bg-black bg-opacity-50 border-2 border-white border-opacity-10 rounded text-xs md:text-sm">Режиссура</span>
+                        <span class="px-3 py-2 md:px-4 md:py-2 bg-black bg-opacity-50 border-2 border-white border-opacity-10 rounded text-xs md:text-sm">Монтаж</span>
+                        <span class="px-3 py-2 md:px-4 md:py-2 bg-black bg-opacity-50 border-2 border-white border-opacity-10 rounded text-xs md:text-sm">Цветокоррекция</span>
                     </div>
                 </div>
             </div>
             
             <!-- Workspace -->
-            <div class="mt-16">
-                <h3 class="text-xl md:text-2xl mb-8 text-center druk-font select-none">Рабочее пространство</h3>
+            <div class="mt-12 md:mt-16">
+                <h3 class="text-xl md:text-2xl mb-6 md:mb-8 text-center druk-font select-none">Рабочее пространство</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 select-none">
                     <div class="text-left md:text-right py-6 px-6">
-                        <div class="w-12 h-12 flex items-center justify-center mb-4 md:ml-auto">
-                            <i class="ri-4k-line text-primary text-3xl md:text-4xl"></i>
+                        <div class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center mb-4 md:ml-auto">
+                            <i class="ri-4k-line text-primary text-2xl md:text-3xl lg:text-4xl"></i>
                         </div>
-                        <h4 class="font-bold mb-2 text-sm md:text-lg">Софт</h4>
-                        <ul class="opacity-80 text-sm md:text-lg space-y-2">
+                        <h4 class="font-bold mb-2 text-sm md:text-base lg:text-lg">Софт</h4>
+                        <ul class="opacity-80 text-sm md:text-base lg:text-lg space-y-2">
                             <li class="flex items-center justify-between md:justify-end">
                                 <div class="flex items-center md:contents">
                                     <i class="ri-image-edit-line mr-2 md:hidden"></i>
@@ -583,11 +583,11 @@
                     </div>
                     
                     <div class="py-6 px-6">
-                        <div class="w-12 h-12 flex items-center justify-center mb-4">
-                            <i class="ri-computer-line text-primary text-3xl md:text-4xl"></i>
+                        <div class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center mb-4">
+                            <i class="ri-computer-line text-primary text-2xl md:text-3xl lg:text-4xl"></i>
                         </div>
-                        <h4 class="font-bold mb-2 text-sm md:text-lg">Монтажка</h4>
-                        <ul class="opacity-80 text-sm md:text-lg space-y-2">
+                        <h4 class="font-bold mb-2 text-sm md:text-base lg:text-lg">Монтажка</h4>
+                        <ul class="opacity-80 text-sm md:text-base lg:text-lg space-y-2">
                             <li><i class="ri-instance-line"></i> RTX 4060 8GB</li>
                             <li><i class="ri-cpu-line"></i> Intel Xeon E5-2697 v4</li>
                             <li><i class="ri-ram-line"></i> RAM 64GB</li>
@@ -607,11 +607,11 @@
             <!-- Swiper elements navigation -->
             <div class="flex justify-between items-center mb-4 mt-4">
                 <div class="swiper-button-prev-custom w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
-                    <i class="ri-arrow-left-s-line text-white text-2xl"></i>
+                    <i class="ri-arrow-left-wide-line text-white text-2xl"></i>
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-next-custom w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
-                    <i class="ri-arrow-right-s-line text-white text-2xl"></i>
+                    <i class="ri-arrow-right-wide-line text-white text-2xl"></i>
                 </div>
             </div>
     
@@ -668,15 +668,15 @@
                 <h3 class="text-2xl font-bold mb-6 select-none">Давайте создадим что-то потрясающее</h3>
                 <p class="opacity-80 text-sm md:text-lg mb-6 select-none">Я всегда открыта для обсуждения новых проектов, творческих идей или возможностей стать частью вашего видения.</p>
 
-                <div class="flex flex-col items-center">
-                    <div class="w-16 h-16 flex items-center justify-center text-primary bg-black bg-opacity-30 rounded-full">
-                        <i class="ri-map-pin-line text-3xl md:text-4xl"></i>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-11">
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 flex items-center justify-center text-primary bg-black bg-opacity-30 rounded-full">
+                            <i class="ri-map-pin-line text-3xl md:text-4xl"></i>
+                        </div>
+                        <h4 class="font-bold text-lg select-none">Локация</h4>
+                        <p class="text-lg opacity-80 select-none">Россия, Москва</p>
                     </div>
-                    <h4 class="font-bold text-lg select-none">Локация</h4>
-                    <p class="text-lg opacity-80 select-none">Россия, Москва</p>
-                </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-x-11">
                     <div class="flex flex-col items-center">
                         <div class="w-16 h-16 flex items-center justify-center text-primary bg-black bg-opacity-30 rounded-full">
                             <i class="ri-mail-line text-3xl md:text-4xl"></i>
@@ -701,7 +701,7 @@
                         </p>                            
                     </div>
 
-                    <div class="flex flex-col items-center">
+                    <div class="flex flex-col items-center lg:col-span-3 lg:col-start-1">
                         <div class="w-16 h-16 flex items-center justify-center text-primary bg-black bg-opacity-30 rounded-full">
                             <i class="ri-telegram-2-line text-3xl md:text-4xl"></i>
                         </div>
@@ -719,9 +719,9 @@
     <!-- Footer -->
     <footer class="py-6 bg-black">
         <div class="mx-auto px-6 w-full">
-            <div class="flex flex-col md:flex-row justify-between mb-6 md:mb-0">
+            <div class="flex flex-col lg:flex-row justify-between mb-6 lg:mb-0">
                 <a href="#hero" class="text-white druk-font text-2xl mt-6 mb-6 select-none">PRODBYLELYA</a>
-                <nav class="flex flex-wrap gap-x-8 gap-y-6 md:gap-y-0 mt-8">
+                <nav class="flex flex-wrap gap-x-8 gap-y-4 mt-6 lg:mt-8">
                     <a href="#portfolio" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider select-none">Портфолио</a>
                     <a href="#showcase" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider select-none">Новое</a>
                     <a href="#about" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider select-none">Обо мне</a>
@@ -731,11 +731,11 @@
             </div>
             
             <div class="border-t border-white border-opacity-10 pt-6">
-                <div class="flex flex-col md:flex-row justify-center md:justify-end space-y-0 md:space-x-6 md:text-right gap-y-3 md:gap-y-0">
-                    <p class="text-sm opacity-60"><a href="source/privacy-policy.pdf" class="hover:text-primary transition-colors select-none">Политика конфиденциальности</a></p>
-                    <p class="text-sm opacity-60"><a href="https://policies.google.com/terms?hl=ru" class="hover:text-primary transition-colors select-none">Условия использования</a></p>
-                    <div>
-                        <p class="text-sm opacity-60 md:text-left select-none">created by <a href="https://t.me/vultourjol" class="hover:text-primary transition-colors">vultourjol <i class="ri-code-s-slash-line"></i></a></i>
+                <div class="flex flex-col md:flex-row lg:flex-row justify-center md:justify-between lg:justify-end space-y-3 md:space-y-0 md:space-x-4 lg:space-x-6 lg:text-right">
+                    <p class="text-sm opacity-60 text-center md:text-left lg:text-right"><a href="source/privacy-policy.pdf" class="hover:text-primary transition-colors select-none">Политика конфиденциальности</a></p>
+                    <p class="text-sm opacity-60 text-center md:text-center lg:text-right"><a href="https://policies.google.com/terms?hl=ru" class="hover:text-primary transition-colors select-none">Условия использования</a></p>
+                    <div class="text-center md:text-right lg:text-left">
+                        <p class="text-sm opacity-60 select-none">created by <a href="https://t.me/vultourjol" class="hover:text-primary transition-colors">vultourjol <i class="ri-code-s-slash-line"></i></a></p>
                     </div>
                 </div>
             </div>

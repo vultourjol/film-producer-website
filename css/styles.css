@@ -42,55 +42,113 @@ html {
 .parallax {
     transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-        
+
 .typewriter {
     overflow: hidden;
-    border-right: 0.15em solid var(--accent-color);
+    border-right: 0.15em solid transparent;
     white-space: nowrap;
     margin: 0 auto;
     letter-spacing: 0.15em;
     width: 0;
     max-width: max-content; 
-    animation: typing 3.5s steps(10000, end) forwards, blink-caret 0.75s step-end infinite;
+    position: relative;
+    animation: 
+        cursor-appear 0.5s ease-in-out 0.5s forwards,
+        cursor-blink 0.75s step-end 1s infinite,
+        typing 3.5s steps(10000, end) 1.5s forwards;
+        /* cursor-final-hide 0.3s ease-out 5s forwards; */
 }
 
- @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+@keyframes cursor-appear {
+    0% { 
+        border-right-color: transparent;
+    }
+    100% { 
+        border-right-color: var(--accent-color);
+    }
 }
 
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: var(--accent-color) }
+@keyframes cursor-blink {
+    0%, 50% { 
+        border-right-color: var(--accent-color);
+    }
+    51%, 100% { 
+        border-right-color: transparent;
+    }
 }
-        
+
+@keyframes typing {
+    0% { 
+        width: 0;
+    }
+    100% { 
+        width: 100%;
+    }
+}
+
+@keyframes cursor-final-hide {
+    0% { 
+        border-right-color: var(--accent-color);
+    }
+    100% { 
+        border-right-color: transparent;
+    }
+}
+     
 .floating {
     animation: floating 3s ease-in-out infinite;
+    opacity: 0; /* Изначально скрыты */
+    animation-delay: 1s; /* Появляются вместе с началом мигания курсора */
+    animation-fill-mode: both; /* Сохраняет стили до и после анимации */
+}
+        
+/* ...existing code... */
+
+.floating {
+    animation: 
+        fade-in 1.5s ease-out 2s forwards,
+        floating 3s ease-in-out 1s infinite;
+    opacity: 0;
 }
         
 .floating-delay-1 {
-    animation-delay: 0.5s;
+    animation: 
+        fade-in 1.5s ease-out 2.5s forwards,
+        floating 3s ease-in-out 1.5s infinite;
 }
         
 .floating-delay-2 {
-    animation-delay: 1s;
+    animation: 
+        fade-in 1.5s ease-out 3s forwards,
+        floating 3s ease-in-out 2s infinite;
 }
-        
+
+.scroll-indicator {
+    animation: 
+        fade-in 1.5s ease-out 3.5s forwards,
+        pulse 3s ease-in-out 3s infinite;
+    opacity: 0;
+}
+
+/* Анимация плавного появления */
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 @keyframes floating {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-15px); }
     100% { transform: translateY(0px); }
 }
         
-.scroll-indicator {
-    animation: pulse 2s infinite;
-}
-        
 @keyframes pulse {
-    0% { transform: scale(0.75); opacity: 0.5; }
-    50% { transform: scale(1.05); opacity: 1; }
-    100% { transform: scale(0.75); opacity: 0.5; }
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
 }
+
+/* ...existing code... */
         
 .hamburger-menu {
     transition: all 0.3s ease-in-out;
@@ -176,6 +234,8 @@ html {
     }
 }
         
+/* ...existing code... */
+
 .custom-cursor {
     position: fixed;
     width: 40px;
@@ -186,9 +246,10 @@ html {
     pointer-events: none;
     z-index: 9999;
     mix-blend-mode: difference;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Базовый переход */
+    opacity: 1;
 }
-        
+
 .custom-cursor-dot {
     position: fixed;
     width: 8px;
@@ -199,7 +260,17 @@ html {
     pointer-events: none;
     z-index: 9999;
     mix-blend-mode: difference;
+    transition: transform 0.2s ease; /* Плавный переход для точки */
 }
+
+/* Состояния курсора при наведении */
+.custom-cursor.hover {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s ease, width 0.3s ease, height 0.3s ease;
+}
+
+/* ...existing code... */
         
 .video-bg {
     position: absolute;
@@ -338,14 +409,7 @@ input:checked + .slider:before {
     }
 }
 
-@media (max-width: 640px) {
-  }
-  
-  @media (min-width: 641px) and (max-width: 1024px) {
-  }
-  
-  @media (min-width: 1025px) {
-  }
+
 
 @media (max-width: 640px) {
     .typewriter {
@@ -533,5 +597,65 @@ a, button, input, textarea, select,
     
     .custom-cursor, .custom-cursor-dot {
         display: block !important;
+    }
+}
+
+@media (max-width: 1025px) {
+    .custom-cursor,
+    .custom-cursor-dot {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1370px) and (orientation: landscape) {
+    .custom-cursor,
+    .custom-cursor-dot {
+        display: none !important;
+    }
+}
+
+.custom-cursor,
+.custom-cursor-dot {
+    opacity: 0;
+    visibility: hidden;
+    left: -100px; 
+    top: -100px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.custom-cursor.active,
+.custom-cursor-dot.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 1023px) {
+    .custom-cursor,
+    .custom-cursor-dot {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+    .typewriter {
+        font-size: 3.5rem !important; 
+    }
+}
+
+@media (max-width: 430px) and (orientation: portrait) {
+    .typewriter {
+        font-size: 1.9rem !important; 
+    }
+}
+
+@media (max-width: 390px) and (orientation: portrait) {
+    .typewriter {
+        font-size: 1.7rem !important; 
+    }
+}
+
+@media (max-width: 1500px) and (orientation: landscape) {
+    .typewriter {
+        font-size: 5rem !important; 
     }
 }
