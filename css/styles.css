@@ -51,7 +51,7 @@ html {
     letter-spacing: 0.15em;
     width: 0;
     max-width: max-content; 
-    animation: typing 3.5s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+    animation: typing 3.5s steps(10000, end) forwards, blink-caret 0.75s step-end infinite;
 }
 
  @keyframes typing {
@@ -353,7 +353,7 @@ input:checked + .slider:before {
 @media (max-width: 640px) {
     .typewriter {
       font-size: 2rem;
-      letter-spacing: 0.1em;
+      letter-spacing: 1em;
     }
     
     .project-overlay {
