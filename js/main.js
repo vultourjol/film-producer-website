@@ -1,46 +1,67 @@
-const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || window.innerWidth <= 768;
+const isMobile = false; 
 
 function deferNonEssentialScripts() {
     if (isMobile) {
-        window.addEventListener("load", initializeCustomCursor);
+        // window.addEventListener("load", initializeCustomCursor);
         window.addEventListener("load", initializeParallaxEffects);
     } else {
-        initializeCustomCursor();
+        // initializeCustomCursor();
         initializeParallaxEffects();
     }
 }
 
-function initializeCustomCursor() {
-    if (window.innerWidth <= 768) return;
+// function initializeCustomCursor() {    
+//     const cursor = document.querySelector(".custom-cursor");
+//     const cursorDot = document.querySelector(".custom-cursor-dot");
     
-    const cursor = document.querySelector(".custom-cursor");
-    const cursorDot = document.querySelector(".custom-cursor-dot");
+//     if (!cursor || !cursorDot) return;
     
-    if (!cursor || !cursorDot) return;
+//     let hasMouseMoved = false;
+
+//     function showCursorOnFirstMove(e) {
+//         if (!hasMouseMoved) {
+//             hasMouseMoved = true;
+            
+//             cursor.style.left = e.clientX + "px";
+//             cursor.style.top = e.clientY + "px";
+//             cursorDot.style.left = e.clientX + "px";
+//             cursorDot.style.top = e.clientY + "px";
+            
+//             setTimeout(() => {
+//                 cursor.classList.add('active');
+//                 cursorDot.classList.add('active');
+//             }, 100);
+            
+//             document.removeEventListener('mousemove', showCursorOnFirstMove);
+            
+//             // Добавляем основной обработчик движения мыши
+//             document.addEventListener("mousemove", function(e) {
+//                 cursor.style.left = e.clientX + "px";
+//                 cursor.style.top = e.clientY + "px";
+//                 cursorDot.style.left = e.clientX + "px";
+//                 cursorDot.style.top = e.clientY + "px";
+//             });
+//         }
+//     }
+
+//     document.addEventListener('mousemove', showCursorOnFirstMove);
     
-    document.addEventListener("mousemove", function(e) {
-        cursor.style.left = e.clientX + "px";
-        cursor.style.top = e.clientY + "px";
+//     // Обработчики для hover эффектов
+//     const links = document.querySelectorAll("a, button, input, textarea, .project-card, [data-project-id]");
+//     links.forEach(link => {
+//         link.addEventListener("mouseenter", function() {
+//             cursor.classList.add('hover');
+//             cursor.style.transform = "translate(-50%, -50%) scale(1.5)";
+//             cursor.style.opacity = "0.5";
+//         });
         
-        cursorDot.style.left = e.clientX + "px";
-        cursorDot.style.top = e.clientY + "px";
-    });
-    
-    const links = document.querySelectorAll("a, button, input, textarea, .project-card, [data-project-id]");
-    links.forEach(link => {
-        link.addEventListener("mouseenter", function() {
-            cursor.style.transform = "translate(-50%, -50%) scale(1.5)";
-            cursor.style.opacity = "0.5";
-            cursor.style.transition = "transform 0.3s ease, opacity 0.3s ease"; // Добавляем плавный переход
-        });
-        
-        link.addEventListener("mouseleave", function() {
-            cursor.style.transform = "translate(-50%, -50%) scale(1)";
-            cursor.style.opacity = "1";
-            cursor.style.transition = "transform 0.3s ease, opacity 0.3s ease"; // Добавляем плавный переход обратно
-        });
-    });
-}
+//         link.addEventListener("mouseleave", function() {
+//             cursor.classList.remove('hover');
+//             cursor.style.transform = "translate(-50%, -50%) scale(1)";
+//             cursor.style.opacity = "1";
+//         });
+//     });
+// }
 
 function initializeParallaxEffects() {
     const parallaxElements = document.querySelectorAll(".parallax");
@@ -92,9 +113,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const header = document.querySelector("header");
     window.addEventListener("scroll", function() {
         if (window.scrollY > 100) {
-            header.classList.add("bg-black", "bg-opacity-90", "shadow-lg");
+            header.classList.add("bg-black", "shadow-lg");
         } else {
-            header.classList.remove("bg-black", "bg-opacity-90", "shadow-lg");
+            header.classList.remove("bg-black", "shadow-lg");
         }
     });
             
@@ -203,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 modal.classList.remove("hidden");
                 body.classList.add("overflow-hidden");
                 setTimeout(() => {
-                    modalBackdrop.classList.add("opacity-100", "show"); // Add show class for blur
+                    modalBackdrop.classList.add("opacity-100", "show"); 
                     modal.classList.add("opacity-100", "scale-100");
                 }, 10);
             }
@@ -264,68 +285,9 @@ window.addEventListener("scroll", function() {
     
     if (scrollPosition > 100) {
         header.classList.remove("-translate-y-full");
-        header.classList.add("translate-y-0", "bg-opacity-90");
+        header.classList.add("translate-y-0");
     } else {
         header.classList.add("-translate-y-full");
-        header.classList.remove("translate-y-0", "bg-opacity-90");
-    }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const cursor = document.querySelector('.custom-cursor');
-    const cursorDot = document.querySelector('.custom-cursor-dot');
-    let hasMouseMoved = false;
-
-    function showCursorOnFirstMove(e) {
-        if (!hasMouseMoved && window.innerWidth > 1023) {
-            hasMouseMoved = true;
-            
-            if (cursor) {
-                cursor.style.left = e.clientX + "px";
-                cursor.style.top = e.clientY + "px";
-            }
-            if (cursorDot) {
-                cursorDot.style.left = e.clientX + "px";
-                cursorDot.style.top = e.clientY + "px";
-            }
-            
-            setTimeout(() => {
-                if (cursor) cursor.classList.add('active');
-                if (cursorDot) cursorDot.classList.add('active');
-            }, 100);
-            
-            document.removeEventListener('mousemove', showCursorOnFirstMove);
-        }
-    }
-
-    if (window.innerWidth > 1023) {
-        document.addEventListener('mousemove', showCursorOnFirstMove);
-    }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const cursor = document.querySelector('.custom-cursor');
-    const cursorDot = document.querySelector('.custom-cursor-dot');
-
-    if (cursor && cursorDot) {
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-            cursorDot.style.left = e.clientX + 'px';
-            cursorDot.style.top = e.clientY + 'px';
-        });
-
-        // Плавное увеличение при наведении на интерактивные элементы
-        const hoverElements = document.querySelectorAll('a, button, .project-card, [data-project-id]');
-        
-        hoverElements.forEach(element => {
-            element.addEventListener('mouseenter', () => {
-                cursor.classList.add('hover');
-            });
-            
-            element.addEventListener('mouseleave', () => {
-                cursor.classList.remove('hover');
-            });
-        });
+        header.classList.remove("translate-y-0");
     }
 });

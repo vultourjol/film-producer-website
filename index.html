@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#000000">
-    <title>PRODBYLELYA</title>
+    <title>PRODBYLELYA</title>    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="movie-2-line-16px-white.png" id="favicon-16">
+    <link rel="icon" type="image/png" sizes="32x32" href="movie-2-line-32px-white.png" id="favicon-32">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="movie-2-line-16px.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="movie-2-line-32px.png">
+    <script>
+        function updateFavicon() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const favicon16 = document.getElementById('favicon-16');
+            const favicon32 = document.getElementById('favicon-32');
+            
+            if (isDark) {
+                favicon16.href = 'movie-2-line-16px-white.png';
+                favicon32.href = 'movie-2-line-32px-white.png';
+            } else {
+                favicon16.href = 'movie-2-line-16px-black.png';
+                favicon32.href = 'movie-2-line-32px-black.png';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', updateFavicon);
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+    </script>
 
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
     <script>
@@ -44,11 +62,11 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
-    <div class="custom-cursor hidden lg:block max-lg:!hidden"></div>
-    <div class="custom-cursor-dot hidden lg:block max-lg:!hidden"></div>    
+    <!-- <div class="custom-cursor hidden lg:block max-lg:!hidden"></div>
+    <div class="custom-cursor-dot hidden lg:block max-lg:!hidden"></div> -->
 
     <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-opacity-95 bg-black transform -translate-y-full backdrop-blur-md">
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-black bg-opacity-50 backdrop-blur -translate-y-full">
         <div class="mx-auto px-6 w-full py-4 flex justify-between items-center">
 
             <a href="#hero" class="text-white druk-font text-2xl select-none">PRODBYLELYA</a>
@@ -57,7 +75,7 @@
                 <span class="bar w-6 h-0.5 bg-white mb-1.5 transition-all"></span>
                 <span class="bar w-6 h-0.5 bg-white mb-1.5 transition-all"></span>
                 <span class="bar w-6 h-0.5 bg-white transition-all"></span>
-            </div>
+            </div>  
             
             <nav class="hidden lg:flex space-x-8">
                 <a href="#portfolio" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1 select-none">Портфолио</a>
@@ -67,13 +85,13 @@
                 <a href="#contact" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1 select-none">Контакты</a>
             </nav>
             
-            <div class="mobile-menu fixed top-0 right-0 w-80 h-full bg-black bg-opacity-95 transform translate-x-full transition-transform duration-300 ease-in-out z-40">
-                <nav class="flex flex-col items-center justify-center w-full h-screen space-y-16 px-6 bg-black bg-opacity-75 backdrop-blur-md">
-                    <a href="#portfolio" class="text-white hover:text-primary transition-colors text-xl uppercase tracking-wider">Портфолио</a>
-                    <a href="#showcase" class="text-white hover:text-primary transition-colors text-xl uppercase tracking-wider">Новое</a>
-                    <a href="#about" class="text-white hover:text-primary transition-colors text-xl uppercase tracking-wider">Обо мне</a>
-                    <a href="#team" class="text-white hover:text-primary transition-colors text-xl uppercase tracking-wider">Команда</a>
-                    <a href="#contact" class="text-white hover:text-primary transition-colors text-xl uppercase tracking-wider">Контакты</a>
+            <div class="mobile-menu fixed top-0 right-0 w-80 h-full transform translate-x-full transition-transform duration-300 ease-in-out z-40">
+                <nav class="flex flex-col items-center justify-center w-full h-screen space-y-16 px-6">
+                    <a href="#portfolio" class="text-white hover:text-primary text-xl uppercase tracking-wider py-2 px-1 select-none">Портфолио</a>
+                    <a href="#showcase" class="text-white hover:text-primary text-xl uppercase tracking-wider py-2 px-1 select-none">Новое</a>
+                    <a href="#about" class="text-white hover:text-primary text-xl uppercase tracking-wider py-2 px-1 select-none">Обо мне</a>
+                    <a href="#team" class="text-white hover:text-primary text-xl uppercase tracking-wider py-2 px-1 select-none">Команда</a>
+                    <a href="#contact" class="text-white hover:text-primary text-xl uppercase  tracking-wider py-2 px-1 select-none">Контакты</a>
                 </nav>
             </div>
 
@@ -144,20 +162,20 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Project 2 -->
                     <div class="swiper-slide">
                         <div class="project-card rounded overflow-hidden relative h-80" data-project-id="2">
                             <picture>
-                                <source srcset="source/fieldgreen.webp" media="(max-width: 600px)" type="image/webp">
-                                <source srcset="source/fieldgreen.webp" media="(max-width: 1200px)" type="image/webp">
-                                <source srcset="source/fieldgreen.webp" type="image/webp">
-                                <img src="source/fieldgreen.webp" loading="lazy" alt="Славянка" 
+                                <source srcset="source/fatumfatum.webp" media="(max-width: 600px)" type="image/webp">
+                                <source srcset="source/fatumfatum.webp" media="(max-width: 1200px)" type="image/webp">
+                                <source srcset="source/fatumfatum.webp" type="image/webp">
+                                <img src="source/fatumfatum.webp" loading="lazy" alt="Фатум" 
                                      class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
                             </picture>                    
                             <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
-                                <h3 class="text-xl mb-2 druk-font">Славянка</h3>
-                                <p class="text-sm opacity-80">Документальный короткометражный фильм • 2024</p>
+                                <h3 class="text-xl mb-2 druk-font">Фатум</h3>
+                                <p class="text-sm opacity-80">Художественный короткометражный фильм • 2023</p>
                             </div>
                         </div>
                     </div>
@@ -200,15 +218,15 @@
                     <div class="swiper-slide">
                         <div class="project-card rounded overflow-hidden relative h-80" data-project-id="5">
                             <picture>
-                                <source srcset="source/fatumfatum.webp" media="(max-width: 600px)" type="image/webp">
-                                <source srcset="source/fatumfatum.webp" media="(max-width: 1200px)" type="image/webp">
-                                <source srcset="source/fatumfatum.webp" type="image/webp">
-                                <img src="source/fatumfatum.webp" loading="lazy" alt="Фатум" 
+                                <source srcset="source/fieldgreen.webp" media="(max-width: 600px)" type="image/webp">
+                                <source srcset="source/fieldgreen.webp" media="(max-width: 1200px)" type="image/webp">
+                                <source srcset="source/fieldgreen.webp" type="image/webp">
+                                <img src="source/fieldgreen.webp" loading="lazy" alt="Славянка" 
                                      class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
                             </picture>                    
                             <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
-                                <h3 class="text-xl mb-2 druk-font">Фатум</h3>
-                                <p class="text-sm opacity-80">Художественный короткометражный фильм • 2023</p>
+                                <h3 class="text-xl mb-2 druk-font">Славянка</h3>
+                                <p class="text-sm opacity-80">Документальный короткометражный фильм • 2024</p>
                             </div>
                         </div>
                     </div>
@@ -803,14 +821,14 @@
                     <i class="ri-close-line text-white text-2xl"></i>
                 </button>
                 <div class="relative h-[50vh]">
-                    <img src="source/fieldgreen.webp" alt="Славянка" class="w-full h-full object-cover">
+                    <img src="source/fatumfatum.webp" alt="Фатум" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-8">
-                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Славянка</h3>
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Фатум</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Документальный короткометражный фильм</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">10 мин</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">2024</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Художественный короткометражный фильм</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">22 мин</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">2023</span>
                             <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10">
                                 <i class="ri-play-fill text-white text-2xl"></i>
                             </a>
@@ -818,29 +836,28 @@
                     </div>
                 </div>
                 <div class="p-8">
-                    <p class="text-sm md:text-lg mb-8">История о любви к своим корням, о том как важно о них помнить и о том, как во все времна народная музыка сохраняла человека в человеке.</p>
+                    <p class="text-sm md:text-lg mb-8">Молодой и наивный парень делает первые шаги во "взрослую жизнь". Герой пробует себя в разных сферах, ищет новые знакомства и отчаянно пытается достичь той жизни, которую принято считать за идеал. Так, деньги и власть становятся для молодого человека причиной для совершения  необдуманного поступка. Однако, за любым преступлением следует и наказание, поэтому главному герою приходиться попрощаться не только со своими мечтами, но и с собственной жизнью.</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
                         <div>
                             <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
-                            <p class="text-sm md:text-lg opacity-80">Режиссёр - Лёля Козловская</p>
-                            <p class="text-sm md:text-lg opacity-80">Оператор - Розалия Тукаева</p>
-                            <p class="text-sm md:text-lg opacity-80">Режиссёр монтажа - Лёля Козловская & Розалия Тукаева</p>
+                            <p class="text-sm md:text-lg opacity-80">Режиссёр - Маргарита Голомидова</p>
+                            <p class="text-sm md:text-lg opacity-80">Оператор - Дмитрий Журавлёв</p>
+                            <p class="text-sm md:text-lg opacity-80">Режиссёр монтажа - Маргарита Голомидова</p>
                             <p class="text-sm md:text-lg opacity-80">Продюсер - Лёля Козловская</p>
                         </div>
                         <div>
                             <h4 class="text-xl font-bold mb-4">Технические детали</h4>
-                            <p class="text-sm md:text-lg opacity-80">Камера: Sony ZVE10</p>
-                            <p class="text-sm md:text-lg opacity-80">Локации: г. Калуга</p>
+                            <p class="text-sm md:text-lg opacity-80">Камера: Blackmagik 6K</p>
+                            <p class="text-sm md:text-lg opacity-80">Локации: г. Москва, г. Лобня</p>
                         </div>
                     </div>
                     <div class="mb-8">
                         <h4 class="text-xl font-bold mb-4">За кадром</h4>
-                        <p class="text-sm md:text-lg opacity-80">Съемки проходили в городе Калуга в течении 3-ех дней. Мы с командой приехали в замечательный дачный посёлок к главной героине и в тот же день начали снимать. Нам было важно ничего не упустить, ведь режиссёру хотелось достичь максимальной достоверности деревенской жизни русско-народного ансамбля.</p>
+                        <p class="text-sm md:text-lg opacity-80">Это был первый крупный по студенческим меркам проект для меня. Тогда мне в руки попали 300.000 руб. на реализацию и я впервые столкнулась с масштабом. 6 смен, 2 города, огромное количество актёров, перекрытие площади Трёх вокзалов и работа с трюковой собакой.</p>
                     </div>
                 </div>
             </div>
         </div>
-        
         
         <!-- Project 3 Modal -->
         <div class="project-modal-content hidden" id="modal-project-3">
@@ -940,14 +957,14 @@
                     <i class="ri-close-line text-white text-2xl"></i>
                 </button>
                 <div class="relative h-[50vh]">
-                    <img src="source/fatumfatum.webp" alt="Фатум" class="w-full h-full object-cover">
+                    <img src="source/fieldgreen.webp" alt="Славянка" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-8">
-                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Фатум</h3>
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Славянка</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Художественный короткометражный фильм</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">22 мин</span>
-                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">2023</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Документальный короткометражный фильм</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">10 мин</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">2024</span>
                             <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10">
                                 <i class="ri-play-fill text-white text-2xl"></i>
                             </a>
@@ -955,24 +972,24 @@
                     </div>
                 </div>
                 <div class="p-8">
-                    <p class="text-sm md:text-lg mb-8">Молодой и наивный парень делает первые шаги во "взрослую жизнь". Герой пробует себя в разных сферах, ищет новые знакомства и отчаянно пытается достичь той жизни, которую принято считать за идеал. Так, деньги и власть становятся для молодого человека причиной для совершения  необдуманного поступка. Однако, за любым преступлением следует и наказание, поэтому главному герою приходиться попрощаться не только со своими мечтами, но и с собственной жизнью.</p>
+                    <p class="text-sm md:text-lg mb-8">История о любви к своим корням, о том как важно о них помнить и о том, как во все времна народная музыка сохраняла человека в человеке.</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
                         <div>
                             <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
-                            <p class="text-sm md:text-lg opacity-80">Режиссёр - Маргарита Голомидова</p>
-                            <p class="text-sm md:text-lg opacity-80">Оператор - Дмитрий Журавлёв</p>
-                            <p class="text-sm md:text-lg opacity-80">Режиссёр монтажа - Маргарита Голомидова</p>
+                            <p class="text-sm md:text-lg opacity-80">Режиссёр - Лёля Козловская</p>
+                            <p class="text-sm md:text-lg opacity-80">Оператор - Розалия Тукаева</p>
+                            <p class="text-sm md:text-lg opacity-80">Режиссёр монтажа - Лёля Козловская & Розалия Тукаева</p>
                             <p class="text-sm md:text-lg opacity-80">Продюсер - Лёля Козловская</p>
                         </div>
                         <div>
                             <h4 class="text-xl font-bold mb-4">Технические детали</h4>
-                            <p class="text-sm md:text-lg opacity-80">Камера: Blackmagik 6K</p>
-                            <p class="text-sm md:text-lg opacity-80">Локации: г. Москва, г. Лобня</p>
+                            <p class="text-sm md:text-lg opacity-80">Камера: Sony ZVE10</p>
+                            <p class="text-sm md:text-lg opacity-80">Локации: г. Калуга</p>
                         </div>
                     </div>
                     <div class="mb-8">
                         <h4 class="text-xl font-bold mb-4">За кадром</h4>
-                        <p class="text-sm md:text-lg opacity-80">Это был первый крупный по студенческим меркам проект для меня. Тогда мне в руки попали 300.000 руб. на реализацию и я впервые столкнулась с масштабом. 6 смен, 2 города, огромное количество актёров, перекрытие площади Трёх вокзалов и работа с трюковой собакой.</p>
+                        <p class="text-sm md:text-lg opacity-80">Съемки проходили в городе Калуга в течении 3-ех дней. Мы с командой приехали в замечательный дачный посёлок к главной героине и в тот же день начали снимать. Нам было важно ничего не упустить, ведь режиссёру хотелось достичь максимальной достоверности деревенской жизни русско-народного ансамбля.</p>
                     </div>
                 </div>
             </div>

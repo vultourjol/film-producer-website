@@ -14,7 +14,6 @@ body {
     color: var(--text-primary);
     overflow-x: hidden;
     padding-top: env(safe-area-inset-top);
-    cursor: none;
 }
 
 header {
@@ -24,10 +23,6 @@ header {
 
 html {
     background-color: #000000;
-}
-
-* {
-    cursor: none;
 }
 
 .heading {
@@ -171,7 +166,7 @@ html {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 1);
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
@@ -180,7 +175,7 @@ html {
 
 .mobile-menu:not(.translate-x-full)::before {
     opacity: 1;
-    visibility: visible;
+    visibility: visible; 
 }
         
 .project-card {
@@ -227,39 +222,6 @@ html {
     }
 }
         
-.custom-cursor {
-    position: fixed;
-    width: 40px;
-    height: 40px;
-    border: 2px solid var(--accent-color);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 9999;
-    mix-blend-mode: difference;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Базовый переход */
-    opacity: 1;
-}
-
-.custom-cursor-dot {
-    position: fixed;
-    width: 8px;
-    height: 8px;
-    background-color: var(--accent-color);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 9999;
-    mix-blend-mode: difference;
-    transition: transform 0.2s ease; /* Плавный переход для точки */
-}
-
-.custom-cursor.hover {
-    width: 50px;
-    height: 50px;
-    transition: transform 0.2s ease, width 0.3s ease, height 0.3s ease;
-}
-        
 .video-bg {
     position: absolute;
     top: 0;
@@ -278,11 +240,6 @@ html {
     height: 100%;
     background: linear-gradient(to bottom, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.9));
     z-index: -1;
-}
-        
-.film-strip {
-    background-image: url("data:image/svg+xml,%3Csvg width='50' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0' y='0' width='50' height='200' fill='%23000000' /%3E%3Crect x='10' y='10' width='30' height='30' fill='none' stroke='%23EAA124' stroke-width='2' /%3E%3Crect x='10' y='50' width='30' height='30' fill='none' stroke='%23EAA124' stroke-width='2' /%3E%3Crect x='10' y='90' width='30' height='30' fill='none' stroke='%23EAA124' stroke-width='2' /%3E%3Crect x='10' y='130' width='30' height='30' fill='none' stroke='%23EAA124' stroke-width='2' /%3E%3Crect x='10' y='170' width='30' height='30' fill='none' stroke='%23EAA124' stroke-width='2' /%3E%3C/svg%3E");
-    background-repeat: repeat-y;
 }
         
 .slider {
@@ -330,14 +287,13 @@ input:checked + .slider:before {
     opacity: 1;
 }
 
-/* Modal backdrop blur animation */
 .project-modal #modal-overlay {
     backdrop-filter: blur(0px);
     transition: backdrop-filter 1s ease-in-out;
 }
 
 .project-modal.show #modal-overlay {
-    backdrop-filter: blur(16px); /* equivalent to backdrop-blur-lg */
+    backdrop-filter: blur(16px);
 }
 
 .project-modal-content {
@@ -522,106 +478,8 @@ body::-webkit-scrollbar {
 }
 
 * {
-    cursor: none;
     scrollbar-width: none; 
     -ms-overflow-style: none;
-}
-
-*, *::before, *::after,
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video,
-button, input, textarea, select, option {
-    cursor: none !important;
-}
-
-a, button, input, textarea, select, 
-.project-card, .hamburger-menu, .scroll-indicator,
-.swiper-button-next-custom, .swiper-button-prev-custom,
-.social-icon, [role="button"], [tabindex],
-.cursor-pointer {
-    cursor: none !important;
-}
-
-.swiper-slide, .swiper-container, .swiper-wrapper,
-.swiper-pagination, .swiper-pagination-bullet,
-.swiper-button-next, .swiper-button-prev {
-    cursor: none !important;
-}
-
-.hover\:bg-primary, .hover\:text-primary, .hover\:scale-110,
-.transition-colors, .transition-transform {
-    cursor: none !important;
-}
-
-@media (max-width: 768px) {
-    *, *::before, *::after {
-        cursor: auto !important;
-    }
-    
-    .custom-cursor, .custom-cursor-dot {
-        display: none !important;
-    }
-}
-
-@media (min-width: 769px) {
-    * {
-        cursor: none !important;
-    }
-    
-    body {
-        cursor: none !important;
-    }
-    
-    .custom-cursor, .custom-cursor-dot {
-        display: block !important;
-    }
-}
-
-@media (max-width: 1025px) {
-    .custom-cursor,
-    .custom-cursor-dot {
-        display: none !important;
-    }
-}
-
-@media (max-width: 1370px) and (orientation: landscape) {
-    .custom-cursor,
-    .custom-cursor-dot {
-        display: none !important;
-    }
-}
-
-.custom-cursor,
-.custom-cursor-dot {
-    opacity: 0;
-    visibility: hidden;
-    left: -100px; 
-    top: -100px;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.custom-cursor.active,
-.custom-cursor-dot.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-@media (max-width: 1023px) {
-    .custom-cursor,
-    .custom-cursor-dot {
-        display: none !important;
-    }
 }
 
 @media (max-width: 1024px) and (orientation: portrait) {
