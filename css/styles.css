@@ -90,6 +90,11 @@ html {
     }
 }
 
+.fade-in {
+    animation: fade-in 3s ease-in 3.5s forwards;
+    opacity: 0;
+}
+
 .floating {
     animation: 
         fade-in 1.5s ease-out 2s forwards,
