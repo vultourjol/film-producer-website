@@ -505,3 +505,143 @@ body::-webkit-scrollbar {
         font-size: 5rem !important; 
     }
 }
+
+.film-strip {
+    background: linear-gradient(
+        to bottom,
+        #1a1a1a 0%,
+        #333 5%,
+        #1a1a1a 10%,
+        #333 15%,
+        #1a1a1a 20%,
+        #333 25%,
+        #1a1a1a 30%,
+        #333 35%,
+        #1a1a1a 40%,
+        #333 45%,
+        #1a1a1a 50%,
+        #333 55%,
+        #1a1a1a 60%,
+        #333 65%,
+        #1a1a1a 70%,
+        #333 75%,
+        #1a1a1a 80%,
+        #333 85%,
+        #1a1a1a 90%,
+        #333 95%,
+        #1a1a1a 100%
+    );
+    position: relative;
+    border-radius: 4px;
+}
+
+.film-strip::before,
+.film-strip::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background: #000;
+    border-radius: 50%;
+    box-shadow: 
+        0 16px 0 #000,
+        0 32px 0 #000,
+        0 48px 0 #000,
+        0 64px 0 #000,
+        0 80px 0 #000,
+        0 96px 0 #000,
+        0 112px 0 #000,
+        0 128px 0 #000,
+        0 144px 0 #000,
+        0 160px 0 #000,
+        0 176px 0 #000,
+        0 192px 0 #000,
+        0 208px 0 #000,
+        0 224px 0 #000,
+        0 240px 0 #000,
+        0 256px 0 #000,
+        0 272px 0 #000,
+        0 288px 0 #000,
+        0 304px 0 #000,
+        0 320px 0 #000,
+        0 336px 0 #000,
+        0 352px 0 #000,
+        0 368px 0 #000,
+        0 384px 0 #000,
+        0 400px 0 #000,
+        0 416px 0 #000,
+        0 432px 0 #000,
+        0 448px 0 #000,
+        0 464px 0 #000,
+        0 480px 0 #000,
+        0 496px 0 #000,
+        0 512px 0 #000,
+        0 528px 0 #000,
+        0 544px 0 #000,
+        0 560px 0 #000,
+        0 576px 0 #000,
+        0 592px 0 #000,
+        0 608px 0 #000;
+}
+
+.film-strip::before {
+    top: 8px;
+}
+
+.film-strip::after {
+    top: 12px;
+}
+
+/* Адаптивные стили для разных размеров экрана */
+@media (max-width: 768px) {
+    .film-strip {
+        width: 8px;
+    }
+    
+    .film-strip::before,
+    .film-strip::after {
+        width: 4px;
+        height: 4px;
+        box-shadow: 
+            0 12px 0 #000,
+            0 24px 0 #000,
+            0 36px 0 #000,
+            0 48px 0 #000,
+            0 60px 0 #000,
+            0 72px 0 #000,
+            0 84px 0 #000,
+            0 96px 0 #000,
+            0 108px 0 #000,
+            0 120px 0 #000,
+            0 132px 0 #000,
+            0 144px 0 #000,
+            0 156px 0 #000,
+            0 168px 0 #000,
+            0 180px 0 #000,
+            0 192px 0 #000,
+            0 204px 0 #000,
+            0 216px 0 #000,
+            0 228px 0 #000,
+            0 240px 0 #000,
+            0 252px 0 #000,
+            0 264px 0 #000,
+            0 276px 0 #000,
+            0 288px 0 #000,
+            0 300px 0 #000,
+            0 312px 0 #000,
+            0 324px 0 #000,
+            0 336px 0 #000,
+            0 348px 0 #000,
+            0 360px 0 #000,
+            0 372px 0 #000,
+            0 384px 0 #000,
+            0 396px 0 #000,
+            0 408px 0 #000,
+            0 420px 0 #000,
+            0 432px 0 #000,
+            0 444px 0 #000,
+            0 456px 0 #000;
+    }
+}
