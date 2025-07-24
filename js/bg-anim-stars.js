@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ctx.moveTo(px, py);
             ctx.lineTo(sx, sy);
             // Используем тот же цвет, что и в вашей текущей анимации
-            ctx.strokeStyle = `rgba(234,161,36, 0.8)`;
+            ctx.strokeStyle = `rgba(234,161,36, 1.0)`;
             ctx.lineWidth = radius;
             ctx.stroke();
         }

@@ -32,6 +32,15 @@ header {
     padding-top: env(safe-area-inset-top);
 }
 
+#bg-lines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    opacity: 0;
+    animation: fade-in 4s ease-in 1s forwards;
+}
+
 .heading {
     font-size: clamp(1.5rem, 5vw, 3rem);
     padding: min(5vw, 50px);
