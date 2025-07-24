@@ -8,19 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let width, height, stars, starCount = 800, speed = 2;
 
-    // Устанавливаем размеры с учетом всего экрана
-    canvas.width = window.screen.width * window.devicePixelRatio;
-    canvas.height = window.screen.height * window.devicePixelRatio;
-    
-    // CSS размеры остаются как есть, но убираем ограничения safe area
-    canvas.style.width = '100vw';
-    canvas.style.height = '100vh';
-    canvas.style.position = 'fixed';
-    canvas.style.top = '0';
-    canvas.style.left = '0';
-    canvas.style.zIndex = '-1';
-    canvas.style.pointerEvents = 'none';
-
     class Star {
         constructor() {
             this.reset();
@@ -84,8 +71,11 @@ document.addEventListener('DOMContentLoaded', function () {
         requestAnimationFrame(animate);
     }
 
-    window.addEventListener('load', setupCanvas);
-    window.addEventListener('resize', setupCanvas);
+    window.addEventListener('resize', () => {
+        // При ресайзе сбрасываем и перерисовываем все
+        ctx.setTransform(1, 0, 0, 1, 0, 0); // Сброс трансформации
+        setup();
+    });
 
     setup();
     animate();
