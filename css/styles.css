@@ -605,20 +605,19 @@ body::-webkit-scrollbar {
   transition: left 0.7s cubic-bezier(.4,0,.2,1);
 }
 
-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+.fullscreen-canvas {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
     z-index: -1;
-    
-    /* Учитываем safe area для iPhone с Dynamic Island */
+    pointer-events: none;
+    /* Растягиваем за пределы safe area */
+    transform: translateY(calc(-1 * env(safe-area-inset-top)));
     padding-top: env(safe-area-inset-top);
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
-    padding-bottom: env(safe-area-inset-bottom);
-    
-    /* Альтернативно, можно использовать margin */
-    /* margin-top: env(safe-area-inset-top); */
 }
