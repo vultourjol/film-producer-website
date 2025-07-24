@@ -92,6 +92,7 @@
             
             <nav class="hidden lg:flex space-x-8">
                 <a href="#portfolio" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1 select-none">Портфолио</a>
+                <a href="#reels" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1 select-none">Reels</a>
                 <a href="#showcase" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1 select-none">Новое</a>
                 <a href="#about" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1 select-none">Обо мне</a>
                 <a href="#team" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1 select-none">Команда</a>
@@ -101,6 +102,7 @@
             <div class="mobile-menu fixed top-0 right-0 w-80 h-full transform translate-x-full transition-transform duration-300 ease-in-out z-40">
                 <nav class="flex flex-col items-center justify-center w-full h-screen space-y-16 px-6">
                     <a href="#portfolio" class="text-white hover:text-primary text-xl uppercase tracking-wider py-2 px-1 select-none">Портфолио</a>
+                    <a href="#reels" class="text-white hover:text-primary text-xl uppercase tracking-wider py-2 px-1 select-none">Reels</a>
                     <a href="#showcase" class="text-white hover:text-primary text-xl uppercase tracking-wider py-2 px-1 select-none">Новое</a>
                     <a href="#about" class="text-white hover:text-primary text-xl uppercase tracking-wider py-2 px-1 select-none">Обо мне</a>
                     <a href="#team" class="text-white hover:text-primary text-xl uppercase tracking-wider py-2 px-1 select-none">Команда</a>
@@ -146,9 +148,9 @@
     </section>
 
     <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="py-6">
+    <section id="portfolio" class="py-2 md:py-6">
         <div class="container mx-auto px-6 w-full mt-6">
-            <h2 class="heading-font text-3xl md:text-4xl text-center druk-font select-none mb-16"><a href="#portfolio">Мои <span class="text-primary">Проекты</span></a></h2>
+            <h2 class="heading-font text-3xl md:text-4xl text-center druk-font select-none mb-4 md:mb-16"><a href="#portfolio">Мои <span class="text-primary">Проекты</span></a></h2>
     
             <!-- Swiper -->
             <div class="swiper project-swiper pt-3 select-none">
@@ -285,13 +287,93 @@
         </div>
     </section>
 
-    <!-- Project Showcase Section -->
-    <section id="showcase" class="py-6 select-none">
+    <!-- Reels Grid Section -->
+    <section id="reels" class="py-2 md:py-6">
         <div class="container mx-auto px-6 w-full mt-6">
-            <h2 class="heading-font text-3xl md:text-4xl mb-16 text-center druk-font select-none"><a href="#showcase">Крайние <span class="text-primary">Проекты</span></a></h2>
+            <h2 class="heading-font text-3xl md:text-4xl text-center druk-font select-none mb-4 md:mb-16"><a href="#reels">Мои <span class="text-primary">Reels</span></a></h2>
+    
+            <!-- Swiper -->
+            <div class="swiper project-swiper pt-3 select-none">
+                <div class="swiper-wrapper">
+                    
+                    <!-- Project 1 -->
+                    <!-- <div class="swiper-slide">
+                        <div class="project-card rounded overflow-hidden relative aspect-[9/16] border-2 border-primary border-opacity-10" data-project-id="77">
+                            <picture>
+                                <source srcset="source/img.webp" media="(max-width: 600px)" type="image/webp">
+                                <source srcset="source/img.webp" media="(max-width: 1200px)" type="image/webp">
+                                <source srcset="source/img.webp" type="image/webp">
+                                <img src="source/img.webp" loading="lazy" alt="placeholder" 
+                                     class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                            </picture>                     
+                            <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
+                                <h3 class="text-xl mb-2 druk-font">placeholder</h3>
+                                <p class="text-sm opacity-80">placeholder</p>
+                            </div>
+                        </div>
+                    </div> -->
+                    
+                    <!-- Soon -->
+                    <div class="swiper-slide">
+                        <div class="project-card rounded overflow-hidden relative aspect-[9/16] border-2 border-primary border-opacity-10" data-project-id="77">
+                            <div class="bg-[#0a0a0a] bg-opacity-10 backdrop-blur w-full h-full flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="ri-film-line text-primary text-5xl mb-4"></i>
+                                    <h3 class="text-xl mb-2 druk-font">Скоро</h3>
+                                    <p class="text-sm opacity-80">Новый Reels в разработке</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soon -->
+                    <div class="swiper-slide">
+                        <div class="project-card rounded overflow-hidden relative aspect-[9/16] border-2 border-primary border-opacity-10" data-project-id="77">
+                            <div class="bg-[#0a0a0a] bg-opacity-10 backdrop-blur w-full h-full flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="ri-film-line text-primary text-5xl mb-4"></i>
+                                    <h3 class="text-xl mb-2 druk-font">Скоро</h3>
+                                    <p class="text-sm opacity-80">Новый Reels в разработке</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soon -->
+                    <div class="swiper-slide">
+                        <div class="project-card rounded overflow-hidden relative aspect-[9/16] border-2 border-primary border-opacity-10" data-project-id="77">
+                            <div class="bg-[#0a0a0a] bg-opacity-10 backdrop-blur w-full h-full flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="ri-film-line text-primary text-5xl mb-4"></i>
+                                    <h3 class="text-xl mb-2 druk-font">Скоро</h3>
+                                    <p class="text-sm opacity-80">Новый Reels в разработке</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Swiper elements navigation -->
+            <div class="flex justify-center items-center mt-4 text-center">
+                <div class="flex flex-row items-center text-white opacity-50 select-none ">
+                    <i class="ri-arrow-left-line text-xl mr-2"></i>
+                    <span class="text-xs">Перетащите для прокрутки</span>
+                    <i class="ri-arrow-right-line text-xl ml-2"></i>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Project Showcase Section -->
+    <section id="showcase" class="py-2 md:py-6 select-none">
+        <div class="container mx-auto px-6 w-full mt-6">
+            <h2 class="heading-font text-3xl md:text-4xl mb-4 md:mb-16 text-center druk-font select-none"><a href="#showcase">Крайние <span class="text-primary">Проекты</span></a></h2>
 
             <!-- Showcase 1 -->
-            <div class="featured-project mb-10">
+            <div class="featured-project mb-4 md:mb-10">
                 <div class="relative h-[70vh] rounded-lg overflow-hidden mb-6 border-2 border-opacity-10 border-primary">
                     <picture>
                         <source srcset="source/kinggg.webp" media="(max-width: 480)" type="image/webp">
@@ -316,7 +398,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
                         <div class="rounded bg-black bg-opacity-10 border-2 border-primary border-opacity-10 backdrop-blur p-4 rounded">
@@ -358,7 +440,7 @@
             </div>
 
             <!-- Divider -->
-            <div class="my-16 flex items-center justify-center">
+            <div class="mb-4 md:mb-10 flex items-center justify-center">
                 <div class="flex-1 border-t-2 border-dashed border-white border-opacity-20"></div>
                 <div class="mx-6">
                     <i class="ri-film-line text-primary text-2xl"></i>
@@ -367,7 +449,7 @@
             </div>
 
             <!-- Showcase 2 -->
-            <div class="featured-project mb-10">
+            <div class="featured-project mb-4 md:mb-10">
                 <div class="relative h-[70vh] rounded-lg overflow-hidden mb-6 border-2 border-opacity-10 border-primary">
                     <picture>
                         <source srcset="source/coolnumbers.PNG" media="(max-width: 480)" type="image/webp">
@@ -392,7 +474,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
                         <div class="rounded bg-black bg-opacity-10 border-2 border-primary border-opacity-10 backdrop-blur p-4 rounded">
@@ -432,7 +514,7 @@
             </div>
 
             <!-- Divider -->
-            <div class="my-16 flex items-center justify-center">
+            <div class="mb-4 md:mb-10 flex items-center justify-center">
                 <div class="flex-1 border-t-2 border-dashed border-white border-opacity-20"></div>
                 <div class="mx-6">
                     <i class="ri-film-line text-primary text-2xl"></i>
@@ -466,7 +548,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
                         <div class="rounded bg-black bg-opacity-10 border-2 border-primary border-opacity-10 backdrop-blur p-4 rounded">
@@ -512,9 +594,9 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-6">
+    <section id="about" class="py-2 md:py-6">
         <div class="container mx-auto px-6 w-full mt-6">
-            <h2 class="heading-font text-3xl md:text-4xl mb-16 text-center druk-font select-none"><a href="#about">Обо <span class="text-primary">Мне</span></a></h2>
+            <h2 class="heading-font text-3xl md:text-4xl mb-4 md:mb-16 text-center druk-font select-none"><a href="#about">Обо <span class="text-primary">Мне</span></a></h2>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
                 
                 <!-- Main picture -->
@@ -598,7 +680,8 @@
             <div class="mt-12 md:mt-16">
                 <h3 class="text-xl md:text-2xl mb-6 md:mb-8 text-center druk-font select-none">Рабочее пространство</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 select-none">
-                    <div class="text-left md:text-right py-6 px-6">
+
+                    <div class="text-left md:text-right px-6">
                         <div class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center mb-4 md:ml-auto">
                             <i class="ri-4k-line text-primary text-2xl md:text-3xl lg:text-4xl"></i>
                         </div>
@@ -628,7 +711,7 @@
                         </ul>
                     </div>
                     
-                    <div class="py-6 px-6">
+                    <div class="px-6">
                         <div class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center mb-4">
                             <i class="ri-computer-line text-primary text-2xl md:text-3xl lg:text-4xl"></i>
                         </div>
@@ -646,9 +729,9 @@
     </section>
 
     <!-- Team Grid Section -->
-    <section id="team" class="py-6">
+    <section id="team" class="py-2 md:py-6">
         <div class="container mx-auto px-6 w-full mt-6">
-            <h2 class="heading-font text-3xl md:text-4xl text-center druk-font select-none mb-16"><a href="#team">Моя <span class="text-primary">Команда</span></a></h2>
+            <h2 class="heading-font text-3xl md:text-4xl text-center druk-font select-none mb-4 md:mb-16"><a href="#team">Моя <span class="text-primary">Команда</span></a></h2>
     
             <!-- Swiper -->
             <div class="swiper project-swiper pt-3 select-none">
@@ -687,6 +770,17 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Soon -->
+                    <div class="swiper-slide">
+                        <div class="project-card rounded overflow-hidden relative aspect-[2/2] h-160 border-2 border-primary border-opacity-10" data-project-id="77">
+                            <div class="bg-[#0a0a0a] bg-opacity-10 backdrop-blur w-full h-full flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="ri-aliens-line text-primary text-5xl mb-4"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     
                 </div>
                 
@@ -705,9 +799,9 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-6">
+    <section id="contact" class="py-2 md:py-6">
         <div class="container mx-auto px-6 w-full mt-6">
-            <h2 class="heading-font text-3xl md:text-4xl mb-16 text-center druk-font select-none"><a href="#contact">Остаемся на <span class="text-primary">Связи</span></a></h2>
+            <h2 class="heading-font text-3xl md:text-4xl mb-4 md:mb-16 text-center druk-font select-none"><a href="#contact">Остаемся на <span class="text-primary">Связи</span></a></h2>
             <div class="max-w-4xl mx-auto text-left md:text-center">
                 <h3 class="text-2xl font-bold mb-6 select-none">Давайте создадим что-то потрясающее</h3>
                 <p class="opacity-80 text-sm md:text-lg mb-6 select-none">Я всегда открыта для обсуждения новых проектов, творческих идей или возможностей стать частью вашего видения.</p>
@@ -778,9 +872,9 @@
             
             <div class="border-t border-white border-opacity-10 py-6">
                 <div class="flex flex-col md:flex-row lg:flex-row justify-center md:justify-between lg:justify-end space-y-3 md:space-y-0 md:space-x-4 lg:space-x-6 lg:text-right">
-                    <p class="text-sm opacity-60 text-center md:text-left lg:text-right"><a href="source/privacy-policy.pdf" class="hover:text-primary transition-colors select-none">Политика конфиденциальности</a></p>
-                    <p class="text-sm opacity-60 text-center md:text-center lg:text-right"><a href="https://policies.google.com/terms?hl=ru" class="hover:text-primary transition-colors select-none">Условия использования</a></p>
-                    <div class="text-center md:text-right lg:text-left">
+                    <p class="text-sm opacity-60 text-left md:text-left lg:text-right"><a href="source/privacy-policy.pdf" class="hover:text-primary transition-colors select-none">Политика конфиденциальности</a></p>
+                    <p class="text-sm opacity-60 text-left md:text-center lg:text-right"><a href="https://policies.google.com/terms?hl=ru" class="hover:text-primary transition-colors select-none">Условия использования</a></p>
+                    <div class="text-left md:text-right lg:text-left">
                         <p class="text-sm opacity-60 select-none">created by <a href="https://t.me/vultourjol" class="hover:text-primary transition-colors">vultourjol <i class="ri-code-s-slash-line"></i></a></p>
                     </div>
                 </div>
