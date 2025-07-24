@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#000000">
     <title>prodbylelya</title>    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="16x16" href="movie-2-line-16px-white.png" id="favicon-16">
     <link rel="icon" type="image/png" sizes="32x32" href="movie-2-line-32px-white.png" id="favicon-32">
@@ -62,11 +61,9 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
-    <!-- <div class="custom-cursor hidden lg:block max-lg:!hidden"></div>
-    <div class="custom-cursor-dot hidden lg:block max-lg:!hidden"></div> -->
-
+    <canvas id="bg-lines" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;pointer-events:none;"></canvas>
     <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-black bg-opacity-50 backdrop-blur -translate-y-full">
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-black bg-opacity-10 backdrop-blur -translate-y-full">
         <div class="mx-auto px-6 w-full py-4 flex justify-between items-center">
 
             <a href="#hero" class="text-white druk-font text-2xl select-none">PRODBYLELYA</a>
@@ -98,32 +95,34 @@
         </div>
     </header>
 
+    <main>
+
     <!-- Hero Section -->
-    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
         <!-- <div class="video-overlay"></div> -->
         <div class="mx-auto px-6 w-full z-10 text-center">
-            <h1 class="text-2xl md:text-5xl lg:text-9xl mb-4 md:mb-12 typewriter inline-block druk-font tracking-widest select-none">PRODBYLELYA</h1>
+            <h1 class="text-2xl md:text-5xl lg:text-9xl mb-4 md:mb-12 typewriter inline-block druk-font tracking-widest select-none bg-black bg-opacity-10 backdrop-blur rounded">PRODBYLELYA</h1>
 
             <div>
-                <p class="text-sm md:text-md lg:text-xl mb-4 md:mb-12 fade-in inline-block druk-font tracking-widest select-none text-primary">From idea to grand premiere.</p>
+                <p class="text-sm md:text-md lg:text-xl mb-4 md:mb-12 fade-in inline-block druk-font tracking-widest select-none text-primary rounded-full bg-black bg-opacity-10 backdrop-blur p-2">From idea to grand premiere.</p>
             </div>
             
             <div class="flex justify-center space-x-8 md:space-x-16 mb-16">
-                <div class="w-16 h-16 flex items-center justify-center floating">
+                <div class="w-16 h-16 flex items-center justify-center floating rounded-full backdrop-blur">
                     <i class="ri-movie-2-line text-white text-3xl md:text-4xl"></i>
                 </div>
 
-                <div class="w-16 h-16 flex items-center justify-center floating-delay-1">
+                <div class="w-16 h-16 flex items-center justify-center floating-delay-1 rounded-full backdrop-blur">
                     <i class="ri-camera-line text-white text-3xl md:text-4xl"></i>
                 </div>
 
-                <div class="w-16 h-16 flex items-center justify-center floating-delay-2">
+                <div class="w-16 h-16 flex items-center justify-center floating-delay-2 rounded-full backdrop-blur">
                     <i class="ri-clapperboard-line text-white text-3xl md:text-4xl"></i>
                 </div>
             </div>
 
-            <a href="#portfolio" class="scroll-indicator inline-block">
-                <div class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-primary transition-colors">
+            <a href="#portfolio" class="scroll-indicator inline-block rounded-full hover:bg-primary hover:bg-opacity-10 hover:backdrop-blur transition-colors bg-black bg-opacity-10 backdrop-blur">
+                <div class="w-16 h-16 flex items-center justify-center">
                     <i class="ri-arrow-down-wide-line text-white font-bold text-4xl"></i>
                 </div>
             </a>
@@ -131,17 +130,16 @@
     </section>
 
     <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="py-6 bg-black">
+    <section id="portfolio" class="py-6">
         <div class="container mx-auto px-6 w-full mt-6">
             <h2 class="heading-font text-3xl md:text-4xl text-center druk-font select-none"><a href="#portfolio">Мои <span class="text-primary">Проекты</span></a></h2>
 
             <!-- Swiper elements navigation -->
             <div class="flex justify-between items-center mb-4 mt-4 select-none">
-                <div class="swiper-button-prev-custom w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
+                <div class="swiper-button-prev-custom w-12 h-12 bg-black bg-opacity-10 backdrop-blur rounded-full flex items-center justify-center hover:bg-primary hover:bg-opacity-50 transition-colors border-2 border-primary border-opacity-10">
                     <i class="ri-arrow-left-wide-line text-white text-2xl"></i>
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next-custom w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
+                <div class="swiper-button-next-custom w-12 h-12 bg-black bg-opacity-10 backdrop-blur rounded-full flex items-center justify-center hover:bg-primary hover:bg-opacity-50 transition-colors border-2 border-primary border-opacity-10">
                     <i class="ri-arrow-right-wide-line text-white text-2xl"></i>
                 </div>
             </div>
@@ -152,7 +150,7 @@
                     
                     <!-- Project 1 -->
                     <div class="swiper-slide">
-                        <div class="project-card rounded overflow-hidden relative h-80" data-project-id="1">
+                        <div class="project-card rounded overflow-hidden relative h-80 border-2 border-primary border-opacity-10" data-project-id="1">
                             <picture>
                                 <source srcset="source/alexstory.webp" media="(max-width: 600px)" type="image/webp">
                                 <source srcset="source/alexstory.webp" media="(max-width: 1200px)" type="image/webp">
@@ -169,7 +167,7 @@
 
                     <!-- Project 2 -->
                     <div class="swiper-slide">
-                        <div class="project-card rounded overflow-hidden relative h-80" data-project-id="2">
+                        <div class="project-card rounded overflow-hidden relative h-80 border-2 border-primary border-opacity-10" data-project-id="2">
                             <picture>
                                 <source srcset="source/fatumfatum.webp" media="(max-width: 600px)" type="image/webp">
                                 <source srcset="source/fatumfatum.webp" media="(max-width: 1200px)" type="image/webp">
@@ -186,7 +184,7 @@
                     
                     <!-- Project 3 -->
                     <div class="swiper-slide">
-                        <div class="project-card rounded overflow-hidden relative h-80" data-project-id="3">
+                        <div class="project-card rounded overflow-hidden relative h-80 border-2 border-primary border-opacity-10" data-project-id="3">
                             <picture>
                                 <source srcset="source/manbunker.webp" media="(max-width: 600px)" type="image/webp">
                                 <source srcset="source/manbunker.webp" media="(max-width: 1200px)" type="image/webp">
@@ -203,7 +201,7 @@
                     
                     <!-- Project 4 -->
                     <div class="swiper-slide">
-                        <div class="project-card rounded overflow-hidden relative h-80" data-project-id="4">
+                        <div class="project-card rounded overflow-hidden relative h-80 border-2 border-primary border-opacity-10" data-project-id="4">
                             <picture>
                                 <source srcset="source/firstone.webp" media="(max-width: 600px)" type="image/webp">
                                 <source srcset="source/firstone.webp" media="(max-width: 1200px)" type="image/webp">
@@ -220,7 +218,7 @@
                     
                     <!-- Project 5 -->
                     <div class="swiper-slide">
-                        <div class="project-card rounded overflow-hidden relative h-80" data-project-id="5">
+                        <div class="project-card rounded overflow-hidden relative h-80 border-2 border-primary border-opacity-10" data-project-id="5">
                             <picture>
                                 <source srcset="source/fieldgreen.webp" media="(max-width: 600px)" type="image/webp">
                                 <source srcset="source/fieldgreen.webp" media="(max-width: 1200px)" type="image/webp">
@@ -237,7 +235,7 @@
                     
                     <!-- Project 6 -->
                     <div class="swiper-slide">
-                        <div class="project-card rounded overflow-hidden relative h-80" data-project-id="6">
+                        <div class="project-card rounded overflow-hidden relative h-80 border-2 border-primary border-opacity-10" data-project-id="6">
                             <picture>
                                 <source srcset="source/warclassic.webp" media="(max-width: 600px)" type="image/webp">
                                 <source srcset="source/warclassic.webp" media="(max-width: 1200px)" type="image/webp">
@@ -254,8 +252,8 @@
                     
                     <!-- Soon -->
                     <div class="swiper-slide">
-                        <div class="project-card rounded overflow-hidden relative h-80 border-4 border-white border-opacity-10" data-project-id="77">
-                            <div class="bg-[#0a0a0a] w-full h-full flex items-center justify-center">
+                        <div class="project-card rounded overflow-hidden relative h-80 border-2 border-primary border-opacity-10" data-project-id="77">
+                            <div class="bg-[#0a0a0a] bg-opacity-10 backdrop-blur w-full h-full flex items-center justify-center">
                                 <div class="text-center">
                                     <i class="ri-film-line text-primary text-5xl mb-4"></i>
                                     <h3 class="text-xl mb-2 druk-font">Скоро</h3>
@@ -272,7 +270,7 @@
     </section>
 
     <!-- Project Showcase Section -->
-    <section id="showcase" class="py-6 bg-black select-none">
+    <section id="showcase" class="py-6 select-none">
         <div class="container mx-auto px-6 w-full mt-6">
             <h2 class="heading-font text-3xl md:text-4xl mb-16 text-center druk-font select-none"><a href="#showcase">Крайние <span class="text-primary">Проекты</span></a></h2>
 
@@ -296,7 +294,7 @@
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Документальный короткометражный фильм</span>
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">15 мин</span>
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">2025</span>
-                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10">
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10 shine-effect">
                                 <i class="ri-play-fill text-white text-2xl"></i>
                             </a>
                         </div>
@@ -305,20 +303,22 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div>
                         <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
-                        <p class="text-sm md:text-lg opacity-80">• Режиссёр постановщик - Лёля Козловская</p>
-                        <p class="text-sm md:text-lg opacity-80">• Режиссёр монтажа - Лёля Козловская</p>
-                        <p class="text-sm md:text-lg opacity-80">• Оператор постановщик - Розалия Тукаева</p>
-                        <p class="text-sm md:text-lg opacity-80">• Звукорежиссёр - Максим Малолеткин</p>
-                        <p class="text-sm md:text-lg opacity-80">• Композиторы - Денис Мажуков / Rommitz & The Ol' Time Shakers</p>
-                        <p class="text-sm md:text-lg opacity-80">• Музыка - БРАВО</p>
-                        <p class="text-sm md:text-lg opacity-80">• Продюсер постпродакшн - Лёля Козловская</p>
-                        <p class="text-sm md:text-lg opacity-80">• Исполнительный продюсер - Анна Николаева</p>
-                        <p class="text-sm md:text-lg opacity-80">• Генеральные продюсеры - Лёля Козловская & Денис Мажуков</p>
+                        <div class="rounded bg-black bg-opacity-10 border-2 border-primary border-opacity-10 backdrop-blur p-4 rounded">
+                            <p class="text-sm md:text-lg opacity-80">• Режиссёр постановщик - Лёля Козловская</p>
+                            <p class="text-sm md:text-lg opacity-80">• Режиссёр монтажа - Лёля Козловская</p>
+                            <p class="text-sm md:text-lg opacity-80">• Оператор постановщик - Розалия Тукаева</p>
+                            <p class="text-sm md:text-lg opacity-80">• Звукорежиссёр - Максим Малолеткин</p>
+                            <p class="text-sm md:text-lg opacity-80">• Композиторы - Денис Мажуков / Rommitz & The Ol' Time Shakers</p>
+                            <p class="text-sm md:text-lg opacity-80">• Музыка - БРАВО</p>
+                            <p class="text-sm md:text-lg opacity-80">• Продюсер постпродакшн - Лёля Козловская</p>
+                            <p class="text-sm md:text-lg opacity-80">• Исполнительный продюсер - Анна Николаева</p>
+                            <p class="text-sm md:text-lg opacity-80">• Генеральные продюсеры - Лёля Козловская & Денис Мажуков</p>
+                        </div>
                     </div>
                     <div>
                         <h4 class="text-xl font-bold mb-4">Технический подход</h4>
                         <div class="grid grid-cols-2 gap-4">
-                            <div class="bg-black bg-opacity-30 p-4 rounded border-2 border-primary border-opacity-10">
+                            <div class="bg-black bg-opacity-10 backdrop-blur p-4 rounded border-2 border-primary border-opacity-10">
                                 <div class="w-10 h-10 flex items-center justify-center mb-2">
                                     <i class="ri-camera-lens-line text-primary text-3xl md:text-4xl"></i>
                                 </div>
@@ -326,7 +326,7 @@
                                 <p class="text-sm md:text-lg opacity-80">Sony Fx3</p>
                                 <p class="text-sm md:text-lg opacity-80">Sony a7s III</p>
                             </div>
-                            <div class="bg-black bg-opacity-30 p-4 rounded border-2 border-primary border-opacity-10">
+                            <div class="bg-black bg-opacity-10 backdrop-blur p-4 rounded border-2 border-primary border-opacity-10">
                                 <div class="w-10 h-10 flex items-center justify-center mb-2">
                                     <i class="ri-pushpin-line text-primary text-3xl md:text-4xl"></i>
                                 </div>
@@ -370,7 +370,7 @@
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Художественный короткометражный фильм</span>
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">23 мин</span>
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">2025</span>
-                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10">
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10 shine-effect">
                                 <i class="ri-play-fill text-white text-2xl"></i>
                             </a>
                         </div>
@@ -379,28 +379,30 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div>
                         <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
-                        <p class="text-sm md:text-lg opacity-80">• Авторы сценария - Ирина Глебова, Глеб Лабковский, Виталий Хачатурянц</p>
-                        <p class="text-sm md:text-lg opacity-80">• Режиссёр постановщик - Ирина Глебова</p>
-                        <p class="text-sm md:text-lg opacity-80">• Второй режиссёр - Ясмина Мухамедова</p>
-                        <p class="text-sm md:text-lg opacity-80">• Режиссёр монтажа - Лёля Козловская</p>
-                        <p class="text-sm md:text-lg opacity-80">• Операторы-постановщики - Владислав Иванов & Николай Карабанов</p>
-                        <p class="text-sm md:text-lg opacity-80">• Звукорежиссёр / Композитор - Максим Малолеткин</p>
-                        <p class="text-sm md:text-lg opacity-80">• Художник постановщик - Полина Карпенко</p>
-                        <p class="text-sm md:text-lg opacity-80">• Продюсер постпродакшн - Лёля Козловская</p>
-                        <p class="text-sm md:text-lg opacity-80">• Исполнительные продюсеры - Пётр Пецка & Юлия Белозёрова</p>
-                        <p class="text-sm md:text-lg opacity-80">• Генеральные продюсеры - Ирина Глебова</p>
+                        <div class="rounded bg-black bg-opacity-10 border-2 border-primary border-opacity-10 backdrop-blur p-4 rounded">
+                            <p class="text-sm md:text-lg opacity-80">• Авторы сценария - Ирина Глебова, Глеб Лабковский, Виталий Хачатурянц</p>
+                            <p class="text-sm md:text-lg opacity-80">• Режиссёр постановщик - Ирина Глебова</p>
+                            <p class="text-sm md:text-lg opacity-80">• Второй режиссёр - Ясмина Мухамедова</p>
+                            <p class="text-sm md:text-lg opacity-80">• Режиссёр монтажа - Лёля Козловская</p>
+                            <p class="text-sm md:text-lg opacity-80">• Операторы-постановщики - Владислав Иванов & Николай Карабанов</p>
+                            <p class="text-sm md:text-lg opacity-80">• Звукорежиссёр / Композитор - Максим Малолеткин</p>
+                            <p class="text-sm md:text-lg opacity-80">• Художник постановщик - Полина Карпенко</p>
+                            <p class="text-sm md:text-lg opacity-80">• Продюсер постпродакшн - Лёля Козловская</p>
+                            <p class="text-sm md:text-lg opacity-80">• Исполнительные продюсеры - Пётр Пецка & Юлия Белозёрова</p>
+                            <p class="text-sm md:text-lg opacity-80">• Генеральные продюсеры - Ирина Глебова</p>
+                        </div>
                     </div>
                     <div>
                         <h4 class="text-xl font-bold mb-4">Технический подход</h4>
                         <div class="grid grid-cols-2 gap-4">
-                            <div class="bg-black bg-opacity-30 p-4 rounded border-2 border-primary border-opacity-10">
+                            <div class="bg-black bg-opacity-10 backdrop-blur p-4 rounded border-2 border-primary border-opacity-10">
                                 <div class="w-10 h-10 flex items-center justify-center mb-2">
                                     <i class="ri-camera-lens-line text-primary text-3xl md:text-4xl"></i>
                                 </div>
                                 <h5 class="font-bold mb-1 text-sm md:text-lg">Камера</h5>
                                 <p class="text-sm md:text-lg opacity-80">BlackMagik 6K</p>
                             </div>
-                            <div class="bg-black bg-opacity-30 p-4 rounded border-2 border-primary border-opacity-10">
+                            <div class="bg-black bg-opacity-10 backdrop-blur p-4 rounded border-2 border-primary border-opacity-10">
                                 <div class="w-10 h-10 flex items-center justify-center mb-2">
                                     <i class="ri-pushpin-line text-primary text-3xl md:text-4xl"></i>
                                 </div>
@@ -442,7 +444,7 @@
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Художественный короткометражный фильм</span>
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">25 мин</span>
                             <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">2025</span>
-                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10">
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10 shine-effect">
                                 <i class="ri-play-fill text-white text-2xl"></i>
                             </a>
                         </div>
@@ -451,31 +453,33 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div>
                         <h4 class="text-xl font-bold mb-4">Съёмочная группа</h4>
-                        <p class="text-sm md:text-lg opacity-80">• Авторы сценария - Маргарита Голомидова & Наталия Невская</p>
-                        <p class="text-sm md:text-lg opacity-80">• Режиссёр постановщик - Маргарита Голомидова</p>
-                        <p class="text-sm md:text-lg opacity-80">• Второй режиссёр - Анна Баранова & Надежда Краснова</p>
-                        <p class="text-sm md:text-lg opacity-80">• Режиссёр Монтажа - Маргарита Голомидова</p>
-                        <p class="text-sm md:text-lg opacity-80">• Операторы-постановщики - Анастасия Легкова</p>
-                        <p class="text-sm md:text-lg opacity-80">• Звукорежиссёр - Никита Дзюба</p>
-                        <p class="text-sm md:text-lg opacity-80">• Графика - Максим Злобин</p>
-                        <p class="text-sm md:text-lg opacity-80">• Цветокоррекция - Алёна Масленникова</p>
-                        <p class="text-sm md:text-lg opacity-80">• Художник-постановщик - Василика Цолис</p>
-                        <p class="text-sm md:text-lg opacity-80">• Художник по костюмам - Ева Варламова</p>
-                        <p class="text-sm md:text-lg opacity-80">• Художник по гриму - Варвара Боталова</p>
-                        <p class="text-sm md:text-lg opacity-80">• Кастинг-директор - Валерия Фетисова</p>
-                        <p class="text-sm md:text-lg opacity-80">• Продюссеры - Маргарита Голомидова, Анастасия Легкова, Лёля Козловская, Большой Тёма, Анастасия Окунева</p>
+                        <div class="rounded bg-black bg-opacity-10 border-2 border-primary border-opacity-10 backdrop-blur p-4 rounded">
+                            <p class="text-sm md:text-lg opacity-80">• Авторы сценария - Маргарита Голомидова & Наталия Невская</p>
+                            <p class="text-sm md:text-lg opacity-80">• Режиссёр постановщик - Маргарита Голомидова</p>
+                            <p class="text-sm md:text-lg opacity-80">• Второй режиссёр - Анна Баранова & Надежда Краснова</p>
+                            <p class="text-sm md:text-lg opacity-80">• Режиссёр Монтажа - Маргарита Голомидова</p>
+                            <p class="text-sm md:text-lg opacity-80">• Операторы-постановщики - Анастасия Легкова</p>
+                            <p class="text-sm md:text-lg opacity-80">• Звукорежиссёр - Никита Дзюба</p>
+                            <p class="text-sm md:text-lg opacity-80">• Графика - Максим Злобин</p>
+                            <p class="text-sm md:text-lg opacity-80">• Цветокоррекция - Алёна Масленникова</p>
+                            <p class="text-sm md:text-lg opacity-80">• Художник-постановщик - Василика Цолис</p>
+                            <p class="text-sm md:text-lg opacity-80">• Художник по костюмам - Ева Варламова</p>
+                            <p class="text-sm md:text-lg opacity-80">• Художник по гриму - Варвара Боталова</p>
+                            <p class="text-sm md:text-lg opacity-80">• Кастинг-директор - Валерия Фетисова</p>
+                            <p class="text-sm md:text-lg opacity-80">• Продюссеры - Маргарита Голомидова, Анастасия Легкова, Лёля Козловская, Большой Тёма, Анастасия Окунева</p>
+                        </div>
                     </div>
                     <div>
                         <h4 class="text-xl font-bold mb-4">Технический подход</h4>
                         <div class="grid grid-cols-2 gap-4">
-                            <div class="bg-black bg-opacity-30 p-4 rounded border-2 border-primary border-opacity-10">
+                            <div class="bg-black bg-opacity-10 backdrop-blur p-4 rounded border-2 border-primary border-opacity-10">
                                 <div class="w-10 h-10 flex items-center justify-center mb-2">
                                     <i class="ri-camera-lens-line text-primary text-3xl md:text-4xl"></i>
                                 </div>
                                 <h5 class="font-bold mb-1 text-sm md:text-lg">Камера</h5>
                                 <p class="text-sm md:text-lg opacity-80">Arri Alexa Mini</p>
                             </div>
-                            <div class="bg-black bg-opacity-30 p-4 rounded border-2 border-primary border-opacity-10">
+                            <div class="bg-black bg-opacity-10 backdrop-blur p-4 rounded border-2 border-primary border-opacity-10">
                                 <div class="w-10 h-10 flex items-center justify-center mb-2">
                                     <i class="ri-pushpin-line text-primary text-3xl md:text-4xl"></i>
                                 </div>
@@ -488,12 +492,11 @@
                 </div>
             </div>
             
-            <!-- Showcase 4 -->
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-6 bg-black">
+    <section id="about" class="py-6">
         <div class="container mx-auto px-6 w-full mt-6">
             <h2 class="heading-font text-3xl md:text-4xl mb-16 text-center druk-font select-none"><a href="#about">Обо <span class="text-primary">Мне</span></a></h2>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -507,17 +510,17 @@
                             <source srcset="source/mypic.webp" media="(max-width: 1200px)" type="image/webp">
                             <source srcset="source/mypic.webp" type="image/webp">
                             <img src="source/mypic.webp" loading="lazy" alt="Портрет" 
-                                class="rounded-lg w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110 max-h-[600px] md:max-h-[1000px] lg:max-h-none">
+                                class="rounded-lg w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110 max-h-[600px] md:max-h-[1000px] lg:max-h-none border-2 border-primary border-opacity-10">
                         </picture>                    
                     </div>
-                    <div class="absolute -bottom-4 md:-bottom-8 -right-2 bg-primary rounded-lg p-4 md:p-6 shadow-x border-4 border-white border-opacity-50">
+                    <div class="absolute -bottom-4 md:-bottom-8 -right-2 bg-primary rounded-lg p-4 md:p-6 shadow-x border-4 border-white border-opacity-50 shine-effect">
                         <p class="font-bold text-lg md:text-xl">6+ Лет опыта</p>
                         <p class="text-sm md:text-base">Продюссер & Режиссёр монтажа</p>
                     </div>
                 </div>
 
                 <!-- Description -->
-                <div class="select-none order-1 lg:order-2">
+                <div class="select-none order-1 lg:order-2 rounded-lg bg-black bg-opacity-10 backdrop-blur p-6 md:p-8 lg:p-12 border-2 border-primary border-opacity-10">
                     <h3 class="text-xl md:text-2xl lg:text-3xl mb-4 md:mb-6 druk-font">Лёля Козловская</h3>
                     <p class="opacity-80 mb-4 md:mb-6 text-sm md:text-base lg:text-lg">Привет, я молодой продюсер и режиссёр из Москвы. В 2020 году поступила в Институт кино телевидения ГИТР на продюсерский факультет. В 2024 году, осознав, что почти все мои съемочные работы как продюсера я также вела в качестве режиссёра, я решила поступить на факультет режиссуры. В 2025 году выпустилась в 2-мя высшими образованиями. </p>
                     <p class="opacity-80 mb-4 md:mb-6 text-sm md:text-base lg:text-lg">С самого детства я любила смотреть фильмы. Потом меня заинтересовала музыка и я начала писать собственные песни, ездила на студию, записывалась. Когда вышла телепередача "Песни" на ТНТ, начала писать сценарии к клипам для песен артистов, мечтая когда нибудь их снять.</p>
@@ -566,11 +569,11 @@
                     
                     <!-- Tags -->
                     <div class="flex flex-wrap gap-2 md:gap-3">
-                        <span class="px-3 py-2 md:px-4 md:py-2 bg-black bg-opacity-50 border-2 border-white border-opacity-10 rounded text-xs md:text-sm">Продюсерство</span>
-                        <span class="px-3 py-2 md:px-4 md:py-2 bg-black bg-opacity-50 border-2 border-white border-opacity-10 rounded text-xs md:text-sm">Постпродакшн</span>
-                        <span class="px-3 py-2 md:px-4 md:py-2 bg-black bg-opacity-50 border-2 border-white border-opacity-10 rounded text-xs md:text-sm">Режиссура</span>
-                        <span class="px-3 py-2 md:px-4 md:py-2 bg-black bg-opacity-50 border-2 border-white border-opacity-10 rounded text-xs md:text-sm">Монтаж</span>
-                        <span class="px-3 py-2 md:px-4 md:py-2 bg-black bg-opacity-50 border-2 border-white border-opacity-10 rounded text-xs md:text-sm">Цветокоррекция</span>
+                        <span class="px-3 py-2 md:px-4 md:py-2 bg-black border-2 border-primary border-opacity-10 rounded text-xs md:text-sm hover:bg-primary hover:bg-opacity-20">Продюсерство</span>
+                        <span class="px-3 py-2 md:px-4 md:py-2 bg-black border-2 border-primary border-opacity-10 rounded text-xs md:text-sm hover:bg-primary hover:bg-opacity-20">Постпродакшн</span>
+                        <span class="px-3 py-2 md:px-4 md:py-2 bg-black border-2 border-primary border-opacity-10 rounded text-xs md:text-sm hover:bg-primary hover:bg-opacity-20">Режиссура</span>
+                        <span class="px-3 py-2 md:px-4 md:py-2 bg-black border-2 border-primary border-opacity-10 rounded text-xs md:text-sm hover:bg-primary hover:bg-opacity-20">Монтаж</span>
+                        <span class="px-3 py-2 md:px-4 md:py-2 bg-black border-2 border-primary border-opacity-10 rounded text-xs md:text-sm hover:bg-primary hover:bg-opacity-20">Цветокоррекция</span>
                     </div>
                 </div>
             </div>
@@ -584,7 +587,7 @@
                             <i class="ri-4k-line text-primary text-2xl md:text-3xl lg:text-4xl"></i>
                         </div>
                         <h4 class="font-bold mb-2 text-sm md:text-base lg:text-lg">Софт</h4>
-                        <ul class="opacity-80 text-sm md:text-base lg:text-lg space-y-2">
+                        <ul class="text-sm md:text-base lg:text-lg space-y-2 border-2 border-primary border-opacity-10 rounded-lg p-4 bg-black bg-opacity-10 backdrop-blur">
                             <li class="flex items-center justify-between md:justify-end">
                                 <div class="flex items-center md:contents">
                                     <i class="ri-image-edit-line mr-2 md:hidden"></i>
@@ -614,7 +617,7 @@
                             <i class="ri-computer-line text-primary text-2xl md:text-3xl lg:text-4xl"></i>
                         </div>
                         <h4 class="font-bold mb-2 text-sm md:text-base lg:text-lg">Монтажка</h4>
-                        <ul class="opacity-80 text-sm md:text-base lg:text-lg space-y-2">
+                        <ul class="text-sm md:text-base lg:text-lg space-y-2 border-2 border-primary border-opacity-10 rounded-lg p-4 bg-black bg-opacity-10 backdrop-blur">
                             <li><i class="ri-instance-line"></i> RTX 4060 8GB</li>
                             <li><i class="ri-cpu-line"></i> Intel Xeon E5-2697 v4</li>
                             <li><i class="ri-ram-line"></i> RAM 64GB</li>
@@ -627,17 +630,17 @@
     </section>
 
     <!-- Team Grid Section -->
-    <section id="team" class="py-6 bg-black">
+    <section id="team" class="py-6">
         <div class="container mx-auto px-6 w-full mt-6">
             <h2 class="heading-font text-3xl md:text-4xl text-center druk-font select-none"><a href="#team">Моя <span class="text-primary">Команда</span></a></h2>
 
             <!-- Swiper elements navigation -->
             <div class="flex justify-between items-center mb-4 mt-4">
-                <div class="swiper-button-prev-custom w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
+                <div class="swiper-button-prev-custom w-12 h-12 bg-black bg-opacity-10 backdrop-blur rounded-full flex items-center justify-center hover:bg-primary hover:bg-opacity-50 transition-colors border-2 border-primary border-opacity-10">
                     <i class="ri-arrow-left-wide-line text-white text-2xl"></i>
                 </div>
                 <div class="swiper-pagination"></div>
-                <div class="swiper-button-next-custom w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
+                <div class="swiper-button-next-custom w-12 h-12 bg-black bg-opacity-10 backdrop-blur rounded-full flex items-center justify-center hover:bg-primary hover:bg-opacity-50 transition-colors border-2 border-primary border-opacity-10">
                     <i class="ri-arrow-right-wide-line text-white text-2xl"></i>
                 </div>
             </div>
@@ -648,7 +651,7 @@
                     
                     <!-- Team member 1 card (Project 7) -->
                     <div class="swiper-slide">
-                        <div class="project-card rounded overflow-hidden relative h-160 border-4 border-white border-opacity-10" data-project-id="7">
+                        <div class="project-card rounded overflow-hidden relative h-160 border-2 border-primary border-opacity-10" data-project-id="7">
                             <picture>
                                 <source srcset="source/anna.webp" media="(max-width: 600px)" type="image/webp">
                                 <source srcset="source/anna.webp" media="(max-width: 1200px)" type="image/webp">
@@ -665,7 +668,7 @@
 
                     <!-- Team member card 2 (Project 8) -->
                     <div class="swiper-slide">
-                        <div class="project-card rounded overflow-hidden relative h-160 border-4 border-white border-opacity-10" data-project-id="8">
+                        <div class="project-card rounded overflow-hidden relative h-160 border-2 border-primary border-opacity-10" data-project-id="8">
                             <picture>
                                 <source srcset="source/egor.webp" media="(max-width: 600px)" type="image/webp">
                                 <source srcset="source/egor.webp" media="(max-width: 1200px)" type="image/webp">
@@ -688,16 +691,16 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-6 bg-black">
+    <section id="contact" class="py-6">
         <div class="container mx-auto px-6 w-full mt-6">
             <h2 class="heading-font text-3xl md:text-4xl mb-16 text-center druk-font select-none"><a href="#contact">Остаемся на <span class="text-primary">Связи</span></a></h2>
             <div class="max-w-4xl mx-auto text-left md:text-center">
                 <h3 class="text-2xl font-bold mb-6 select-none">Давайте создадим что-то потрясающее</h3>
                 <p class="opacity-80 text-sm md:text-lg mb-6 select-none">Я всегда открыта для обсуждения новых проектов, творческих идей или возможностей стать частью вашего видения.</p>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-11">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-11 bg-black bg-opacity-10 backdrop-blur rounded border-2 border-primary border-opacity-10 py-6">
                     <div class="flex flex-col items-center">
-                        <div class="w-16 h-16 flex items-center justify-center text-primary bg-black bg-opacity-30 rounded-full">
+                        <div class="w-16 h-16 flex items-center justify-center text-primary">
                             <i class="ri-map-pin-line text-3xl md:text-4xl"></i>
                         </div>
                         <h4 class="font-bold text-lg select-none">Локация</h4>
@@ -705,7 +708,7 @@
                     </div>
 
                     <div class="flex flex-col items-center">
-                        <div class="w-16 h-16 flex items-center justify-center text-primary bg-black bg-opacity-30 rounded-full">
+                        <div class="w-16 h-16 flex items-center justify-center text-primary">
                             <i class="ri-mail-line text-3xl md:text-4xl"></i>
                         </div>
                         <h4 class="font-bold text-lg select-none">Почта</h4>
@@ -717,7 +720,7 @@
                     </div>
                         
                     <div class="flex flex-col items-center">
-                        <div class="w-16 h-16 flex items-center justify-center text-primary bg-black bg-opacity-30 rounded-full">
+                        <div class="w-16 h-16 flex items-center justify-center text-primary">
                             <i class="ri-phone-line text-3xl md:text-4xl"></i>
                         </div>
                         <h4 class="font-bold text-lg select-none">Телефон</h4>
@@ -728,8 +731,8 @@
                         </p>                            
                     </div>
 
-                    <div class="flex flex-col items-center lg:col-span-3 lg:col-start-1">
-                        <div class="w-16 h-16 flex items-center justify-center text-primary bg-black bg-opacity-30 rounded-full">
+                    <div class="flex flex-col items-center lg:col-span-3 lg:col-start-1 lg:mt-6">
+                        <div class="w-16 h-16 flex items-center justify-center text-primary">
                             <i class="ri-telegram-2-line text-3xl md:text-4xl"></i>
                         </div>
                         <h4 class="font-bold text-lg select-none">Telegram</h4>
@@ -743,12 +746,14 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
-    <footer class="py-6 bg-black">
+    <footer class="py-6 bg-black bg-opacity-10 backdrop-blur">
         <div class="mx-auto px-6 w-full">
             <div class="flex flex-col lg:flex-row justify-between mb-6 lg:mb-0">
                 <a href="#hero" class="text-white druk-font text-2xl mt-6 mb-6 select-none">PRODBYLELYA</a>
-                <nav class="flex flex-wrap gap-x-8 gap-y-4 mt-6 lg:mt-8">
+                <nav class="flex flex-wrap gap-x-8 gap-y-4 lg:mt-8">
                     <a href="#portfolio" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider select-none">Портфолио</a>
                     <a href="#showcase" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider select-none">Новое</a>
                     <a href="#about" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider select-none">Обо мне</a>
@@ -776,7 +781,7 @@
         <!-- Project 1 Modal -->
         <div class="project-modal-content hidden" id="modal-project-1">
             <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
-                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
                     <i class="ri-close-line text-white text-2xl"></i>
                 </button>
                 <div class="relative h-[50vh]">
@@ -821,7 +826,7 @@
         <!-- Project 2 Modal -->
         <div class="project-modal-content hidden" id="modal-project-2">
             <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
-                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
                     <i class="ri-close-line text-white text-2xl"></i>
                 </button>
                 <div class="relative h-[50vh]">
@@ -866,7 +871,7 @@
         <!-- Project 3 Modal -->
         <div class="project-modal-content hidden" id="modal-project-3">
             <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
-                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
                     <i class="ri-close-line text-white text-2xl"></i>
                 </button>
                 <div class="relative h-[50vh]">
@@ -911,7 +916,7 @@
         <!-- Project 4 Modal -->
         <div class="project-modal-content hidden" id="modal-project-4">
             <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
-                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
                     <i class="ri-close-line text-white text-2xl"></i>
                 </button>
                 <div class="relative h-[50vh]">
@@ -957,7 +962,7 @@
         <!-- Project 5 Modal -->
         <div class="project-modal-content hidden" id="modal-project-5">
             <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
-                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
                     <i class="ri-close-line text-white text-2xl"></i>
                 </button>
                 <div class="relative h-[50vh]">
@@ -1002,7 +1007,7 @@
         <!-- Project 6 Modal -->
         <div class="project-modal-content hidden" id="modal-project-6">
             <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
-                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
                     <i class="ri-close-line text-white text-2xl"></i>
                 </button>
                 <div class="relative h-[50vh]">
@@ -1046,7 +1051,7 @@
         <!-- Soon -->
         <div class="project-modal-content hidden" id="modal-project-77">
             <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
-                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
                     <i class="ri-close-line text-white text-2xl"></i>
                 </button>
                 <div class="relative h-[50vh]">
@@ -1088,7 +1093,7 @@
         <!-- Team member 1 Modal - Анна Николаева -->
         <div class="project-modal-content hidden" id="modal-project-7">
             <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
-                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
                     <i class="ri-close-line text-white text-2xl"></i>
                 </button>
                 <div class="relative h-[50vh]">
@@ -1132,7 +1137,7 @@
         <!-- Team member 2 Modal - Егор Нуруллин -->
         <div class="project-modal-content hidden" id="modal-project-8">
             <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
-                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
                     <i class="ri-close-line text-white text-2xl"></i>
                 </button>
                 <div class="relative h-[50vh]">
@@ -1174,6 +1179,6 @@
     </div>
 
     <script src="js/main.js"></script>
-
+    <script src="js/bg-anim-stars.js"></script>
 </body>
 </html>
