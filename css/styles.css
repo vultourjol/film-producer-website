@@ -177,7 +177,7 @@ header {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 1);
+    background: rgba(0, 0, 0, 1);   
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
@@ -305,6 +305,8 @@ input:checked + .slider:before {
 
 .project-modal.show #modal-overlay {
     backdrop-filter: blur(16px);
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: background-color 1s ease-in-out;
 }
 
 .project-modal-content {

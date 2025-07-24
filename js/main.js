@@ -10,59 +10,6 @@ function deferNonEssentialScripts() {
     }
 }
 
-// function initializeCustomCursor() {    
-//     const cursor = document.querySelector(".custom-cursor");
-//     const cursorDot = document.querySelector(".custom-cursor-dot");
-    
-//     if (!cursor || !cursorDot) return;
-    
-//     let hasMouseMoved = false;
-
-//     function showCursorOnFirstMove(e) {
-//         if (!hasMouseMoved) {
-//             hasMouseMoved = true;
-            
-//             cursor.style.left = e.clientX + "px";
-//             cursor.style.top = e.clientY + "px";
-//             cursorDot.style.left = e.clientX + "px";
-//             cursorDot.style.top = e.clientY + "px";
-            
-//             setTimeout(() => {
-//                 cursor.classList.add('active');
-//                 cursorDot.classList.add('active');
-//             }, 100);
-            
-//             document.removeEventListener('mousemove', showCursorOnFirstMove);
-            
-//             // Добавляем основной обработчик движения мыши
-//             document.addEventListener("mousemove", function(e) {
-//                 cursor.style.left = e.clientX + "px";
-//                 cursor.style.top = e.clientY + "px";
-//                 cursorDot.style.left = e.clientX + "px";
-//                 cursorDot.style.top = e.clientY + "px";
-//             });
-//         }
-//     }
-
-//     document.addEventListener('mousemove', showCursorOnFirstMove);
-    
-//     // Обработчики для hover эффектов
-//     const links = document.querySelectorAll("a, button, input, textarea, .project-card, [data-project-id]");
-//     links.forEach(link => {
-//         link.addEventListener("mouseenter", function() {
-//             cursor.classList.add('hover');
-//             cursor.style.transform = "translate(-50%, -50%) scale(1.5)";
-//             cursor.style.opacity = "0.5";
-//         });
-        
-//         link.addEventListener("mouseleave", function() {
-//             cursor.classList.remove('hover');
-//             cursor.style.transform = "translate(-50%, -50%) scale(1)";
-//             cursor.style.opacity = "1";
-//         });
-//     });
-// }
-
 function initializeParallaxEffects() {
     const parallaxElements = document.querySelectorAll(".parallax");
     window.addEventListener("scroll", function() {
