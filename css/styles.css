@@ -604,3 +604,21 @@ body::-webkit-scrollbar {
   left: 120%;
   transition: left 0.7s cubic-bezier(.4,0,.2,1);
 }
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    
+    /* Учитываем safe area для iPhone с Dynamic Island */
+    padding-top: env(safe-area-inset-top);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+    
+    /* Альтернативно, можно использовать margin */
+    /* margin-top: env(safe-area-inset-top); */
+}
