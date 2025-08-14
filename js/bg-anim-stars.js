@@ -70,11 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
         requestAnimationFrame(animate);
     }
 
-    window.addEventListener('resize', () => {
-        ctx.setTransform(1, 0, 0, 1, 0, 0); 
-        setup();
-    });
-
     setup();
     animate();
 });
