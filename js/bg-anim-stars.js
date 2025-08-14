@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     const ctx = canvas.getContext('2d');
 
-    let width, height, stars, starCount = 800, speed = 2;
+    let width, height, stars, starCount = 800, speed;
 
     class Star {
         constructor() {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
             this.x = (Math.random() - 0.5) * width;
             this.y = (Math.random() - 0.5) * height;
             this.z = Math.random() * width;
-            this.pz = this.z; // Предыдущая позиция Z для создания хвоста
+            this.pz = this.z; 
         }
 
         update() {
@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
             ctx.beginPath();
             ctx.moveTo(px, py);
             ctx.lineTo(sx, sy);
-            // Используем тот же цвет, что и в вашей текущей анимации
             ctx.strokeStyle = `rgba(234,161,36, 1.0)`;
             ctx.lineWidth = radius;
             ctx.stroke();
@@ -50,16 +49,16 @@ document.addEventListener('DOMContentLoaded', function () {
     function setup() {
         width = canvas.width = window.innerWidth;
         height = canvas.height = window.innerHeight;
+        speed = (width / 1920) * 2; 
         stars = [];
         for (let i = 0; i < starCount; i++) {
             stars.push(new Star());
         }
-        // Перемещаем начало координат в центр для 3D эффекта
         ctx.translate(width / 2, height / 2);
     }
 
+
     function animate() {
-        // Создаем эффект затухания, чтобы звезды оставляли след
         ctx.fillStyle = 'rgba(10, 10, 10, 0.2)';
         ctx.fillRect(-width / 2, -height / 2, width, height);
 
@@ -71,11 +70,10 @@ document.addEventListener('DOMContentLoaded', function () {
         requestAnimationFrame(animate);
     }
 
-    window.addEventListener('resize', () => {
-        // При ресайзе сбрасываем и перерисовываем все
-        ctx.setTransform(1, 0, 0, 1, 0, 0); // Сброс трансформации
-        setup();
-    });
+    // window.addEventListener('resize', () => {
+    //     ctx.setTransform(1, 0, 0, 1, 0, 0); 
+    //     setup();
+    // });
 
     setup();
     animate();
