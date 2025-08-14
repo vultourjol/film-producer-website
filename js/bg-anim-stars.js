@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function setup() {
         width = canvas.width = window.innerWidth;
         height = canvas.height = window.innerHeight;
-        speed = (width / 1920) * 2; 
+        speed = (width / 1920) * 1; 
         stars = [];
         for (let i = 0; i < starCount; i++) {
             stars.push(new Star());
@@ -70,10 +70,10 @@ document.addEventListener('DOMContentLoaded', function () {
         requestAnimationFrame(animate);
     }
 
-    // window.addEventListener('resize', () => {
-    //     ctx.setTransform(1, 0, 0, 1, 0, 0); 
-    //     setup();
-    // });
+    window.addEventListener('resize', () => {
+        ctx.setTransform(1, 0, 0, 1, 0, 0); 
+        setup();
+    });
 
     setup();
     animate();
