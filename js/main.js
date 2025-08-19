@@ -197,30 +197,82 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    const projectSwiper = new Swiper(".project-swiper", {
+    // const projectSwiper = new Swiper(".project-swiper", {
+    //     slidesPerView: 'auto',
+    //     spaceBetween: 12,
+    //     loop: true,
+        
+    //     breakpoints: {
+    //         640: {
+    //             slidesPerView: 1,
+    //             spaceBetween: 20
+    //         },
+    //         1024: {
+    //             slidesPerView: 3,
+    //             spaceBetween: 20
+    //         }
+    //     },
+        
+    //     pagination: {
+    //         el: ".swiper-pagination",
+    //         clickable: true,
+    //     },
+        
+    //     navigation: {
+    //         nextEl: ".swiper-button-next-custom",
+    //         prevEl: ".swiper-button-prev-custom",
+    //     }
+    // });
+
+    const swiperConfig = {
         slidesPerView: 'auto',
         spaceBetween: 12,
         loop: true,
-        
         breakpoints: {
-            640: {
-                slidesPerView: 1,
-                spaceBetween: 20
-            },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 20
-            }
+            640: { slidesPerView: 1, spaceBetween: 20 },
+            1024: { slidesPerView: 3, spaceBetween: 20 }
         },
-        
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
         },
-        
         navigation: {
             nextEl: ".swiper-button-next-custom",
             prevEl: ".swiper-button-prev-custom",
+        },
+        keyboard: {
+            enabled: false,
+            onlyInViewport: true,
+            pageUpDown: false
+        },
+        mousewheel: {
+            enabled: false,          
+            forceToAxis: true,       
+            releaseOnEdges: true,    
+            sensitivity: 1
+        }
+    };
+
+    const projectSwipers = Array.from(document.querySelectorAll(".project-swiper"))
+        .map(el => new Swiper(el, swiperConfig));
+
+    function activateSwiper(swiperInstance) {
+        projectSwipers.forEach(sw => {
+            sw.keyboard.disable();
+            if (sw.mousewheel) sw.mousewheel.disable();
+        });
+        if (swiperInstance) {
+            if (swiperInstance.keyboard) swiperInstance.keyboard.enable();
+            if (swiperInstance.mousewheel) swiperInstance.mousewheel.enable();
+        }
+    }
+
+    projectSwipers.forEach(sw => {
+        ['mouseenter','touchstart','focusin'].forEach(evt => {
+            sw.el.addEventListener(evt, () => activateSwiper(sw));
+        });
+        if (!sw.el.hasAttribute('tabindex')) {
+            sw.el.setAttribute('tabindex', '0');
         }
     });
 
