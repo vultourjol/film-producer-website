@@ -197,33 +197,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // const projectSwiper = new Swiper(".project-swiper", {
-    //     slidesPerView: 'auto',
-    //     spaceBetween: 12,
-    //     loop: true,
-        
-    //     breakpoints: {
-    //         640: {
-    //             slidesPerView: 1,
-    //             spaceBetween: 20
-    //         },
-    //         1024: {
-    //             slidesPerView: 3,
-    //             spaceBetween: 20
-    //         }
-    //     },
-        
-    //     pagination: {
-    //         el: ".swiper-pagination",
-    //         clickable: true,
-    //     },
-        
-    //     navigation: {
-    //         nextEl: ".swiper-button-next-custom",
-    //         prevEl: ".swiper-button-prev-custom",
-    //     }
-    // });
-
     const swiperConfig = {
         slidesPerView: 'auto',
         spaceBetween: 12,
