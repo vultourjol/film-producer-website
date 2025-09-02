@@ -47,8 +47,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function setup() {
+        const safeAreaTop = parseInt(getComputedStyle(document.documentElement).getPropertyValue('env(safe-area-inset-top)')) || 0;
+        const safeAreaBottom = parseInt(getComputedStyle(document.documentElement).getPropertyValue('env(safe-area-inset-bottom)')) || 0;
+
         width = canvas.width = window.innerWidth;
         height = canvas.height = window.innerHeight;
+        
         speed = (width / 1920) * 1; 
         stars = [];
         for (let i = 0; i < starCount; i++) {
