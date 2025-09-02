@@ -615,7 +615,6 @@ body::-webkit-scrollbar {
     padding: 0 !important;
     z-index: -1;
     pointer-events: none;
-    /* Растягиваем за пределы safe area */
     transform: translateY(calc(-1 * env(safe-area-inset-top)));
     padding-top: env(safe-area-inset-top);
 }
