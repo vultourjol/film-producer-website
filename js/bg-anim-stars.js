@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function setup() {
         width = canvas.width = window.innerWidth;
-        height = canvas.height = window.innerHeight;
+        height = canvas.height = document.documentElement.scrollHeight;
         speed = (width / 1920) * 1; 
         stars = [];
         for (let i = 0; i < starCount; i++) {
