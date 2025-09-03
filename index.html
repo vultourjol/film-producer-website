@@ -822,14 +822,19 @@
                         </div>
                     </div>
 
-                    <!-- Soon -->
+                    <!-- Team member card 3 (Project 9) -->
                     <div class="swiper-slide">
-                        <div class="project-card rounded overflow-hidden relative aspect-[2/2] h-160 border-2 border-primary border-opacity-10" data-project-id="77">
-                            <div class="bg-[#0a0a0a] bg-opacity-10 backdrop-blur w-full h-full flex items-center justify-center">
-                                <div class="text-center">
-                                    <i class="ri-aliens-line text-primary text-5xl mb-4"></i>
-                                    <h3 class="text-xl mb-2 druk-font">Alien <span class="text-primary">1</span></h3>
-                                </div>
+                        <div class="project-card rounded overflow-hidden relative aspect-[2/2] h-160 border-2 border-primary border-opacity-10" data-project-id="9">
+                            <picture>
+                                <source srcset="source/ulna.webp" media="(max-width: 600px)" type="image/webp">
+                                <source srcset="source/ulna.webp" media="(max-width: 1200px)" type="image/webp">
+                                <source srcset="source/ulna.webp" type="image/webp">
+                                <img src="source/ulna.webp" loading="lazy" alt="Ульяна Торжевская" 
+                                     class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                            </picture>                    
+                            <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
+                                <h3 class="text-xl mb-2 druk-font">Ульяна Торжевская</h3>
+                                <p class="text-sm opacity-80">Монтажёр • Режиссёр монтажа</p>
                             </div>
                         </div>
                     </div>
@@ -1353,6 +1358,56 @@
                 </div>
             </div>
         </div>
+
+        <!-- Project 9 Modal -->
+        <!-- Team member 3 Modal - Анна Николаева -->
+        <div class="project-modal-content hidden" id="modal-project-9">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
+                    <i class="ri-close-line text-white text-2xl"></i>
+                </button>
+                <div class="relative h-[50vh]">
+                    <img src="source/ulna.webp" alt="Ульяна Торжевская" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Ульяна Торжевская</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Режиссёр монтажа</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Монтажёр</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">3+ лет опыта</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <p class="text-sm md:text-lg mb-8">Ульяна - режиссёр монтажа с большим портфолио работ и навыками работы в различных программах: DaVinci, After Effects, Premiere Pro, CapCut. Работает с навыками: от цветокорра и склейки до сложного клинапа. Отвечает за качественный вид итогового продукта.  </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Опыт и навыки</h4>
+                            <p class="opacity-80 text-sm md:text-lg">• Короткие метры</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Документальные фильмы</p>
+                            <p class="opacity-80 text-sm md:text-lg">• ТВ форматы</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Образовательный контент</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Подкасты</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Проекты</h4>
+                            <p class="opacity-80 text-sm md:text-lg">• 5+ коротких метров</p>
+                            <p class="opacity-80 text-sm md:text-lg">• «Агитационный ролик кандидата ЛДПР»</p>
+                            <p class="opacity-80 text-sm md:text-lg">• «Девочка» короткий метр</p>
+                            <p class="opacity-80 text-sm md:text-lg">• «Человек Сон» короткий метр</p>
+                            <p class="opacity-80 text-sm md:text-lg">• «ДК Яблочкова» клип</p>
+                            <p class="opacity-80 text-sm md:text-lg">• «На дому» курс образовательного контента</p>
+                            <p class="opacity-80 text-sm md:text-lg">• «Лига преподавателей высшей школы»</p>
+                        </div>
+                    </div>
+                    <div class="mb-8">
+                        <h4 class="text-xl font-bold mb-4">Образование</h4>
+                        <p class="opacity-80 text-sm md:text-lg">Высшее образование по специальности "Продюсерство" Института кино и телевидения ГИТР (2023 - 2028 г.).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <script src="js/main.js"></script>
