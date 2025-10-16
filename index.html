@@ -141,7 +141,7 @@
             <nav class="hidden lg:flex space-x-8">
                 <a href="news.html" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1 select-none"><i class="ri-news-line"></i> Новости</a>
                 <a href="#portfolio" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1 select-none">Портфолио</a>
-                <a href="#reels" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1 select-none">Reels</a>
+                <a href="#reels" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1 select-none">Рилс</a>
                 <a href="#showcase" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1 select-none">Новое</a>
                 <a href="#about" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1 select-none">Обо мне</a>
                 <a href="#team" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider py-2 px-1 select-none">Команда</a>
@@ -152,7 +152,7 @@
                 <nav class="flex flex-col items-center justify-center w-full h-screen space-y-8 px-6">
                     <a href="news.html" class="text-white hover:text-primary transition-colors text-xl uppercase tracking-wider py-2 px-1 select-none"><i class="ri-news-line"></i> Новости</a>
                     <a href="#portfolio" class="text-white hover:text-primary text-xl uppercase tracking-wider py-2 px-1 select-none">Портфолио</a>
-                    <a href="#reels" class="text-white hover:text-primary text-xl uppercase tracking-wider py-2 px-1 select-none">Reels</a>
+                    <a href="#reels" class="text-white hover:text-primary text-xl uppercase tracking-wider py-2 px-1 select-none">Рилс</a>
                     <a href="#showcase" class="text-white hover:text-primary text-xl uppercase tracking-wider py-2 px-1 select-none">Новое</a>
                     <a href="#about" class="text-white hover:text-primary text-xl uppercase tracking-wider py-2 px-1 select-none">Обо мне</a>
                     <a href="#team" class="text-white hover:text-primary text-xl uppercase tracking-wider py-2 px-1 select-none">Команда</a>
@@ -342,60 +342,232 @@
     <!-- Reels Grid Section -->
     <section id="reels" class="py-2 md:py-6">
         <div class="container mx-auto px-6 w-full mt-6">
-            <h2 class="heading-font text-3xl md:text-4xl text-center druk-font select-none mb-4 md:mb-16"><a href="#reels">Мои <span class="text-primary">Reels</span></a></h2> 
+            <h2 class="heading-font text-3xl md:text-4xl text-center druk-font select-none mb-4 md:mb-16"><a href="#reels">Мои <span class="text-primary">Рилс</span></a></h2> 
     
             <!-- Swiper -->
             <div class="swiper project-swiper pt-3 select-none">
                 <div class="swiper-wrapper">
                     
-                    <!-- Soon -->
+                    <!-- Project 11 -->
                     <div class="swiper-slide">
-                        <div class="project-card rounded overflow-hidden relative h-80 border-2 border-primary border-opacity-10" data-project-id="77">
-                            <div class="bg-[#0a0a0a] bg-opacity-10 backdrop-blur w-full h-full flex items-center justify-center">
-                                <div class="text-center">
-                                    <i class="ri-film-line text-primary text-5xl mb-4"></i>
-                                    <h3 class="text-xl mb-2 druk-font">Скоро</h3>
-                                    <p class="text-sm opacity-80">Новый Reels в разработке</p>
-                                </div>
+                        <div class="project-card rounded overflow-hidden relative w-full aspect-[9/16] border-2 border-primary border-opacity-10" data-project-id="11">
+                            <picture>
+                                <source srcset="source/reels/gocha.webp" media="(max-width: 600px)" type="image/webp">
+                                <source srcset="source/reels/gocha.webp" media="(max-width: 1200px)" type="image/webp">
+                                <source srcset="source/reels/gocha.webp" type="image/webp">
+                                <img src="source/reels/gocha.webp" loading="lazy" alt="Гоча" 
+                                     class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                            </picture>                     
+                            <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
+                                <h3 class="text-xl mb-2 druk-font">TAKAYAMA FORWARD AUTO</h3>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Soon -->
+                    <!-- Project 12 -->
                     <div class="swiper-slide">
-                        <div class="project-card rounded overflow-hidden relative h-80 border-2 border-primary border-opacity-10" data-project-id="77">
-                            <div class="bg-[#0a0a0a] bg-opacity-10 backdrop-blur w-full h-full flex items-center justify-center">
-                                <div class="text-center">
-                                    <i class="ri-film-line text-primary text-5xl mb-4"></i>
-                                    <h3 class="text-xl mb-2 druk-font">Скоро</h3>
-                                    <p class="text-sm opacity-80">Новый Reels в разработке</p>
-                                </div>
+                        <div class="project-card rounded overflow-hidden relative w-full aspect-[9/16] border-2 border-primary border-opacity-10" data-project-id="12">
+                            <picture>
+                                <source srcset="source/reels/nomera.webp" media="(max-width: 600px)" type="image/webp">
+                                <source srcset="source/reels/nomera.webp" media="(max-width: 1200px)" type="image/webp">
+                                <source srcset="source/reels/nomera.webp" type="image/webp">
+                                <img src="source/reels/nomera.webp" loading="lazy" alt="Номера" 
+                                     class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                            </picture>                     
+                            <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
+                                <h3 class="text-xl mb-2 druk-font">Крутые номера</h3>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Soon -->
+                    <!-- Project 13 -->
                     <div class="swiper-slide">
-                        <div class="project-card rounded overflow-hidden relative h-80 border-2 border-primary border-opacity-10" data-project-id="77">
-                            <div class="bg-[#0a0a0a] bg-opacity-10 backdrop-blur w-full h-full flex items-center justify-center">
-                                <div class="text-center">
-                                    <i class="ri-film-line text-primary text-5xl mb-4"></i>
-                                    <h3 class="text-xl mb-2 druk-font">Скоро</h3>
-                                    <p class="text-sm opacity-80">Новый Reels в разработке</p>
-                                </div>
+                        <div class="project-card rounded overflow-hidden relative w-full aspect-[9/16] border-2 border-primary border-opacity-10" data-project-id="13">
+                            <picture>
+                                <source srcset="source/reels/takayama.webp" media="(max-width: 600px)" type="image/webp">
+                                <source srcset="source/reels/takayama.webp" media="(max-width: 1200px)" type="image/webp">
+                                <source srcset="source/reels/takayama.webp" type="image/webp">
+                                <img src="source/reels/takayama.webp" loading="lazy" alt="Гоча" 
+                                     class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                            </picture>                     
+                            <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
+                                <h3 class="text-xl mb-2 druk-font">TAKAYAMA FORWARD AUTO</h3>
                             </div>
                         </div>
                     </div>
 
-                   <!-- Soon -->
-                   <div class="swiper-slide">
-                        <div class="project-card rounded overflow-hidden relative h-80 border-2 border-primary border-opacity-10" data-project-id="77">
-                            <div class="bg-[#0a0a0a] bg-opacity-10 backdrop-blur w-full h-full flex items-center justify-center">
-                                <div class="text-center">
-                                    <i class="ri-film-line text-primary text-5xl mb-4"></i>
-                                    <h3 class="text-xl mb-2 druk-font">Скоро</h3>
-                                    <p class="text-sm opacity-80">Новый Reels в разработке</p>
-                                </div>
+                   <!-- Project 14 -->
+                    <div class="swiper-slide">
+                        <div class="project-card rounded overflow-hidden relative w-full aspect-[9/16] border-2 border-primary border-opacity-10" data-project-id="14">
+                            <picture>
+                                <source srcset="source/reels/muzei.webp" media="(max-width: 600px)" type="image/webp">
+                                <source srcset="source/reels/muzei.webp" media="(max-width: 1200px)" type="image/webp">
+                                <source srcset="source/reels/muzei.webp" type="image/webp">
+                                <img src="source/reels/muzei.webp" loading="lazy" alt="Рита" 
+                                     class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                            </picture>                     
+                            <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
+                                <h3 class="text-xl mb-2 druk-font">Рита Игнатова</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 15 -->
+                    <div class="swiper-slide">
+                        <div class="project-card rounded overflow-hidden relative w-full aspect-[9/16] border-2 border-primary border-opacity-10" data-project-id="15">
+                            <picture>
+                                <source srcset="source/reels/muzei2.webp" media="(max-width: 600px)" type="image/webp">
+                                <source srcset="source/reels/muzei2.webp" media="(max-width: 1200px)" type="image/webp">
+                                <source srcset="source/reels/muzei2.webp" type="image/webp">
+                                <img src="source/reels/muzei2.webp" loading="lazy" alt="Рита" 
+                                     class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                            </picture>                     
+                            <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
+                                <h3 class="text-xl mb-2 druk-font">Рита Игнатова</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 16 -->
+                    <div class="swiper-slide">
+                        <div class="project-card rounded overflow-hidden relative w-full aspect-[9/16] border-2 border-primary border-opacity-10" data-project-id="16">
+                            <picture>
+                                <source srcset="source/reels/dasha.webp" media="(max-width: 600px)" type="image/webp">
+                                <source srcset="source/reels/dasha.webp" media="(max-width: 1200px)" type="image/webp">
+                                <source srcset="source/reels/dasha.webp" type="image/webp">
+                                <img src="source/reels/dasha.webp" loading="lazy" alt="Даша" 
+                                     class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                            </picture>                     
+                            <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
+                                <h3 class="text-xl mb-2 druk-font">Даша Шмелёва</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 17 -->
+                    <div class="swiper-slide">
+                        <div class="project-card rounded overflow-hidden relative w-full aspect-[9/16] border-2 border-primary border-opacity-10" data-project-id="17">
+                            <picture>
+                                <source srcset="source/reels/elizaveta.webp" media="(max-width: 600px)" type="image/webp">
+                                <source srcset="source/reels/elizaveta.webp" media="(max-width: 1200px)" type="image/webp">
+                                <source srcset="source/reels/elizaveta.webp" type="image/webp">
+                                <img src="source/reels/elizaveta.webp" loading="lazy" alt="Елизавета" 
+                                     class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                            </picture>                     
+                            <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
+                                <h3 class="text-xl mb-2 druk-font">Елизавета Варт</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 18 -->
+                    <div class="swiper-slide">
+                        <div class="project-card rounded overflow-hidden relative w-full aspect-[9/16] border-2 border-primary border-opacity-10" data-project-id="18">
+                            <picture>
+                                <source srcset="source/reels/anastasia.webp" media="(max-width: 600px)" type="image/webp">
+                                <source srcset="source/reels/anastasia.webp" media="(max-width: 1200px)" type="image/webp">
+                                <source srcset="source/reels/anastasia.webp" type="image/webp">
+                                <img src="source/reels/anastasia.webp" loading="lazy" alt="Анастасия" 
+                                     class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                            </picture>                     
+                            <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
+                                <h3 class="text-xl mb-2 druk-font">Анастасия Королёва</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 19 -->
+                    <div class="swiper-slide">
+                        <div class="project-card rounded overflow-hidden relative w-full aspect-[9/16] border-2 border-primary border-opacity-10" data-project-id="19">
+                            <picture>
+                                <source srcset="source/reels/tata.webp" media="(max-width: 600px)" type="image/webp">
+                                <source srcset="source/reels/tata.webp" media="(max-width: 1200px)" type="image/webp">
+                                <source srcset="source/reels/tata.webp" type="image/webp">
+                                <img src="source/reels/tata.webp" loading="lazy" alt="Тата" 
+                                     class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                            </picture>                     
+                            <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
+                                <h3 class="text-xl mb-2 druk-font">Тата Шапиро</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 20 -->
+                    <div class="swiper-slide">
+                        <div class="project-card rounded overflow-hidden relative w-full aspect-[9/16] border-2 border-primary border-opacity-10" data-project-id="20">
+                            <picture>
+                                <source srcset="source/reels/stomatolog.webp" media="(max-width: 600px)" type="image/webp">
+                                <source srcset="source/reels/stomatolog.webp" media="(max-width: 1200px)" type="image/webp">
+                                <source srcset="source/reels/stomatolog.webp" type="image/webp">
+                                <img src="source/reels/stomatolog.webp" loading="lazy" alt="Стоматолог" 
+                                     class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                            </picture>                     
+                            <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
+                                <h3 class="text-xl mb-2 druk-font">Стоматолог</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 21 -->
+                    <div class="swiper-slide">
+                        <div class="project-card rounded overflow-hidden relative w-full aspect-[9/16] border-2 border-primary border-opacity-10" data-project-id="21">
+                            <picture>
+                                <source srcset="source/reels/kupalo.webp" media="(max-width: 600px)" type="image/webp">
+                                <source srcset="source/reels/kupalo.webp" media="(max-width: 1200px)" type="image/webp">
+                                <source srcset="source/reels/kupalo.webp" type="image/webp">
+                                <img src="source/reels/kupalo.webp" loading="lazy" alt="Купала" 
+                                     class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                            </picture>                     
+                            <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
+                                <h3 class="text-xl mb-2 druk-font">Фестиваль Иван Купала</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 22 -->
+                    <div class="swiper-slide">
+                        <div class="project-card rounded overflow-hidden relative w-full aspect-[9/16] border-2 border-primary border-opacity-10" data-project-id="22">
+                            <picture>
+                                <source srcset="source/reels/tishina.webp" media="(max-width: 600px)" type="image/webp">
+                                <source srcset="source/reels/tishina.webp" media="(max-width: 1200px)" type="image/webp">
+                                <source srcset="source/reels/tishina.webp" type="image/webp">
+                                <img src="source/reels/tishina.webp" loading="lazy" alt="Тишина" 
+                                     class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                            </picture>                     
+                            <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
+                                <h3 class="text-xl mb-2 druk-font">Где звенит тишина</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 23 -->
+                    <div class="swiper-slide">
+                        <div class="project-card rounded overflow-hidden relative w-full aspect-[9/16] border-2 border-primary border-opacity-10" data-project-id="23">
+                            <picture>
+                                <source srcset="source/reels/snippet.webp" media="(max-width: 600px)" type="image/webp">
+                                <source srcset="source/reels/snippet.webp" media="(max-width: 1200px)" type="image/webp">
+                                <source srcset="source/reels/snippet.webp" type="image/webp">
+                                <img src="source/reels/snippet.webp" loading="lazy" alt="Сниппет" 
+                                     class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                            </picture>                     
+                            <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
+                                <h3 class="text-xl mb-2 druk-font">Яна Лепнина</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 24 -->
+                    <div class="swiper-slide">
+                        <div class="project-card rounded overflow-hidden relative w-full aspect-[9/16] border-2 border-primary border-opacity-10" data-project-id="24">
+                            <picture>
+                                <source srcset="source/reels/stanislav.webp" media="(max-width: 600px)" type="image/webp">
+                                <source srcset="source/reels/stanislav.webp" media="(max-width: 1200px)" type="image/webp">
+                                <source srcset="source/reels/stanislav.webp" type="image/webp">
+                                <img src="source/reels/stanislav.webp" loading="lazy" alt="Станислав" 
+                                     class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                            </picture>                     
+                            <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
+                                <h3 class="text-xl mb-2 druk-font">Станислав Сконечны</h3>
                             </div>
                         </div>
                     </div>
@@ -838,14 +1010,36 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Soon -->
+
+                    <!-- Team member card 4 (Project 10) -->
                     <div class="swiper-slide">
-                        <div class="project-card rounded overflow-hidden relative aspect-[2/2] h-160 border-2 border-primary border-opacity-10" data-project-id="77">
+                        <div class="project-card rounded overflow-hidden relative aspect-[2/2] h-160 border-2 border-primary border-opacity-10" data-project-id="10">
                             <div class="bg-[#0a0a0a] bg-opacity-10 backdrop-blur w-full h-full flex items-center justify-center">
                                 <div class="text-center">
-                                    <i class="ri-aliens-line text-primary text-5xl mb-4"></i>
-                                    <h3 class="text-xl mb-2 druk-font">Alien <span class="text-primary">2</span></h3>
+                                    <i class="ri-emotion-happy-line text-primary text-5xl mb-4"></i>
+                                </div>
+                                <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
+                                    <h3 class="text-xl mb-2 druk-font">Василиса Ерисова</h3>
+                                    <p class="text-sm opacity-80">2D художник • Иллюстратор • Мультипликатор</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team member card 5 (Project 25) -->
+                    <div class="swiper-slide">
+                        <div class="project-card rounded overflow-hidden relative aspect-[2/2] h-160 border-2 border-primary border-opacity-10" data-project-id="25">
+                            <div class="bg-[#0a0a0a] bg-opacity-10 backdrop-blur w-full h-full flex items-center justify-center">
+                                <picture>
+                                    <source srcset="source/SERGEISHE.webp" media="(max-width: 600px)" type="image/webp">
+                                    <source srcset="source/SERGEISHE.webp" media="(max-width: 1200px)" type="image/webp">
+                                    <source srcset="source/SERGEISHE.webp" type="image/webp">
+                                    <img src="source/SERGEISHE.webp" loading="lazy" alt="Сергей Стецик" 
+                                        class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110">
+                                </picture>  
+                                <div class="project-overlay absolute inset-0 flex flex-col justify-end p-6">
+                                    <h3 class="text-xl mb-2 druk-font">Сергей Стецик</h3>
+                                    <p class="text-sm opacity-80">Режиссёр • Оператор</p>
                                 </div>
                             </div>
                         </div>
@@ -935,7 +1129,7 @@
                 <nav class="flex flex-wrap gap-x-8 gap-y-4 lg:mt-8">
                     <a href="news.html" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider select-none"><i class="ri-news-line"></i> Новости</a>
                     <a href="#portfolio" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider select-none">Портфолио</a>
-                    <a href="#reels" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider select-none">Reels</a>
+                    <a href="#reels" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider select-none">Рилс</a>
                     <a href="#showcase" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider select-none">Новое</a>
                     <a href="#about" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider select-none">Обо мне</a>
                     <a href="#team" class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider select-none">Команда</a>
@@ -1360,7 +1554,7 @@
         </div>
 
         <!-- Project 9 Modal -->
-        <!-- Team member 3 Modal - Анна Николаева -->
+        <!-- Team member 3 Modal - Ульяна Торжевская -->
         <div class="project-modal-content hidden" id="modal-project-9">
             <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
                 <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
@@ -1403,6 +1597,569 @@
                     <div class="mb-8">
                         <h4 class="text-xl font-bold mb-4">Образование</h4>
                         <p class="opacity-80 text-sm md:text-lg">Высшее образование по специальности "Продюсерство" Института кино и телевидения ГИТР (2023 - 2028 г.).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 10 Modal -->
+        <!-- Team member 4 Modal - Василиса Ерисова -->
+        <div class="project-modal-content hidden" id="modal-project-10">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
+                    <i class="ri-close-line text-white text-2xl"></i>
+                </button>
+                <div class="relative h-[50vh]">
+                    <!-- <img src="source/ulna.webp" alt="Василиса Ерисова" class="w-full h-full object-cover"> -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Василиса Ерисова</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">2D художник</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Иллюстратор</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Мультипликатор</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">3+ лет опыта</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <p class="text-sm md:text-lg mb-8">Василиса - 2D-художник, иллюстратор и мультипликатор с опытом более 3 лет в креативной индустрии. Специализируется на создании иллюстраций, концептов и анимации.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Опыт и навыки</h4>
+                            <p class="opacity-80 text-sm md:text-lg">• 2D-иллюстрация (clip studio paint, photoshop, procreate)</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Разработка персонажей</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Создание раскадровок</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Покадровая 2D-анимация (toon boom harmony, tvpaint, clip studio paint)</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Перекладочная 2D-анимация (moho, toon boom harmony, adobe animate)</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Композитинг (after effects)</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Проекты</h4>
+                            <p class="opacity-80 text-sm md:text-lg">• Учебная практика в студии «Союзмультфильм» («Простоквашино», «Оранжевая корова», «Суворов: Великое путешествие»)</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Иллюстрации для детских книг писательницы B. Jane Turnquest</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Иллюстрации для переиздания книги «The Great Gatsby» под редакцией Gerardo Pelayo</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Рекламный ролик ИМВЕНТ КВАДРО</p>
+                        </div>
+                    </div>
+                    <div class="mb-8">
+                        <h4 class="text-xl font-bold mb-4">Образование</h4>
+                        <p class="opacity-80 text-sm md:text-lg">Среднее профессиональное образование по специальности «Анимация» Московского университета «Синергия», квалификация «Художник-мультипликатор» (2021 - 2025 г.).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 25 Modal -->
+        <!-- Team member 4 Modal - Сергей Стецик -->
+        <div class="project-modal-content hidden" id="modal-project-25">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
+                    <i class="ri-close-line text-white text-2xl"></i>
+                </button>
+                <div class="relative h-[50vh]">
+                    <img src="source/SERGEISHE.webp" alt="Сергей Стецик" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Сергей Стецик</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Режиссёр</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">Оператор</span>
+                            <span class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10">7+ лет опыта</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <p class="text-sm md:text-lg mb-8">Сергей - .</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Опыт и навыки</h4>
+                            <p class="opacity-80 text-sm md:text-lg">• Придумываю концепты и продумываю, как их  реализовывать</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Снимаю как оператор-постановщик</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Знаю как с помощью света и обстановки навести красоту в кадре</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Заранее продумываю и ищу креативные решения, которые впоследствии воплощаю на монтаже</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Работаю с профессиональными актерами, а так же помогаю не профессионалам увереннее держаться в кадре</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Хорошо лажу с детьми, помогаю им раскрыться и расслабиться на съемочной площадке</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Интегрирую в свои работы анимацию и нейросети</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Проекты</h4>
+                            <p class="opacity-80 text-sm md:text-lg">• "Каково" с Отаром Кушинашвили</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Контент-ролики для "Шоколадница"</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Серия Рилс для ресторана "Кусочки"</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Промо-ролики для "Circus Zone"</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Промо-ролик для "Море Шоу"</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Серия интервью для "Мастерская Новых Медиа"</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Канал "Колизей" для COlliZEUM</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Имиджевый фильм "Электроизоляционные детали"</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Промо-ролики для "Black Cross"</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Клип "Куда уходят кошки" с НайдИ</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Сниппеты с Вереница</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Короткометражный фильм для актерского агентства при Киностудии "Амедиа"</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Короткометражный фильм для детской театральной студии "Ирбис"</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Промо-ролик для LEON</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Работа с крупными блоггерами</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Проведение прямых трансляций CCT</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Кибер турнир LanDaLan 3</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Серия роликов для ВСК страхование</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Серия роликов ISLAND SOUL Jewelry</p>
+                            <p class="opacity-80 text-sm md:text-lg">• Серия роликов для "Кинетик"</p>
+                        </div>
+                    </div>
+                    <div class="mb-8">
+                        <h4 class="text-xl font-bold mb-4">Образование</h4>
+                        <p class="opacity-80 text-sm md:text-lg">Высшее образование МГИК по специальности "Режисеер Кино и ТВ" (2013 - 2018 г.).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 11 Modal -->
+        <div class="project-modal-content hidden" id="modal-project-11">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
+                    <i class="ri-close-line text-white text-2xl"></i>
+                </button>
+                <div class="relative h-[50vh]">
+                    <img src="source/reels/gocha.webp" alt="Гоча" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">TAKAYAMA FORWARD AUTO</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10 shine-effect">
+                                <i class="ri-play-fill text-white text-2xl"></i>
+                            </a>
+                            <a href="https://t.me/rouuuzi" class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10 hover:bg-primary transition-colors shine-effect">RozaliaAVI <i class="ri-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Съёмка</h4>
+                            <p class="text-sm md:text-lg opacity-80">RozaliaAVI</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Монтаж</h4>
+                            <p class="text-sm md:text-lg opacity-80">Алёна Козловская</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 12 Modal -->
+        <div class="project-modal-content hidden" id="modal-project-12">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
+                    <i class="ri-close-line text-white text-2xl"></i>
+                </button>
+                <div class="relative h-[50vh]">
+                    <img src="source/reels/nomera.webp" alt="Гоча" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Крутые номера</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10 shine-effect">
+                                <i class="ri-play-fill text-white text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Съёмка <span class="text-primary">&</span> Монтаж</h4>
+                            <p class="text-sm md:text-lg opacity-80">Алёна Козловская</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 13 Modal -->
+        <div class="project-modal-content hidden" id="modal-project-13">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
+                    <i class="ri-close-line text-white text-2xl"></i>
+                </button>
+                <div class="relative h-[50vh]">
+                    <img src="source/reels/takayama.webp" alt="Такаяма" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">TAKAYAMA FORWARD AUTO</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10 shine-effect">
+                                <i class="ri-play-fill text-white text-2xl"></i>
+                            </a>
+                            <a href="https://t.me/rouuuzi" class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10 hover:bg-primary transition-colors shine-effect">RozaliaAVI <i class="ri-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Съёмка</h4>
+                            <p class="text-sm md:text-lg opacity-80">RozaliaAVI</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Монтаж</h4>
+                            <p class="text-sm md:text-lg opacity-80">Алёна Козловская</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 14 Modal -->
+        <div class="project-modal-content hidden" id="modal-project-14">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
+                    <i class="ri-close-line text-white text-2xl"></i>
+                </button>
+                <div class="relative h-[50vh]">
+                    <img src="source/reels/muzei.webp" alt="Музей" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Рита Игнатова</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10 shine-effect">
+                                <i class="ri-play-fill text-white text-2xl"></i>
+                            </a>
+                            <a href="https://t.me/rouuuzi" class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10 hover:bg-primary transition-colors shine-effect">RozaliaAVI <i class="ri-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Съёмка</h4>
+                            <p class="text-sm md:text-lg opacity-80">RozaliaAVI</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Монтаж</h4>
+                            <p class="text-sm md:text-lg opacity-80">Алёна Козловская</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 15 Modal -->
+        <div class="project-modal-content hidden" id="modal-project-15">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
+                    <i class="ri-close-line text-white text-2xl"></i>
+                </button>
+                <div class="relative h-[50vh]">
+                    <img src="source/reels/muzei2.webp" alt="Музей" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Рита Игнатова</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10 shine-effect">
+                                <i class="ri-play-fill text-white text-2xl"></i>
+                            </a>
+                            <a href="https://t.me/rouuuzi" class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10 hover:bg-primary transition-colors shine-effect">RozaliaAVI <i class="ri-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Съёмка</h4>
+                            <p class="text-sm md:text-lg opacity-80">RozaliaAVI</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Монтаж</h4>
+                            <p class="text-sm md:text-lg opacity-80">Алёна Козловская</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 16 Modal -->
+        <div class="project-modal-content hidden" id="modal-project-16">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
+                    <i class="ri-close-line text-white text-2xl"></i>
+                </button>
+                <div class="relative h-[50vh]">
+                    <img src="source/reels/dasha.webp" alt="Даша" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Даша Шмелёва</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10 shine-effect">
+                                <i class="ri-play-fill text-white text-2xl"></i>
+                            </a>
+                            <a href="https://t.me/rouuuzi" class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10 hover:bg-primary transition-colors shine-effect">RozaliaAVI <i class="ri-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Съёмка</h4>
+                            <p class="text-sm md:text-lg opacity-80">RozaliaAVI</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Монтаж</h4>
+                            <p class="text-sm md:text-lg opacity-80">Алёна Козловская</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 17 Modal -->
+        <div class="project-modal-content hidden" id="modal-project-17">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
+                    <i class="ri-close-line text-white text-2xl"></i>
+                </button>
+                <div class="relative h-[50vh]">
+                    <img src="source/reels/elizaveta.webp" alt="Елизавета" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Елизавета Варт</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10 shine-effect">
+                                <i class="ri-play-fill text-white text-2xl"></i>
+                            </a>
+                            <a href="https://t.me/rouuuzi" class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10 hover:bg-primary transition-colors shine-effect">RozaliaAVI <i class="ri-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Съёмка</h4>
+                            <p class="text-sm md:text-lg opacity-80">RozaliaAVI</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Монтаж</h4>
+                            <p class="text-sm md:text-lg opacity-80">Алёна Козловская</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 18 Modal -->
+        <div class="project-modal-content hidden" id="modal-project-18">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
+                    <i class="ri-close-line text-white text-2xl"></i>
+                </button>
+                <div class="relative h-[50vh]">
+                    <img src="source/reels/anastasia.webp" alt="Анастасия" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Анастасия Королёва</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10 shine-effect">
+                                <i class="ri-play-fill text-white text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Съёмка <span class="text-primary">&</span> Монтаж</h4>
+                            <p class="text-sm md:text-lg opacity-80">Алёна Козловская</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 19 Modal -->
+        <div class="project-modal-content hidden" id="modal-project-19">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
+                    <i class="ri-close-line text-white text-2xl"></i>
+                </button>
+                <div class="relative h-[50vh]">
+                    <img src="source/reels/tata.webp" alt="Тата" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Тата Шапиро</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10 shine-effect">
+                                <i class="ri-play-fill text-white text-2xl"></i>
+                            </a>
+                            <a href="https://t.me/rouuuzi" class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10 hover:bg-primary transition-colors shine-effect">RozaliaAVI <i class="ri-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Съёмка</h4>
+                            <p class="text-sm md:text-lg opacity-80">RozaliaAVI</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Монтаж</h4>
+                            <p class="text-sm md:text-lg opacity-80">Алёна Козловская</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 20 Modal -->
+        <div class="project-modal-content hidden" id="modal-project-20">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
+                    <i class="ri-close-line text-white text-2xl"></i>
+                </button>
+                <div class="relative h-[50vh]">
+                    <img src="source/reels/stomatolog.webp" alt="Стоматолог" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Стоматолог</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10 shine-effect">
+                                <i class="ri-play-fill text-white text-2xl"></i>
+                            </a>
+                            <a href="https://t.me/rouuuzi" class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10 hover:bg-primary transition-colors shine-effect">RozaliaAVI <i class="ri-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Съёмка</h4>
+                            <p class="text-sm md:text-lg opacity-80">RozaliaAVI</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Монтаж</h4>
+                            <p class="text-sm md:text-lg opacity-80">Алёна Козловская</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 21 Modal -->
+        <div class="project-modal-content hidden" id="modal-project-21">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
+                    <i class="ri-close-line text-white text-2xl"></i>
+                </button>
+                <div class="relative h-[50vh]">
+                    <img src="source/reels/kupalo.webp" alt="Купало" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Фестиваль Иван Купала</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10 shine-effect">
+                                <i class="ri-play-fill text-white text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Съёмка <span class="text-primary">&</span> Монтаж</h4>
+                            <p class="text-sm md:text-lg opacity-80">Алёна Козловская</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 22 Modal -->
+        <div class="project-modal-content hidden" id="modal-project-22">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
+                    <i class="ri-close-line text-white text-2xl"></i>
+                </button>
+                <div class="relative h-[50vh]">
+                    <img src="source/reels/tishina.webp" alt="Тишина" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Где звенит тишина</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10 shine-effect">
+                                <i class="ri-play-fill text-white text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Съёмка <span class="text-primary">&</span> Монтаж</h4>
+                            <p class="text-sm md:text-lg opacity-80">Алёна Козловская</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 23 Modal -->
+        <div class="project-modal-content hidden" id="modal-project-23">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
+                    <i class="ri-close-line text-white text-2xl"></i>
+                </button>
+                <div class="relative h-[50vh]">
+                    <img src="source/reels/snippet.webp" alt="Сниппет" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Яна Лепнина</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10 shine-effect">
+                                <i class="ri-play-fill text-white text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Съёмка <span class="text-primary">&</span> Монтаж</h4>
+                            <p class="text-sm md:text-lg opacity-80">Алёна Козловская</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 24 Modal -->
+        <div class="project-modal-content hidden" id="modal-project-24">
+            <div class="bg-[#121212] rounded-lg w-[90vw] max-w-5xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto relative z-50 select-none">
+                <button class="modal-close absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black bg-opacity-30 hover:bg-primary transition-colors duration-200 z-50 border-2 border-primary border-opacity-10 hover:bg-opacity-50">
+                    <i class="ri-close-line text-white text-2xl"></i>
+                </button>
+                <div class="relative h-[50vh]">
+                    <img src="source/reels/stanislav.webp" alt="Станислав" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="heading-font text-3xl md:text-4xl mb-4 druk-font">Станислав Сконечны</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="w-16 h-10 flex items-center justify-center bg-black bg-opacity-50 rounded hover:bg-primary transition-colors border-2 border-white border-opacity-10 shine-effect">
+                                <i class="ri-play-fill text-white text-2xl"></i>
+                            </a>
+                            <a href="https://t.me/rouuuzi" class="px-4 py-2 bg-black bg-opacity-50 rounded text-sm border-2 border-white border-opacity-10 hover:bg-primary transition-colors shine-effect">RozaliaAVI <i class="ri-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Съёмка</h4>
+                            <p class="text-sm md:text-lg opacity-80">RozaliaAVI</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Монтаж</h4>
+                            <p class="text-sm md:text-lg opacity-80">Алёна Козловская</p>
+                        </div>
                     </div>
                 </div>
             </div>
